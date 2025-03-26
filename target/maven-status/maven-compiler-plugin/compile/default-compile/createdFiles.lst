@@ -1,0 +1,8 @@
+de/travelbroker/Main.class
+de/travelbroker/broker/TravelBroker.class
+de/travelbroker/hotel/HotelService.class
+de/travelbroker/util/Logger.class
+de/travelbroker/messaging/MessageSender.class
+de/travelbroker/model/BookingResponse.class
+de/travelbroker/util/Statistics.class
+de/travelbroker/model/BookingRequest.class
