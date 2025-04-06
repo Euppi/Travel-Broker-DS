@@ -1,7 +1,4 @@
 [
   { "customerName": "Alice", "hotels": ["Hotel-A", "Hotel-B"] },
-  { "customerName": "Bob", "hotels": ["Hotel-B", "Hotel-A"] },
-  { "customerName": "Clara", "hotels": ["Hotel-A"] },
-  { "customerName": "David", "hotels": ["Hotel-B"] },
-  { "customerName": "Eva", "hotels": ["Hotel-A", "Hotel-B", "Hotel-A"] }
+  { "customerName": "Bob", "hotels": ["Hotel-B", "Hotel-A"] }
 ]

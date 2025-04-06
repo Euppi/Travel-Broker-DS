@@ -1,15 +1,17 @@
 package de.travelbroker.messaging;
 
 import org.zeromq.ZMQ;
+import org.zeromq.SocketType;
+import org.zeromq.ZContext;
 
 public class MessageSender implements AutoCloseable {
 
-    private final ZMQ.Context context;
+    private final ZContext context;
     private final ZMQ.Socket sender;
 
     public MessageSender(String address) {
-        context = ZMQ.context(1);
-        sender = context.socket(ZMQ.REQ);
+        context = new ZContext(); // neue API statt ZMQ.context(1)
+        sender = context.createSocket(SocketType.REQ);
         sender.connect(address);
     }
 
@@ -20,8 +22,7 @@ public class MessageSender implements AutoCloseable {
 
     @Override
     public void close() {
-        sender.setLinger(0);
         sender.close();
-        context.term();
+        context.close(); // ZContext schließt auch intern alles korrekt
     }
 }

@@ -1,0 +1,12 @@
+[INFO] Scanning for projects...
+[INFO] 
+[INFO] -----------------< de.travelbroker:travel-broker-saga >-----------------
+[INFO] Building travel-broker-saga 1.0-SNAPSHOT
+[INFO]   from pom.xml
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- exec:3.1.0:java (default-cli) @ travel-broker-saga ---
+[2025-04-02 18:45:46] 🧠 TravelBroker bereit und wartet auf Anfragen auf Port 5560...
+[2025-04-02 19:18:21] 📥 Anfrage empfangen: Sex:Hotel-A
+[2025-04-02 19:24:22] ✅ Bestätigt von Hotel-A
+[2025-04-02 19:24:49] 📥 Anfrage empfangen: Test:Hotel-A

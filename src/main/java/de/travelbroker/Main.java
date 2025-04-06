@@ -1,10 +1,9 @@
 package de.travelbroker;
 
-import de.travelbroker.broker.TravelBroker;
+import de.travelbroker.client.TravelBroker;
 
 public class Main {
-    public static void main(String[] args) {
-        TravelBroker broker = new TravelBroker();
-        broker.start();
+    public static void main(String[] args) throws Exception {
+        TravelBroker.main(args);
     }
 }
