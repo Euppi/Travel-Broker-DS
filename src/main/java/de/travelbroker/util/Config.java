@@ -1,3 +1,5 @@
+// src/main/java/de/travelbroker/util/Config.java
+
 package de.travelbroker.util;
 
 import com.fasterxml.jackson.databind.ObjectMapper;

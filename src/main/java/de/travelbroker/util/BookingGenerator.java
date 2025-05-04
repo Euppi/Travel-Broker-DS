@@ -1,3 +1,5 @@
+// src/main/java/de/travelbroker/util/BookingGenerator.java
+
 package de.travelbroker.util;
 
 import java.util.*;

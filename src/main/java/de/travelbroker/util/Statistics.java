@@ -1,3 +1,5 @@
+// src/main/java/de/travelbroker/util/Statistics.java
+
 package de.travelbroker.util;
 
 public class Statistics {

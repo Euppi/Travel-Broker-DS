@@ -1,3 +1,5 @@
+// src/main/java/de/travelbroker/model/BookingResponse.java
+
 package de.travelbroker.model;
 
 public class BookingResponse {

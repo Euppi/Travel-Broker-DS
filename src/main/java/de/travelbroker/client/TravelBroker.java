@@ -1,3 +1,5 @@
+// src/main/java/de/travelbroker/client/TravelBroker.java
+
 package de.travelbroker.client;
 
 import org.zeromq.SocketType;
@@ -11,6 +13,8 @@ import java.time.format.DateTimeFormatter;
 import java.util.*;
 
 public class TravelBroker {
+
+    private static final int MAX_RETRIES = 2; // Anzahl Wiederholungsversuche
 
     public static void main(String[] args) throws Exception {
         try (ZContext context = new ZContext()) {
@@ -30,31 +34,59 @@ public class TravelBroker {
                 String customer = parts[0];
                 List<String> hotels = Arrays.asList(parts[1].split(","));
 
+                if (hasConsecutiveDuplicateHotels(hotels)) {
+                    String msg = "❌ Ungültige Buchung von " + customer + ": gleiches Hotel kommt doppelt hintereinander vor.";
+                    log(msg);
+                    socket.send(msg.getBytes(ZMQ.CHARSET), 0);
+                    continue;
+                }
+
                 boolean failed = false;
                 List<String> confirmed = new ArrayList<>();
-                List<Integer> timeBlocks = generateRandomTimeBlocks(); // z. B. [10, 11]
+                List<Integer> timeBlocks = generateRandomTimeBlocks();
 
                 for (String hotel : hotels) {
                     String bookingId = customer + "_" + hotel;
-
                     JSONObject msg = new JSONObject();
                     msg.put("action", "book");
                     msg.put("bookingId", bookingId);
                     msg.put("timeBlocks", new JSONArray(timeBlocks));
 
-                    try (ZMQ.Socket hotelSocket = context.createSocket(SocketType.REQ)) {
-                        hotelSocket.connect("tcp://localhost:" + hotelPort(hotel));
-                        hotelSocket.send(msg.toString().getBytes(ZMQ.CHARSET), 0);
+                    boolean hotelSuccess = false;
 
-                        byte[] reply = hotelSocket.recv(2000);
-                        if (reply == null || new String(reply, ZMQ.CHARSET).equalsIgnoreCase("rejected")) {
-                            log("❌ Buchung fehlgeschlagen bei " + hotel);
-                            failed = true;
-                            break;
+                    for (int attempt = 1; attempt <= MAX_RETRIES; attempt++) {
+                        try (ZMQ.Socket hotelSocket = context.createSocket(SocketType.REQ)) {
+                            hotelSocket.connect("tcp://localhost:" + hotelPort(hotel));
+
+                            log("⏳ Versuche Buchung bei " + hotel + " (Versuch " + attempt + ")");
+                            hotelSocket.send(msg.toString().getBytes(ZMQ.CHARSET), 0);
+
+                            byte[] reply = hotelSocket.recv(2000); // 2s Timeout
+
+                            if (reply == null) {
+                                log("⚠️ Keine Antwort von " + hotel + " beim Versuch " + attempt);
+                                continue;
+                            }
+
+                            String replyStr = new String(reply, ZMQ.CHARSET);
+                            if (replyStr.equalsIgnoreCase("confirmed")) {
+                                log("✅ Bestätigt von " + hotel);
+                                confirmed.add(hotel);
+                                hotelSuccess = true;
+                                break;
+                            } else if (replyStr.equalsIgnoreCase("rejected")) {
+                                log("❌ Buchung abgelehnt von " + hotel);
+                                break;
+                            } else {
+                                log("❓ Unerwartete Antwort von " + hotel + ": " + replyStr);
+                            }
                         }
+                    }
 
-                        log("✅ Bestätigt von " + hotel);
-                        confirmed.add(hotel);
+                    if (!hotelSuccess) {
+                        log("❌ Buchung fehlgeschlagen bei " + hotel + " nach " + MAX_RETRIES + " Versuchen");
+                        failed = true;
+                        break;
                     }
                 }
 
@@ -66,6 +98,15 @@ public class TravelBroker {
                 }
             }
         }
+    }
+
+    private static boolean hasConsecutiveDuplicateHotels(List<String> hotels) {
+        for (int i = 1; i < hotels.size(); i++) {
+            if (hotels.get(i).equals(hotels.get(i - 1))) {
+                return true;
+            }
+        }
+        return false;
     }
 
     private static void sendRollback(ZContext context, List<String> hotels, String customer) {
@@ -87,8 +128,8 @@ public class TravelBroker {
 
     private static List<Integer> generateRandomTimeBlocks() {
         Random rand = new Random();
-        int start = rand.nextInt(98); // max 98, damit Platz für 2 Blöcke ist
-        return Arrays.asList(start, start + 1); // zwei aufeinanderfolgende Wochen
+        int start = rand.nextInt(98);
+        return Arrays.asList(start, start + 1);
     }
 
     private static int hotelPort(String name) {

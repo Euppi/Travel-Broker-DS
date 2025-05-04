@@ -1,3 +1,5 @@
+// src/main/java/de/travelbroker/hotel/HotelService.java
+
 package de.travelbroker.hotel;
 
 import org.zeromq.SocketType;
@@ -60,7 +62,7 @@ public class HotelService {
                     System.out.println("✅ Booking successful.");
 
                     String bookingId = extractBookingId(request);
-                    List<Integer> blocks = Arrays.asList(10, 11); // TODO: Realistisch aus request parsen
+                    List<Integer> blocks = Arrays.asList(10, 11);
                     activeBookings.put(bookingId, new Booking(bookingId, blocks));
 
                     // Verfügbarkeiten reduzieren
