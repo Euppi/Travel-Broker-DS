@@ -1,12 +1,11 @@
-// src/main/java/de/travelbroker/hotel/HotelService.java
-
 package de.travelbroker.hotel;
 
+import org.json.JSONArray;
+import org.json.JSONObject;
 import org.zeromq.SocketType;
 import org.zeromq.ZContext;
 import org.zeromq.ZMQ;
-import java.io.FileInputStream;
-import java.io.IOException;
+
 import java.util.*;
 import de.travelbroker.util.Config;
 
@@ -24,9 +23,8 @@ public class HotelService {
         String hotelName = args.length > 0 ? args[0] : "Hotel-A";
         int port = hotelName.equals("Hotel-A") ? 5556 : hotelName.equals("Hotel-B") ? 5557 : 5558;
 
-        // Konfiguration laden
+        // Nur noch config.json laden
         Config.loadConfig("src/main/resources/config.json");
-        loadLocalOverrides();
 
         try (ZContext context = new ZContext()) {
             ZMQ.Socket receiver = context.createSocket(SocketType.REP);
@@ -59,21 +57,35 @@ public class HotelService {
                     System.out.println("⚠️ Simulated drop: process without confirmation.");
                     continue;
                 } else if (chance < Config.hotelErrorRate + Config.hotelTimeoutRate + (1.0 - Config.noRoomAvailableRate)) {
-                    System.out.println("✅ Booking successful.");
+                    System.out.println("✅ Prüfe Verfügbarkeit der Zeitblöcke...");
 
                     String bookingId = extractBookingId(request);
-                    List<Integer> blocks = Arrays.asList(10, 11);
-                    activeBookings.put(bookingId, new Booking(bookingId, blocks));
-
-                    // Verfügbarkeiten reduzieren
-                    for (int block : blocks) {
-                        availability[block]--;
+                    JSONObject obj = new JSONObject(request);
+                    JSONArray jsonBlocks = obj.getJSONArray("timeBlocks");
+                    List<Integer> blocks = new ArrayList<>();
+                    for (int i = 0; i < jsonBlocks.length(); i++) {
+                        blocks.add(jsonBlocks.getInt(i));
                     }
 
-                    receiver.send("confirmed");
-                } else {
-                    System.out.println("❌ No rooms available.");
-                    receiver.send("rejected");
+                    boolean allAvailable = true;
+                    for (int block : blocks) {
+                        if (availability[block] <= 0) {
+                            allAvailable = false;
+                            break;
+                        }
+                    }
+
+                    if (allAvailable) {
+                        for (int block : blocks) {
+                            availability[block]--;
+                        }
+                        activeBookings.put(bookingId, new Booking(bookingId, blocks));
+                        System.out.println("✅ Booking successful.");
+                        receiver.send("confirmed");
+                    } else {
+                        System.out.println("❌ No rooms available.");
+                        receiver.send("rejected");
+                    }
                 }
             }
         }
@@ -108,26 +120,11 @@ public class HotelService {
         }
     }
 
-    private static void loadLocalOverrides() {
-        try {
-            Properties props = new Properties();
-            props.load(new FileInputStream("config/hotel.properties"));
-            Config.hotelErrorRate = Double.parseDouble(props.getProperty("crashRate", String.valueOf(Config.hotelErrorRate)));
-            Config.hotelTimeoutRate = Double.parseDouble(props.getProperty("unconfirmedRate", String.valueOf(Config.hotelTimeoutRate)));
-            Config.noRoomAvailableRate = 1.0 - Double.parseDouble(props.getProperty("successRate", String.valueOf(1.0 - Config.noRoomAvailableRate)));
-            Config.bookingDelayMillis = Integer.parseInt(props.getProperty("averageProcessingTimeMs", String.valueOf(Config.bookingDelayMillis)));
-        } catch (IOException e) {
-            System.out.println("⚠️ Could not load fallback hotel.properties – using only config.json.");
-        }
-    }
-
     // Hilfsklasse für Buchungen
     private static class Booking {
-        // Removed unused field bookingId
         List<Integer> timeBlocks;
 
         Booking(String id, List<Integer> blocks) {
-            // Removed assignment to unused field bookingId
             this.timeBlocks = blocks;
         }
     }

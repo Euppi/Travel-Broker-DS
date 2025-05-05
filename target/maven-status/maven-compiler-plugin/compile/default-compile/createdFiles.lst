@@ -2,13 +2,11 @@ de/travelbroker/util/Logger.class
 de/travelbroker/model/BookingResponse.class
 de/travelbroker/util/Statistics.class
 de/travelbroker/client/RequestSender.class
-de/travelbroker/client/RequestSender$1.class
 de/travelbroker/util/Config$ConfigFile.class
 de/travelbroker/Main.class
 de/travelbroker/util/Config.class
 de/travelbroker/hotel/HotelService.class
 de/travelbroker/messaging/MessageSender.class
-de/travelbroker/client/RequestSender$2.class
 de/travelbroker/util/BookingGenerator.class
 de/travelbroker/hotel/HotelService$Booking.class
 de/travelbroker/client/TravelBroker.class

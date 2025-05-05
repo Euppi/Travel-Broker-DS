@@ -1,0 +1,326 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report-3.0.xsd" version="3.0" name="de.travelbroker.TravelBrokerIntegrationTest" time="35.901" tests="5" errors="0" skipped="0" failures="0">
+  <properties>
+    <property name="java.specification.version" value="23"/>
+    <property name="sun.jnu.encoding" value="UTF-8"/>
+    <property name="java.class.path" value="/Users/alexanderkott/Desktop/GitHub.nosync/Travel-Broker-DS/target/test-classes:/Users/alexanderkott/Desktop/GitHub.nosync/Travel-Broker-DS/target/classes:/Users/alexanderkott/.m2/repository/org/json/json/20230227/json-20230227.jar:/Users/alexanderkott/.m2/repository/org/junit/jupiter/junit-jupiter/5.10.0/junit-jupiter-5.10.0.jar:/Users/alexanderkott/.m2/repository/org/junit/jupiter/junit-jupiter-api/5.10.0/junit-jupiter-api-5.10.0.jar:/Users/alexanderkott/.m2/repository/org/opentest4j/opentest4j/1.3.0/opentest4j-1.3.0.jar:/Users/alexanderkott/.m2/repository/org/junit/platform/junit-platform-commons/1.10.0/junit-platform-commons-1.10.0.jar:/Users/alexanderkott/.m2/repository/org/apiguardian/apiguardian-api/1.1.2/apiguardian-api-1.1.2.jar:/Users/alexanderkott/.m2/repository/org/junit/jupiter/junit-jupiter-params/5.10.0/junit-jupiter-params-5.10.0.jar:/Users/alexanderkott/.m2/repository/org/junit/jupiter/junit-jupiter-engine/5.10.0/junit-jupiter-engine-5.10.0.jar:/Users/alexanderkott/.m2/repository/org/junit/platform/junit-platform-engine/1.10.0/junit-platform-engine-1.10.0.jar:/Users/alexanderkott/.m2/repository/org/zeromq/jeromq/0.6.0/jeromq-0.6.0.jar:/Users/alexanderkott/.m2/repository/eu/neilalexander/jnacl/1.0.0/jnacl-1.0.0.jar:/Users/alexanderkott/.m2/repository/com/fasterxml/jackson/core/jackson-databind/2.15.3/jackson-databind-2.15.3.jar:/Users/alexanderkott/.m2/repository/com/fasterxml/jackson/core/jackson-annotations/2.15.3/jackson-annotations-2.15.3.jar:/Users/alexanderkott/.m2/repository/com/fasterxml/jackson/core/jackson-core/2.15.3/jackson-core-2.15.3.jar:/Users/alexanderkott/.m2/repository/org/slf4j/slf4j-simple/2.0.7/slf4j-simple-2.0.7.jar:/Users/alexanderkott/.m2/repository/org/slf4j/slf4j-api/2.0.7/slf4j-api-2.0.7.jar:"/>
+    <property name="java.vm.vendor" value="Homebrew"/>
+    <property name="sun.arch.data.model" value="64"/>
+    <property name="java.vendor.url" value="https://github.com/Homebrew/homebrew-core/issues"/>
+    <property name="user.timezone" value="Europe/Berlin"/>
+    <property name="os.name" value="Mac OS X"/>
+    <property name="java.vm.specification.version" value="23"/>
+    <property name="sun.java.launcher" value="SUN_STANDARD"/>
+    <property name="user.country" value="DE"/>
+    <property name="sun.boot.library.path" value="/opt/homebrew/Cellar/openjdk/23.0.2/libexec/openjdk.jdk/Contents/Home/lib"/>
+    <property name="sun.java.command" value="/Users/alexanderkott/Desktop/GitHub.nosync/Travel-Broker-DS/target/surefire/surefirebooter-20250505095406731_3.jar /Users/alexanderkott/Desktop/GitHub.nosync/Travel-Broker-DS/target/surefire 2025-05-05T09-54-06_690-jvmRun1 surefire-20250505095406731_1tmp surefire_0-20250505095406731_2tmp"/>
+    <property name="http.nonProxyHosts" value="local|*.local|169.254/16|*.169.254/16"/>
+    <property name="jdk.debug" value="release"/>
+    <property name="surefire.test.class.path" value="/Users/alexanderkott/Desktop/GitHub.nosync/Travel-Broker-DS/target/test-classes:/Users/alexanderkott/Desktop/GitHub.nosync/Travel-Broker-DS/target/classes:/Users/alexanderkott/.m2/repository/org/json/json/20230227/json-20230227.jar:/Users/alexanderkott/.m2/repository/org/junit/jupiter/junit-jupiter/5.10.0/junit-jupiter-5.10.0.jar:/Users/alexanderkott/.m2/repository/org/junit/jupiter/junit-jupiter-api/5.10.0/junit-jupiter-api-5.10.0.jar:/Users/alexanderkott/.m2/repository/org/opentest4j/opentest4j/1.3.0/opentest4j-1.3.0.jar:/Users/alexanderkott/.m2/repository/org/junit/platform/junit-platform-commons/1.10.0/junit-platform-commons-1.10.0.jar:/Users/alexanderkott/.m2/repository/org/apiguardian/apiguardian-api/1.1.2/apiguardian-api-1.1.2.jar:/Users/alexanderkott/.m2/repository/org/junit/jupiter/junit-jupiter-params/5.10.0/junit-jupiter-params-5.10.0.jar:/Users/alexanderkott/.m2/repository/org/junit/jupiter/junit-jupiter-engine/5.10.0/junit-jupiter-engine-5.10.0.jar:/Users/alexanderkott/.m2/repository/org/junit/platform/junit-platform-engine/1.10.0/junit-platform-engine-1.10.0.jar:/Users/alexanderkott/.m2/repository/org/zeromq/jeromq/0.6.0/jeromq-0.6.0.jar:/Users/alexanderkott/.m2/repository/eu/neilalexander/jnacl/1.0.0/jnacl-1.0.0.jar:/Users/alexanderkott/.m2/repository/com/fasterxml/jackson/core/jackson-databind/2.15.3/jackson-databind-2.15.3.jar:/Users/alexanderkott/.m2/repository/com/fasterxml/jackson/core/jackson-annotations/2.15.3/jackson-annotations-2.15.3.jar:/Users/alexanderkott/.m2/repository/com/fasterxml/jackson/core/jackson-core/2.15.3/jackson-core-2.15.3.jar:/Users/alexanderkott/.m2/repository/org/slf4j/slf4j-simple/2.0.7/slf4j-simple-2.0.7.jar:/Users/alexanderkott/.m2/repository/org/slf4j/slf4j-api/2.0.7/slf4j-api-2.0.7.jar:"/>
+    <property name="sun.cpu.endian" value="little"/>
+    <property name="user.home" value="/Users/alexanderkott"/>
+    <property name="user.language" value="en"/>
+    <property name="java.specification.vendor" value="Oracle Corporation"/>
+    <property name="java.version.date" value="2025-01-21"/>
+    <property name="java.home" value="/opt/homebrew/Cellar/openjdk/23.0.2/libexec/openjdk.jdk/Contents/Home"/>
+    <property name="file.separator" value="/"/>
+    <property name="basedir" value="/Users/alexanderkott/Desktop/GitHub.nosync/Travel-Broker-DS"/>
+    <property name="java.vm.compressedOopsMode" value="Zero based"/>
+    <property name="line.separator" value="&#10;"/>
+    <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
+    <property name="java.specification.name" value="Java Platform API Specification"/>
+    <property name="apple.awt.application.name" value="ForkedBooter"/>
+    <property name="surefire.real.class.path" value="/Users/alexanderkott/Desktop/GitHub.nosync/Travel-Broker-DS/target/surefire/surefirebooter-20250505095406731_3.jar"/>
+    <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
+    <property name="ftp.nonProxyHosts" value="local|*.local|169.254/16|*.169.254/16"/>
+    <property name="java.runtime.version" value="23.0.2"/>
+    <property name="user.name" value="alexanderkott"/>
+    <property name="stdout.encoding" value="UTF-8"/>
+    <property name="path.separator" value=":"/>
+    <property name="os.version" value="15.5"/>
+    <property name="java.runtime.name" value="OpenJDK Runtime Environment"/>
+    <property name="file.encoding" value="UTF-8"/>
+    <property name="java.vm.name" value="OpenJDK 64-Bit Server VM"/>
+    <property name="java.vendor.version" value="Homebrew"/>
+    <property name="localRepository" value="/Users/alexanderkott/.m2/repository"/>
+    <property name="java.vendor.url.bug" value="https://github.com/Homebrew/homebrew-core/issues"/>
+    <property name="java.io.tmpdir" value="/var/folders/4_/139jl0dj4_70s6_djmkc2nch0000gn/T/"/>
+    <property name="java.version" value="23.0.2"/>
+    <property name="user.dir" value="/Users/alexanderkott/Desktop/GitHub.nosync/Travel-Broker-DS"/>
+    <property name="os.arch" value="aarch64"/>
+    <property name="java.vm.specification.name" value="Java Virtual Machine Specification"/>
+    <property name="native.encoding" value="UTF-8"/>
+    <property name="java.library.path" value="/Users/alexanderkott/Library/Java/Extensions:/Library/Java/Extensions:/Network/Library/Java/Extensions:/System/Library/Java/Extensions:/usr/lib/java:."/>
+    <property name="java.vm.info" value="mixed mode, sharing"/>
+    <property name="stderr.encoding" value="UTF-8"/>
+    <property name="java.vendor" value="Homebrew"/>
+    <property name="java.vm.version" value="23.0.2"/>
+    <property name="sun.io.unicode.encoding" value="UnicodeBig"/>
+    <property name="socksNonProxyHosts" value="local|*.local|169.254/16|*.169.254/16"/>
+    <property name="java.class.version" value="67.0"/>
+  </properties>
+  <testcase name="testManyBookingsInParallel" classname="de.travelbroker.TravelBrokerIntegrationTest" time="26.248">
+    <system-out><![CDATA[🔧 Starte HotelServices...
+✅ Konfiguration geladen aus: src/main/resources/config.json
+Hotel-A is running on port 5556 with failure simulation...
+✅ Konfiguration geladen aus: src/main/resources/config.json
+Hotel-B is running on port 5557 with failure simulation...
+✅ Konfiguration geladen aus: src/main/resources/config.json
+Hotel-C is running on port 5558 with failure simulation...
+🔧 Starte TravelBroker...
+✅ Konfiguration geladen aus: src/main/resources/config.json
+[2025-05-05 09:54:08] 🧠 TravelBroker bereit und wartet auf Anfragen auf Port 5569...
+✅ Setup abgeschlossen.
+➡️  [User3] Sende Buchung: User3:Hotel-A,Hotel-B,Hotel-C
+➡️  [User1] Sende Buchung: User1:Hotel-A,Hotel-B,Hotel-C
+➡️  [User2] Sende Buchung: User2:Hotel-A,Hotel-B,Hotel-C
+➡️  [User4] Sende Buchung: User4:Hotel-A,Hotel-B,Hotel-C
+➡️  [User5] Sende Buchung: User5:Hotel-A,Hotel-B,Hotel-C
+➡️  [User7] Sende Buchung: User7:Hotel-A,Hotel-B,Hotel-C
+➡️  [User6] Sende Buchung: User6:Hotel-A,Hotel-B,Hotel-C
+➡️  [User8] Sende Buchung: User8:Hotel-A,Hotel-B,Hotel-C
+➡️  [User9] Sende Buchung: User9:Hotel-A,Hotel-B,Hotel-C
+➡️  [User10] Sende Buchung: User10:Hotel-A,Hotel-B,Hotel-C
+[2025-05-05 09:54:11] 📥 Anfrage empfangen: User1:Hotel-A,Hotel-B,Hotel-C
+[2025-05-05 09:54:11] ⏳ Versuche Buchung bei Hotel-A (Versuch 1)
+Hotel-A received: {"timeBlocks":[1,2],"action":"book","bookingId":"User1_Hotel-A"}
+✅ Prüfe Verfügbarkeit der Zeitblöcke...
+✅ Booking successful.
+[2025-05-05 09:54:12] ✅ Bestätigt von Hotel-A
+[2025-05-05 09:54:12] ⏳ Versuche Buchung bei Hotel-B (Versuch 1)
+Hotel-B received: {"timeBlocks":[1,2],"action":"book","bookingId":"User1_Hotel-B"}
+✅ Prüfe Verfügbarkeit der Zeitblöcke...
+✅ Booking successful.
+[2025-05-05 09:54:13] ✅ Bestätigt von Hotel-B
+[2025-05-05 09:54:13] ⏳ Versuche Buchung bei Hotel-C (Versuch 1)
+Hotel-C received: {"timeBlocks":[1,2],"action":"book","bookingId":"User1_Hotel-C"}
+✅ Prüfe Verfügbarkeit der Zeitblöcke...
+✅ Booking successful.
+[2025-05-05 09:54:14] ✅ Bestätigt von Hotel-C
+[2025-05-05 09:54:14] 📥 Anfrage empfangen: User8:Hotel-A,Hotel-B,Hotel-C
+[2025-05-05 09:54:14] ⏳ Versuche Buchung bei Hotel-A (Versuch 1)
+⬅️  [User1] Antwort: Buchung erfolgreich für User1
+Hotel-A received: {"timeBlocks":[87,88],"action":"book","bookingId":"User8_Hotel-A"}
+✅ Prüfe Verfügbarkeit der Zeitblöcke...
+✅ Booking successful.
+[2025-05-05 09:54:14] ✅ Bestätigt von Hotel-A
+[2025-05-05 09:54:14] ⏳ Versuche Buchung bei Hotel-B (Versuch 1)
+Hotel-B received: {"timeBlocks":[87,88],"action":"book","bookingId":"User8_Hotel-B"}
+✅ Prüfe Verfügbarkeit der Zeitblöcke...
+✅ Booking successful.
+[2025-05-05 09:54:15] ✅ Bestätigt von Hotel-B
+[2025-05-05 09:54:15] ⏳ Versuche Buchung bei Hotel-C (Versuch 1)
+Hotel-C received: {"timeBlocks":[87,88],"action":"book","bookingId":"User8_Hotel-C"}
+✅ Prüfe Verfügbarkeit der Zeitblöcke...
+✅ Booking successful.
+[2025-05-05 09:54:16] ✅ Bestätigt von Hotel-C
+[2025-05-05 09:54:16] 📥 Anfrage empfangen: User3:Hotel-A,Hotel-B,Hotel-C
+⬅️  [User8] Antwort: Buchung erfolgreich für User8
+[2025-05-05 09:54:16] ⏳ Versuche Buchung bei Hotel-A (Versuch 1)
+Hotel-A received: {"timeBlocks":[7,8],"action":"book","bookingId":"User3_Hotel-A"}
+✅ Prüfe Verfügbarkeit der Zeitblöcke...
+✅ Booking successful.
+[2025-05-05 09:54:16] ✅ Bestätigt von Hotel-A
+[2025-05-05 09:54:16] ⏳ Versuche Buchung bei Hotel-B (Versuch 1)
+Hotel-B received: {"timeBlocks":[7,8],"action":"book","bookingId":"User3_Hotel-B"}
+✅ Prüfe Verfügbarkeit der Zeitblöcke...
+✅ Booking successful.
+[2025-05-05 09:54:18] ✅ Bestätigt von Hotel-B
+[2025-05-05 09:54:18] ⏳ Versuche Buchung bei Hotel-C (Versuch 1)
+Hotel-C received: {"timeBlocks":[7,8],"action":"book","bookingId":"User3_Hotel-C"}
+✅ Prüfe Verfügbarkeit der Zeitblöcke...
+✅ Booking successful.
+[2025-05-05 09:54:18] ✅ Bestätigt von Hotel-C
+[2025-05-05 09:54:18] 📥 Anfrage empfangen: User2:Hotel-A,Hotel-B,Hotel-C
+[2025-05-05 09:54:18] ⏳ Versuche Buchung bei Hotel-A (Versuch 1)
+⬅️  [User3] Antwort: Buchung erfolgreich für User3
+Hotel-A received: {"timeBlocks":[47,48],"action":"book","bookingId":"User2_Hotel-A"}
+✅ Prüfe Verfügbarkeit der Zeitblöcke...
+✅ Booking successful.
+[2025-05-05 09:54:19] ✅ Bestätigt von Hotel-A
+[2025-05-05 09:54:19] ⏳ Versuche Buchung bei Hotel-B (Versuch 1)
+Hotel-B received: {"timeBlocks":[47,48],"action":"book","bookingId":"User2_Hotel-B"}
+✅ Prüfe Verfügbarkeit der Zeitblöcke...
+✅ Booking successful.
+[2025-05-05 09:54:20] ✅ Bestätigt von Hotel-B
+[2025-05-05 09:54:20] ⏳ Versuche Buchung bei Hotel-C (Versuch 1)
+Hotel-C received: {"timeBlocks":[47,48],"action":"book","bookingId":"User2_Hotel-C"}
+✅ Prüfe Verfügbarkeit der Zeitblöcke...
+✅ Booking successful.
+[2025-05-05 09:54:21] ✅ Bestätigt von Hotel-C
+[2025-05-05 09:54:21] 📥 Anfrage empfangen: User4:Hotel-A,Hotel-B,Hotel-C
+[2025-05-05 09:54:21] ⏳ Versuche Buchung bei Hotel-A (Versuch 1)
+⬅️  [User2] Antwort: Buchung erfolgreich für User2
+Hotel-A received: {"timeBlocks":[76,77],"action":"book","bookingId":"User4_Hotel-A"}
+✅ Prüfe Verfügbarkeit der Zeitblöcke...
+✅ Booking successful.
+[2025-05-05 09:54:22] ✅ Bestätigt von Hotel-A
+[2025-05-05 09:54:22] ⏳ Versuche Buchung bei Hotel-B (Versuch 1)
+Hotel-B received: {"timeBlocks":[76,77],"action":"book","bookingId":"User4_Hotel-B"}
+✅ Prüfe Verfügbarkeit der Zeitblöcke...
+✅ Booking successful.
+[2025-05-05 09:54:23] ✅ Bestätigt von Hotel-B
+[2025-05-05 09:54:23] ⏳ Versuche Buchung bei Hotel-C (Versuch 1)
+Hotel-C received: {"timeBlocks":[76,77],"action":"book","bookingId":"User4_Hotel-C"}
+✅ Prüfe Verfügbarkeit der Zeitblöcke...
+✅ Booking successful.
+[2025-05-05 09:54:23] ✅ Bestätigt von Hotel-C
+[2025-05-05 09:54:23] 📥 Anfrage empfangen: User9:Hotel-A,Hotel-B,Hotel-C
+⬅️  [User4] Antwort: Buchung erfolgreich für User4
+[2025-05-05 09:54:23] ⏳ Versuche Buchung bei Hotel-A (Versuch 1)
+Hotel-A received: {"timeBlocks":[17,18],"action":"book","bookingId":"User9_Hotel-A"}
+✅ Prüfe Verfügbarkeit der Zeitblöcke...
+✅ Booking successful.
+[2025-05-05 09:54:24] ✅ Bestätigt von Hotel-A
+[2025-05-05 09:54:24] ⏳ Versuche Buchung bei Hotel-B (Versuch 1)
+Hotel-B received: {"timeBlocks":[17,18],"action":"book","bookingId":"User9_Hotel-B"}
+✅ Prüfe Verfügbarkeit der Zeitblöcke...
+✅ Booking successful.
+[2025-05-05 09:54:24] ✅ Bestätigt von Hotel-B
+[2025-05-05 09:54:24] ⏳ Versuche Buchung bei Hotel-C (Versuch 1)
+Hotel-C received: {"timeBlocks":[17,18],"action":"book","bookingId":"User9_Hotel-C"}
+✅ Prüfe Verfügbarkeit der Zeitblöcke...
+✅ Booking successful.
+[2025-05-05 09:54:25] ✅ Bestätigt von Hotel-C
+[2025-05-05 09:54:25] 📥 Anfrage empfangen: User10:Hotel-A,Hotel-B,Hotel-C
+[2025-05-05 09:54:25] ⏳ Versuche Buchung bei Hotel-A (Versuch 1)
+⬅️  [User9] Antwort: Buchung erfolgreich für User9
+Hotel-A received: {"timeBlocks":[47,48],"action":"book","bookingId":"User10_Hotel-A"}
+✅ Prüfe Verfügbarkeit der Zeitblöcke...
+✅ Booking successful.
+[2025-05-05 09:54:26] ✅ Bestätigt von Hotel-A
+[2025-05-05 09:54:26] ⏳ Versuche Buchung bei Hotel-B (Versuch 1)
+Hotel-B received: {"timeBlocks":[47,48],"action":"book","bookingId":"User10_Hotel-B"}
+✅ Prüfe Verfügbarkeit der Zeitblöcke...
+✅ Booking successful.
+[2025-05-05 09:54:27] ✅ Bestätigt von Hotel-B
+[2025-05-05 09:54:27] ⏳ Versuche Buchung bei Hotel-C (Versuch 1)
+Hotel-C received: {"timeBlocks":[47,48],"action":"book","bookingId":"User10_Hotel-C"}
+✅ Prüfe Verfügbarkeit der Zeitblöcke...
+❌ No rooms available.
+[2025-05-05 09:54:28] ❌ Buchung abgelehnt von Hotel-C
+[2025-05-05 09:54:28] ❌ Buchung fehlgeschlagen bei Hotel-C nach 5 Versuchen
+Hotel-A received: {"action":"cancel","bookingId":"User10_Hotel-A"}
+🔁 Rollback erfolgreich für User10_Hotel-A
+[2025-05-05 09:54:28] ↩️ Rollback gesendet an Hotel-A
+Hotel-B received: {"action":"cancel","bookingId":"User10_Hotel-B"}
+🔁 Rollback erfolgreich für User10_Hotel-B
+[2025-05-05 09:54:29] ↩️ Rollback gesendet an Hotel-B
+[2025-05-05 09:54:29] 📥 Anfrage empfangen: User7:Hotel-A,Hotel-B,Hotel-C
+⬅️  [User10] Antwort: Buchung fehlgeschlagen für User10
+[2025-05-05 09:54:29] ⏳ Versuche Buchung bei Hotel-A (Versuch 1)
+Hotel-A received: {"timeBlocks":[19,20],"action":"book","bookingId":"User7_Hotel-A"}
+✅ Prüfe Verfügbarkeit der Zeitblöcke...
+✅ Booking successful.
+[2025-05-05 09:54:30] ✅ Bestätigt von Hotel-A
+[2025-05-05 09:54:30] ⏳ Versuche Buchung bei Hotel-B (Versuch 1)
+Hotel-B received: {"timeBlocks":[19,20],"action":"book","bookingId":"User7_Hotel-B"}
+✅ Prüfe Verfügbarkeit der Zeitblöcke...
+✅ Booking successful.
+[2025-05-05 09:54:30] ✅ Bestätigt von Hotel-B
+[2025-05-05 09:54:30] ⏳ Versuche Buchung bei Hotel-C (Versuch 1)
+Hotel-C received: {"timeBlocks":[19,20],"action":"book","bookingId":"User7_Hotel-C"}
+✅ Prüfe Verfügbarkeit der Zeitblöcke...
+✅ Booking successful.
+[2025-05-05 09:54:31] ✅ Bestätigt von Hotel-C
+[2025-05-05 09:54:31] 📥 Anfrage empfangen: User6:Hotel-A,Hotel-B,Hotel-C
+⬅️  [User7] Antwort: Buchung erfolgreich für User7
+[2025-05-05 09:54:31] ⏳ Versuche Buchung bei Hotel-A (Versuch 1)
+Hotel-A received: {"timeBlocks":[60,61],"action":"book","bookingId":"User6_Hotel-A"}
+✅ Prüfe Verfügbarkeit der Zeitblöcke...
+✅ Booking successful.
+[2025-05-05 09:54:32] ✅ Bestätigt von Hotel-A
+[2025-05-05 09:54:32] ⏳ Versuche Buchung bei Hotel-B (Versuch 1)
+Hotel-B received: {"timeBlocks":[60,61],"action":"book","bookingId":"User6_Hotel-B"}
+✅ Prüfe Verfügbarkeit der Zeitblöcke...
+✅ Booking successful.
+[2025-05-05 09:54:33] ✅ Bestätigt von Hotel-B
+[2025-05-05 09:54:33] ⏳ Versuche Buchung bei Hotel-C (Versuch 1)
+Hotel-C received: {"timeBlocks":[60,61],"action":"book","bookingId":"User6_Hotel-C"}
+✅ Prüfe Verfügbarkeit der Zeitblöcke...
+✅ Booking successful.
+[2025-05-05 09:54:33] ✅ Bestätigt von Hotel-C
+[2025-05-05 09:54:33] 📥 Anfrage empfangen: User5:Hotel-A,Hotel-B,Hotel-C
+[2025-05-05 09:54:33] ⏳ Versuche Buchung bei Hotel-A (Versuch 1)
+⬅️  [User6] Antwort: Buchung erfolgreich für User6
+Hotel-A received: {"timeBlocks":[0,1],"action":"book","bookingId":"User5_Hotel-A"}
+✅ Prüfe Verfügbarkeit der Zeitblöcke...
+✅ Booking successful.
+[2025-05-05 09:54:34] ✅ Bestätigt von Hotel-A
+[2025-05-05 09:54:34] ⏳ Versuche Buchung bei Hotel-B (Versuch 1)
+Hotel-B received: {"timeBlocks":[0,1],"action":"book","bookingId":"User5_Hotel-B"}
+✅ Prüfe Verfügbarkeit der Zeitblöcke...
+✅ Booking successful.
+[2025-05-05 09:54:35] ✅ Bestätigt von Hotel-B
+[2025-05-05 09:54:35] ⏳ Versuche Buchung bei Hotel-C (Versuch 1)
+Hotel-C received: {"timeBlocks":[0,1],"action":"book","bookingId":"User5_Hotel-C"}
+✅ Prüfe Verfügbarkeit der Zeitblöcke...
+❌ No rooms available.
+[2025-05-05 09:54:36] ❌ Buchung abgelehnt von Hotel-C
+[2025-05-05 09:54:36] ❌ Buchung fehlgeschlagen bei Hotel-C nach 5 Versuchen
+Hotel-A received: {"action":"cancel","bookingId":"User5_Hotel-A"}
+🔁 Rollback erfolgreich für User5_Hotel-A
+[2025-05-05 09:54:37] ↩️ Rollback gesendet an Hotel-A
+Hotel-B received: {"action":"cancel","bookingId":"User5_Hotel-B"}
+🔁 Rollback erfolgreich für User5_Hotel-B
+[2025-05-05 09:54:37] ↩️ Rollback gesendet an Hotel-B
+⬅️  [User5] Antwort: Buchung fehlgeschlagen für User5
+]]></system-out>
+  </testcase>
+  <testcase name="testValidBookingWithRepeatsNotConsecutive" classname="de.travelbroker.TravelBrokerIntegrationTest" time="2.558">
+    <system-out><![CDATA[➡️  [Clara] Sende Buchung: Clara:Hotel-C,Hotel-A,Hotel-C
+[2025-05-05 09:54:37] 📥 Anfrage empfangen: Clara:Hotel-C,Hotel-A,Hotel-C
+[2025-05-05 09:54:37] ⏳ Versuche Buchung bei Hotel-C (Versuch 1)
+Hotel-C received: {"timeBlocks":[11,12],"action":"book","bookingId":"Clara_Hotel-C"}
+✅ Prüfe Verfügbarkeit der Zeitblöcke...
+✅ Booking successful.
+[2025-05-05 09:54:38] ✅ Bestätigt von Hotel-C
+[2025-05-05 09:54:38] ⏳ Versuche Buchung bei Hotel-A (Versuch 1)
+Hotel-A received: {"timeBlocks":[11,12],"action":"book","bookingId":"Clara_Hotel-A"}
+✅ Prüfe Verfügbarkeit der Zeitblöcke...
+✅ Booking successful.
+[2025-05-05 09:54:39] ✅ Bestätigt von Hotel-A
+[2025-05-05 09:54:39] ⏳ Versuche Buchung bei Hotel-C (Versuch 1)
+Hotel-C received: {"timeBlocks":[11,12],"action":"book","bookingId":"Clara_Hotel-C"}
+✅ Prüfe Verfügbarkeit der Zeitblöcke...
+✅ Booking successful.
+[2025-05-05 09:54:40] ✅ Bestätigt von Hotel-C
+⬅️  [Clara] Antwort: Buchung erfolgreich für Clara
+]]></system-out>
+  </testcase>
+  <testcase name="testInvalidBookingRejected_TwoSameHotels" classname="de.travelbroker.TravelBrokerIntegrationTest" time="0.006">
+    <system-out><![CDATA[➡️  [David] Sende Buchung: David:Hotel-A,Hotel-A
+[2025-05-05 09:54:40] 📥 Anfrage empfangen: David:Hotel-A,Hotel-A
+[2025-05-05 09:54:40] ❌ Ungültige Buchung von David: gleiches Hotel kommt doppelt hintereinander vor.
+⬅️  [David] Antwort: ❌ Ungültige Buchung von David: gleiches Hotel kommt doppelt hintereinander vor.
+]]></system-out>
+  </testcase>
+  <testcase name="testValidBookingAccepted" classname="de.travelbroker.TravelBrokerIntegrationTest" time="2.534">
+    <system-out><![CDATA[➡️  [Alice] Sende Buchung: Alice:Hotel-A,Hotel-B,Hotel-C
+[2025-05-05 09:54:40] 📥 Anfrage empfangen: Alice:Hotel-A,Hotel-B,Hotel-C
+[2025-05-05 09:54:40] ⏳ Versuche Buchung bei Hotel-A (Versuch 1)
+Hotel-A received: {"timeBlocks":[89,90],"action":"book","bookingId":"Alice_Hotel-A"}
+✅ Prüfe Verfügbarkeit der Zeitblöcke...
+✅ Booking successful.
+[2025-05-05 09:54:41] ✅ Bestätigt von Hotel-A
+[2025-05-05 09:54:41] ⏳ Versuche Buchung bei Hotel-B (Versuch 1)
+Hotel-B received: {"timeBlocks":[89,90],"action":"book","bookingId":"Alice_Hotel-B"}
+✅ Prüfe Verfügbarkeit der Zeitblöcke...
+✅ Booking successful.
+[2025-05-05 09:54:42] ✅ Bestätigt von Hotel-B
+[2025-05-05 09:54:42] ⏳ Versuche Buchung bei Hotel-C (Versuch 1)
+Hotel-C received: {"timeBlocks":[89,90],"action":"book","bookingId":"Alice_Hotel-C"}
+✅ Prüfe Verfügbarkeit der Zeitblöcke...
+✅ Booking successful.
+[2025-05-05 09:54:42] ✅ Bestätigt von Hotel-C
+⬅️  [Alice] Antwort: Buchung erfolgreich für Alice
+]]></system-out>
+  </testcase>
+  <testcase name="testInvalidBookingRejected_DuplicateConsecutiveHotels" classname="de.travelbroker.TravelBrokerIntegrationTest" time="0.004">
+    <system-out><![CDATA[➡️  [Bob] Sende Buchung: Bob:Hotel-B,Hotel-B,Hotel-C
+[2025-05-05 09:54:42] 📥 Anfrage empfangen: Bob:Hotel-B,Hotel-B,Hotel-C
+[2025-05-05 09:54:42] ❌ Ungültige Buchung von Bob: gleiches Hotel kommt doppelt hintereinander vor.
+⬅️  [Bob] Antwort: ❌ Ungültige Buchung von Bob: gleiches Hotel kommt doppelt hintereinander vor.
+]]></system-out>
+  </testcase>
+</testsuite>

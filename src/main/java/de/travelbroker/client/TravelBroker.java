@@ -1,5 +1,3 @@
-// src/main/java/de/travelbroker/client/TravelBroker.java
-
 package de.travelbroker.client;
 
 import org.zeromq.SocketType;
@@ -7,6 +5,7 @@ import org.zeromq.ZContext;
 import org.zeromq.ZMQ;
 import org.json.JSONObject;
 import org.json.JSONArray;
+import de.travelbroker.util.Config;
 
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
@@ -14,9 +13,10 @@ import java.util.*;
 
 public class TravelBroker {
 
-    private static final int MAX_RETRIES = 2; // Anzahl Wiederholungsversuche
-
     public static void main(String[] args) throws Exception {
+        // Konfiguration laden (inkl. maxRetries)
+        Config.loadConfig("src/main/resources/config.json");
+
         try (ZContext context = new ZContext()) {
             ZMQ.Socket socket = context.createSocket(SocketType.REP);
             socket.bind("tcp://*:5569");
@@ -54,7 +54,7 @@ public class TravelBroker {
 
                     boolean hotelSuccess = false;
 
-                    for (int attempt = 1; attempt <= MAX_RETRIES; attempt++) {
+                    for (int attempt = 1; attempt <= Config.maxRetries; attempt++) {
                         try (ZMQ.Socket hotelSocket = context.createSocket(SocketType.REQ)) {
                             hotelSocket.connect("tcp://localhost:" + hotelPort(hotel));
 
@@ -84,7 +84,7 @@ public class TravelBroker {
                     }
 
                     if (!hotelSuccess) {
-                        log("❌ Buchung fehlgeschlagen bei " + hotel + " nach " + MAX_RETRIES + " Versuchen");
+                        log("❌ Buchung fehlgeschlagen bei " + hotel + " nach " + Config.maxRetries + " Versuchen");
                         failed = true;
                         break;
                     }
@@ -128,7 +128,7 @@ public class TravelBroker {
 
     private static List<Integer> generateRandomTimeBlocks() {
         Random rand = new Random();
-        int start = rand.nextInt(98);
+        int start = rand.nextInt(98); // 98 + 1 = max 99
         return Arrays.asList(start, start + 1);
     }
 

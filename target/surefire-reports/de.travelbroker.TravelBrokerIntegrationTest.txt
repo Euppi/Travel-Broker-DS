@@ -1,0 +1,4 @@
+-------------------------------------------------------------------------------
+Test set: de.travelbroker.TravelBrokerIntegrationTest
+-------------------------------------------------------------------------------
+Tests run: 5, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 35.90 s -- in de.travelbroker.TravelBrokerIntegrationTest
