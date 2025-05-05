@@ -13,16 +13,24 @@ import de.travelbroker.util.Config;
 
 public class HotelService {
 
+    // Zufallsgenerator für Fehlersimulation und Zeitverzögerung
     private static final Random rand = new Random();
+
+    // Aktive Buchungen, um Rollbacks zu ermöglichen
     private static final Map<String, Booking> activeBookings = new HashMap<>();
-    private static final int[] availability = new int[100]; // 100 Zeitblöcke (Wochen)
+
+    // Verfügbarkeiten für 100 Zeitblöcke (z. B. Kalenderwochen)
+    private static final int[] availability = new int[100];
 
     static {
-        Arrays.fill(availability, 5); // z.B. 5 Zimmer pro Woche
+        Arrays.fill(availability, 5); // Jedes Zeitfenster hat 5 freie Zimmer
     }
 
     public static void main(String[] args) {
+        // Hotelname über Kommandozeilenargument oder Standardwert
         String hotelName = args.length > 0 ? args[0] : "Hotel-A";
+
+        // Portzuordnung abhängig vom Hotelnamen
         int port = switch (hotelName) {
             case "Hotel-A" -> 5556;
             case "Hotel-B" -> 5557;
@@ -30,6 +38,7 @@ public class HotelService {
             default -> throw new IllegalArgumentException("Unbekannter Hotelname: " + hotelName);
         };
 
+        // Konfiguration laden (z. B. Fehlerwahrscheinlichkeiten, Verzögerung)
         Config.loadConfig("src/main/resources/config.json");
 
         try (ZContext context = new ZContext()) {
@@ -38,13 +47,17 @@ public class HotelService {
 
             System.out.println(hotelName + " is running on port " + port + " with failure simulation...");
 
+            // Hauptverarbeitungsschleife
             while (!Thread.currentThread().isInterrupted()) {
                 String request = receiver.recvStr();
                 if (request == null) continue;
 
-                System.out.println("📨 [" + hotelName + "] received: " + request);
+                System.out.println("[" + hotelName + "] received: " + request);
+
+                // Künstliche Verzögerung simulieren (z. B. Netzwerk-Latenz)
                 simulateDelay();
 
+                // Prüfe, ob es sich um eine Stornierung handelt
                 if (request.contains("\"action\":\"cancel\"")) {
                     String bookingId = extractBookingId(request);
                     cancelBooking(bookingId);
@@ -52,29 +65,34 @@ public class HotelService {
                     continue;
                 }
 
+                // Fehlersimulation: z. B. keine Antwort, Antwort mit „dropped“, etc.
                 double chance = rand.nextDouble();
-                System.out.println("🔍 [" + hotelName + "] Zufallswert (Fehlersimulation): " + chance);
+                System.out.println("[" + hotelName + "] Zufallswert (Fehlersimulation): " + chance);
 
                 if (chance < Config.hotelErrorRate) {
-                    System.out.println("⚠️ [" + hotelName + "] Simulated crash: no response.");
+                    // Kein Response: Broker wird Timeout behandeln
+                    System.out.println("[" + hotelName + "] Simulated crash: no response.");
                     continue;
                 } else if (chance < Config.hotelErrorRate + Config.hotelTimeoutRate) {
-                    System.out.println("⚠️ [" + hotelName + "] Simulated drop: process without confirmation.");
-                    receiver.send("dropped"); // Wichtig: trotzdem eine Antwort senden
+                    // Gültige, aber bedeutungslose Antwort → Broker versucht Retry
+                    System.out.println("[" + hotelName + "] Simulated drop: process without confirmation.");
+                    receiver.send("dropped");
                     continue;
                 }
-                
 
-                System.out.println("✅ [" + hotelName + "] Prüfe Verfügbarkeit der Zeitblöcke...");
+                System.out.println("[" + hotelName + "] Prüfe Verfügbarkeit der Zeitblöcke...");
 
+                // JSON parsen
                 String bookingId = extractBookingId(request);
                 JSONObject obj = new JSONObject(request);
                 JSONArray jsonBlocks = obj.getJSONArray("timeBlocks");
+
                 List<Integer> blocks = new ArrayList<>();
                 for (int i = 0; i < jsonBlocks.length(); i++) {
                     blocks.add(jsonBlocks.getInt(i));
                 }
 
+                // Prüfen, ob alle gewünschten Zeitblöcke noch verfügbar sind
                 boolean allAvailable = true;
                 for (int block : blocks) {
                     if (availability[block] <= 0) {
@@ -84,49 +102,62 @@ public class HotelService {
                 }
 
                 if (allAvailable) {
+                    // Verfügbarkeiten reduzieren & Buchung merken
                     for (int block : blocks) {
                         availability[block]--;
                     }
                     activeBookings.put(bookingId, new Booking(bookingId, blocks));
-                    System.out.println("✅ [" + hotelName + "] Booking successful for: " + bookingId);
+                    System.out.println("[" + hotelName + "] Booking successful for: " + bookingId);
                     receiver.send("confirmed");
                 } else {
-                    System.out.println("❌ [" + hotelName + "] No rooms available for: " + bookingId);
+                    System.out.println("[" + hotelName + "] No rooms available for: " + bookingId);
                     receiver.send("rejected");
                 }
             }
         }
     }
 
+    /**
+     * Führt einen Rollback (Stornierung) einer bestätigten Buchung durch.
+     */
     private static void cancelBooking(String bookingId) {
         Booking booking = activeBookings.remove(bookingId);
         if (booking != null) {
             for (int block : booking.timeBlocks) {
                 availability[block]++;
             }
-            System.out.println("🔁 Rollback erfolgreich für " + bookingId);
+            System.out.println("Rollback erfolgreich für " + bookingId);
         } else {
-            System.out.println("⚠️ Keine aktive Buchung für " + bookingId + " gefunden.");
+            System.out.println("Keine aktive Buchung für " + bookingId + " gefunden.");
         }
     }
 
+    /**
+     * Extrahiert die Booking-ID aus dem JSON-Request.
+     */
     private static String extractBookingId(String request) {
         int start = request.indexOf("bookingId\":\"") + 12;
         int end = request.indexOf("\"", start);
         return request.substring(start, end);
     }
 
+    /**
+     * Simuliert eine zufällige Netzwerkverzögerung (Gaussian verteilt).
+     */
     private static void simulateDelay() {
         int delay = (int) (rand.nextGaussian() * 300 + Config.bookingDelayMillis);
-        delay = Math.max(100, delay);
+        delay = Math.max(100, delay); // Mindestverzögerung 100ms
         try {
             Thread.sleep(delay);
         } catch (InterruptedException e) {
-            System.out.println("⚠️ Interrupted during delay.");
+            System.out.println("Interrupted during delay.");
             Thread.currentThread().interrupt();
         }
     }
 
+    /**
+     * Innere Klasse zur Repräsentation einer aktiven Buchung.
+     */
     private static class Booking {
         List<Integer> timeBlocks;
 

@@ -16,28 +16,35 @@ import java.util.*;
 public class TravelBroker {
 
     public static void main(String[] args) throws Exception {
+        // Konfigurationsdatei laden (z. B. Zeitlimits, Retry-Zahl)
         Config.loadConfig("src/main/resources/config.json");
 
+        // ZeroMQ-Kontext öffnen
         try (ZContext context = new ZContext()) {
+            // REPLY-Socket (Broker wartet auf Anfragen vom Client)
             ZMQ.Socket socket = context.createSocket(SocketType.REP);
             socket.bind("tcp://*:5569");
 
-            Logger.log("\uD83E\uDDE0 TravelBroker bereit und wartet auf Anfragen auf Port 5569...");
+            Logger.log("TravelBroker bereit und wartet auf Anfragen auf Port 5569...");
 
+            // Hauptverarbeitungsschleife
             while (!Thread.currentThread().isInterrupted()) {
+                // Anfrage empfangen
                 byte[] requestBytes = socket.recv(0);
                 if (requestBytes == null) continue;
 
                 String request = new String(requestBytes, ZMQ.CHARSET);
-                Logger.log("\uD83D\uDCEC Anfrage empfangen: " + request);
+                Logger.log("📬 Anfrage empfangen: " + request);
                 Statistics.incrementTotal();
 
+                // Anfrage aufsplitten in Kunde und Hotelliste
                 String[] parts = request.split(":");
                 String customer = parts[0];
                 List<String> hotels = Arrays.asList(parts[1].split(","));
 
+                // Prüfe auf direkt aufeinanderfolgende doppelte Hotels
                 if (hasConsecutiveDuplicateHotels(hotels)) {
-                    String msg = "\u274C Ung\u00fcltige Buchung von " + customer + ": gleiches Hotel kommt doppelt hintereinander vor.";
+                    String msg = "Ungültige Buchung von " + customer + ": gleiches Hotel kommt doppelt hintereinander vor.";
                     Logger.log(msg);
                     socket.send(msg.getBytes(ZMQ.CHARSET), 0);
                     Statistics.incrementFailed();
@@ -46,10 +53,13 @@ public class TravelBroker {
 
                 boolean failed = false;
                 List<String> confirmed = new ArrayList<>();
-                List<Integer> timeBlocks = generateRandomTimeBlocks();
+                List<Integer> timeBlocks = generateRandomTimeBlocks(); // z. B. [23, 24]
 
+                // Anfrage an alle Hotels schicken
                 for (String hotel : hotels) {
                     String bookingId = customer + "_" + hotel;
+
+                    // JSON-Buchungsnachricht erstellen
                     JSONObject msg = new JSONObject();
                     msg.put("action", "book");
                     msg.put("bookingId", bookingId);
@@ -57,64 +67,73 @@ public class TravelBroker {
 
                     boolean hotelSuccess = false;
 
+                    // Wiederholungsversuche bei Fehlern/Timeouts
                     for (int attempt = 1; attempt <= Config.maxRetries; attempt++) {
-                        Logger.log("\uD83D\uDD01 [Retry " + attempt + "/" + Config.maxRetries + "] f\u00fcr " + hotel);
-                        Logger.log("\u23F3 Sende Buchungsanfrage an " + hotel);
+                        Logger.log("[Retry " + attempt + "/" + Config.maxRetries + "] für " + hotel);
+                        Logger.log("Sende Buchungsanfrage an " + hotel);
 
                         try (ZMQ.Socket hotelSocket = context.createSocket(SocketType.REQ)) {
                             hotelSocket.connect("tcp://localhost:" + hotelPort(hotel));
                             hotelSocket.send(msg.toString().getBytes(ZMQ.CHARSET), 0);
 
-                            Logger.log("\uD83D\uDD52 Warte auf Antwort von " + hotel + " (max. " + Config.brokerResponseTimeoutMillis + "ms)...");
+                            Logger.log("Warte auf Antwort von " + hotel + " (max. " + Config.brokerResponseTimeoutMillis + "ms)...");
                             byte[] reply = hotelSocket.recv(Config.brokerResponseTimeoutMillis);
 
+                            // Keine Antwort erhalten (Timeout)
                             if (reply == null) {
-                                Logger.log("\u26A0\uFE0F Timeout bei " + hotel + " nach " + Config.brokerResponseTimeoutMillis + "ms.");
+                                Logger.log("Timeout bei " + hotel + " nach " + Config.brokerResponseTimeoutMillis + "ms.");
                                 if (attempt == Config.maxRetries) {
-                                    Logger.log("\u26D4 Keine Antwort nach " + Config.maxRetries + " Versuchen – Buchung fehlgeschlagen.");
+                                    Logger.log("Keine Antwort nach " + Config.maxRetries + " Versuchen – Buchung fehlgeschlagen.");
                                 }
                                 continue;
                             }
 
+                            // Antwort erhalten
                             String replyStr = new String(reply, ZMQ.CHARSET);
                             if (replyStr.equalsIgnoreCase("confirmed")) {
-                                Logger.log("\u2705 Best\u00e4tigt von " + hotel);
+                                Logger.log("Bestätigt von " + hotel);
                                 confirmed.add(hotel);
                                 hotelSuccess = true;
                                 break;
                             } else if (replyStr.equalsIgnoreCase("rejected")) {
-                                Logger.log("\u274C Buchung abgelehnt von " + hotel);
+                                Logger.log("Buchung abgelehnt von " + hotel);
                                 break;
                             } else if (replyStr.equalsIgnoreCase("dropped")) {
-                                Logger.log("⚠️ Antwort von " + hotel + ": dropped – wird ignoriert, retry folgt.");
-                                // Kein break → Retry läuft weiter
+                                Logger.log("Antwort von " + hotel + ": dropped – wird ignoriert, retry folgt.");
+                                // keine break-Anweisung → Retry wird fortgesetzt
                             } else {
-                                Logger.log("❓ Unerwartete Antwort von " + hotel + ": " + replyStr);
+                                Logger.log("Unerwartete Antwort von " + hotel + ": " + replyStr);
                             }
-                            
                         }
                     }
 
+                    // Wenn Buchung bei diesem Hotel fehlschlägt → Abbruch
                     if (!hotelSuccess) {
                         failed = true;
                         break;
                     }
                 }
 
+                // Wenn ein Hotel fehlschlug → Rollback an alle vorher bestätigten Hotels
                 if (failed) {
                     sendRollback(context, confirmed, customer);
-                    socket.send(("Buchung fehlgeschlagen f\u00fcr " + customer).getBytes(ZMQ.CHARSET), 0);
+                    socket.send(("Buchung fehlgeschlagen für " + customer).getBytes(ZMQ.CHARSET), 0);
                     Statistics.incrementFailed();
                 } else {
-                    socket.send(("Buchung erfolgreich f\u00fcr " + customer).getBytes(ZMQ.CHARSET), 0);
+                    // Erfolg für alle Hotels
+                    socket.send(("Buchung erfolgreich für " + customer).getBytes(ZMQ.CHARSET), 0);
                     Statistics.incrementSuccess();
                 }
 
+                // Statistik ausgeben
                 Statistics.printSummary();
             }
         }
     }
 
+    /**
+     * Prüft, ob zwei gleiche Hotels direkt hintereinander gebucht werden sollen.
+     */
     private static boolean hasConsecutiveDuplicateHotels(List<String> hotels) {
         for (int i = 1; i < hotels.size(); i++) {
             if (hotels.get(i).equals(hotels.get(i - 1))) {
@@ -124,6 +143,9 @@ public class TravelBroker {
         return false;
     }
 
+    /**
+     * Führt Rollback durch für bereits bestätigte Buchungen.
+     */
     private static void sendRollback(ZContext context, List<String> hotels, String customer) {
         for (String hotel : hotels) {
             try (ZMQ.Socket cancel = context.createSocket(SocketType.REQ)) {
@@ -135,24 +157,30 @@ public class TravelBroker {
                 msg.put("bookingId", bookingId);
 
                 cancel.send(msg.toString().getBytes(ZMQ.CHARSET), 0);
-                cancel.recv(0);
-                Logger.log("\u21A9\uFE0F Rollback gesendet an " + hotel);
+                cancel.recv(0); // Warten auf Bestätigung
+                Logger.log("Rollback gesendet an " + hotel);
             }
         }
     }
 
+    /**
+     * Erzeugt zufällige Zeitblöcke (z. B. [15, 16]) für die Buchung.
+     */
     private static List<Integer> generateRandomTimeBlocks() {
         Random rand = new Random();
-        int start = rand.nextInt(98);
+        int start = rand.nextInt(98); // z. B. 0–97
         return Arrays.asList(start, start + 1);
     }
 
+    /**
+     * Gibt den Port für das jeweilige Hotel zurück.
+     */
     private static int hotelPort(String name) {
         return switch (name) {
             case "Hotel-A" -> 5556;
             case "Hotel-B" -> 5557;
             case "Hotel-C" -> 5558;
-            default -> 5559;
+            default -> 5559; // Fallback-Port
         };
     }
 }
