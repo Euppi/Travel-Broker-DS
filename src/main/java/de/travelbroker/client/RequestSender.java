@@ -2,8 +2,8 @@
 
 package de.travelbroker.client;
 
-import org.zeromq.ZContext;
 import org.zeromq.ZMQ;
+import org.zeromq.ZContext;
 
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
@@ -21,36 +21,37 @@ public class RequestSender {
         System.out.println("📤 Starting booking request sender...");
 
         try (ZContext context = new ZContext()) {
-            ZMQ.Socket socket = context.createSocket(ZMQ.REQ);
-            socket.connect("tcp://localhost:5569");
+            try (ZMQ.Socket socket = context.createSocket(ZMQ.REQ)) {
+                socket.connect("tcp://localhost:5569");
 
-            for (String customer : CUSTOMERS) {
-                // zufällige Hotelkombination mit 2 oder 3 Hotels (ohne doppelte)
-                List<String> hotels = new ArrayList<>(HOTELS);
-                Collections.shuffle(hotels);
-                hotels = hotels.subList(0, rand.nextInt(2) + 2); // 2 oder 3 Hotels
+                for (String customer : CUSTOMERS) {
+                    // zufällige Hotelkombination mit 2 oder 3 Hotels (ohne doppelte)
+                    List<String> hotels = new ArrayList<>(HOTELS);
+                    Collections.shuffle(hotels);
+                    hotels = hotels.subList(0, rand.nextInt(2) + 2); // 2 oder 3 Hotels
 
-                // In 10% der Fälle füge ein doppeltes Hotel ein (zum Testen der Duplikatprüfung)
-                if (rand.nextDouble() < 0.1) {
-                    hotels.add(hotels.get(0));
+                    // In 10% der Fälle ein doppeltes Hotel einfügen
+                    if (rand.nextDouble() < 0.1) {
+                        hotels.add(hotels.get(0));
+                    }
+
+                    String request = customer + ":" + String.join(",", hotels);
+                    log("📨 Sending booking for: " + customer);
+                    socket.send(request.getBytes(ZMQ.CHARSET), 0);
+
+                    byte[] replyBytes = socket.recv(3000); // 3s Timeout
+                    if (replyBytes != null) {
+                        String reply = new String(replyBytes, ZMQ.CHARSET);
+                        log("📥 Reply from broker: " + reply);
+                    } else {
+                        log("⚠️ No reply from broker (timeout)");
+                    }
+
+                    Thread.sleep(1000); // 1 Sekunde warten
                 }
 
-                String request = customer + ":" + String.join(",", hotels);
-                log("📨 Sending booking for: " + customer);
-                socket.send(request.getBytes(ZMQ.CHARSET), 0);
-
-                byte[] replyBytes = socket.recv(3000); // 3s Timeout
-                if (replyBytes != null) {
-                    String reply = new String(replyBytes, ZMQ.CHARSET);
-                    log("📥 Reply from broker: " + reply);
-                } else {
-                    log("⚠️ No reply from broker (timeout)");
-                }
-
-                Thread.sleep(1000); // Warte 1 Sekunde bis zur nächsten Anfrage
+                log("✅ Alle Buchungen abgeschlossen.");
             }
-
-            log("✅ Alle Buchungen abgeschlossen.");
         }
     }
 
