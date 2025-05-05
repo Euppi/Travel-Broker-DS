@@ -1,3 +1,5 @@
+// src/main/java/de/travelbroker/hotel/HotelService.java
+
 package de.travelbroker.hotel;
 
 import org.json.JSONArray;
@@ -21,9 +23,13 @@ public class HotelService {
 
     public static void main(String[] args) {
         String hotelName = args.length > 0 ? args[0] : "Hotel-A";
-        int port = hotelName.equals("Hotel-A") ? 5556 : hotelName.equals("Hotel-B") ? 5557 : 5558;
+        int port = switch (hotelName) {
+            case "Hotel-A" -> 5556;
+            case "Hotel-B" -> 5557;
+            case "Hotel-C" -> 5558;
+            default -> throw new IllegalArgumentException("Unbekannter Hotelname: " + hotelName);
+        };
 
-        // Nur noch config.json laden
         Config.loadConfig("src/main/resources/config.json");
 
         try (ZContext context = new ZContext()) {
@@ -36,10 +42,9 @@ public class HotelService {
                 String request = receiver.recvStr();
                 if (request == null) continue;
 
-                System.out.println(hotelName + " received: " + request);
+                System.out.println("📨 [" + hotelName + "] received: " + request);
                 simulateDelay();
 
-                // --- Rollback-Nachricht erkennen ---
                 if (request.contains("\"action\":\"cancel\"")) {
                     String bookingId = extractBookingId(request);
                     cancelBooking(bookingId);
@@ -47,45 +52,47 @@ public class HotelService {
                     continue;
                 }
 
-                // --- Buchung simulieren ---
                 double chance = rand.nextDouble();
+                System.out.println("🔍 [" + hotelName + "] Zufallswert (Fehlersimulation): " + chance);
 
                 if (chance < Config.hotelErrorRate) {
-                    System.out.println("⚠️ Simulated crash: no response.");
+                    System.out.println("⚠️ [" + hotelName + "] Simulated crash: no response.");
                     continue;
                 } else if (chance < Config.hotelErrorRate + Config.hotelTimeoutRate) {
-                    System.out.println("⚠️ Simulated drop: process without confirmation.");
+                    System.out.println("⚠️ [" + hotelName + "] Simulated drop: process without confirmation.");
+                    receiver.send("dropped"); // Wichtig: trotzdem eine Antwort senden
                     continue;
-                } else if (chance < Config.hotelErrorRate + Config.hotelTimeoutRate + (1.0 - Config.noRoomAvailableRate)) {
-                    System.out.println("✅ Prüfe Verfügbarkeit der Zeitblöcke...");
+                }
+                
 
-                    String bookingId = extractBookingId(request);
-                    JSONObject obj = new JSONObject(request);
-                    JSONArray jsonBlocks = obj.getJSONArray("timeBlocks");
-                    List<Integer> blocks = new ArrayList<>();
-                    for (int i = 0; i < jsonBlocks.length(); i++) {
-                        blocks.add(jsonBlocks.getInt(i));
+                System.out.println("✅ [" + hotelName + "] Prüfe Verfügbarkeit der Zeitblöcke...");
+
+                String bookingId = extractBookingId(request);
+                JSONObject obj = new JSONObject(request);
+                JSONArray jsonBlocks = obj.getJSONArray("timeBlocks");
+                List<Integer> blocks = new ArrayList<>();
+                for (int i = 0; i < jsonBlocks.length(); i++) {
+                    blocks.add(jsonBlocks.getInt(i));
+                }
+
+                boolean allAvailable = true;
+                for (int block : blocks) {
+                    if (availability[block] <= 0) {
+                        allAvailable = false;
+                        break;
                     }
+                }
 
-                    boolean allAvailable = true;
+                if (allAvailable) {
                     for (int block : blocks) {
-                        if (availability[block] <= 0) {
-                            allAvailable = false;
-                            break;
-                        }
+                        availability[block]--;
                     }
-
-                    if (allAvailable) {
-                        for (int block : blocks) {
-                            availability[block]--;
-                        }
-                        activeBookings.put(bookingId, new Booking(bookingId, blocks));
-                        System.out.println("✅ Booking successful.");
-                        receiver.send("confirmed");
-                    } else {
-                        System.out.println("❌ No rooms available.");
-                        receiver.send("rejected");
-                    }
+                    activeBookings.put(bookingId, new Booking(bookingId, blocks));
+                    System.out.println("✅ [" + hotelName + "] Booking successful for: " + bookingId);
+                    receiver.send("confirmed");
+                } else {
+                    System.out.println("❌ [" + hotelName + "] No rooms available for: " + bookingId);
+                    receiver.send("rejected");
                 }
             }
         }
@@ -115,12 +122,11 @@ public class HotelService {
         try {
             Thread.sleep(delay);
         } catch (InterruptedException e) {
-            System.out.println("Interrupted during delay.");
+            System.out.println("⚠️ Interrupted during delay.");
             Thread.currentThread().interrupt();
         }
     }
 
-    // Hilfsklasse für Buchungen
     private static class Booking {
         List<Integer> timeBlocks;
 

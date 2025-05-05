@@ -1,7 +1,8 @@
 {
   "hotelErrorRate": 0.0,
-  "hotelTimeoutRate": 0.0,
-  "noRoomAvailableRate": 0.0,
-  "bookingDelayMillis": 700,
-  "maxRetries": 5
+  "hotelTimeoutRate": 0.1,
+  "noRoomAvailableRate": 0.1,
+  "bookingDelayMillis": 300,
+  "brokerResponseTimeoutMillis": 1500,
+  "maxRetries": 3
 }
