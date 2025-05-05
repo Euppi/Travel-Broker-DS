@@ -104,24 +104,10 @@ IN the following theare are the
 | \[Add Name] | Test client and data generator      |
 | \[Add Name] | Documentation and setup scripts     |
 
----
-
-## 📝 Declaration of Originality
-
-> We hereby declare that this project was completed independently without unauthorized help. All sources are clearly referenced.
-
----
-
-## 📺 Demo Video
-
-📎 \[Add YouTube/Drive link here]
 
 ---
 
 ## License
 
 This project is for educational use only.
-
-```
-
 ---
