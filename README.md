@@ -64,9 +64,9 @@ Edit `src/main/resources/config.json` to adjust the simulation:
 
 This lets you control:
 
-* Technical failures (timeouts or drops)
+* Technicael failures (timeouts or drops)
 * Business failures (no rooms available)
-* Response times and retry behavior
+* Response teims and retry behavior
 
 ---
 
@@ -84,30 +84,12 @@ IN the following theare are the
 
 ---
 
-## 🧠 Learning Goals
-
-* Understand the **SAGA pattern** for distributed transactions
-* Use **ZeroMQ** for asynchronous messaging
-* Simulate and handle **technical and business failures**
-* Implement **retry and rollback logic**
-* Practice **concurrent service orchestration**
-
----
-
-## 📜 Authors & Contribution
+## 📜 Authors & Contribution 
 
 | Name        | Responsibility                      |
 | ----------- | ----------------------------------- |
-| \[Add Name] | HotelService implementation         |
-| \[Add Name] | TravelBroker logic and coordination |
-| \[Add Name] | Retry and Timeout handling          |
-| \[Add Name] | Test client and data generator      |
-| \[Add Name] | Documentation and setup scripts     |
-
-
----
-
-## License
-
-This project is for educational use only.
----
+| \Alexander K. | HotelService implementation         |
+| \Merle N. | TravelBroker logic and coordination |
+| \Bent P. | Retry and Timeout handling          |
+| \Eric U. | Test client and data generator      |
+| \Louis S. | Documentation and setup scripts     |
