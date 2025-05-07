@@ -21,10 +21,10 @@ public class Statistics {
     }
 
     public static void printSummary() {
-        Logger.log("📊 Booking Summary:");
+        Logger.log("Booking Summary:");
         Logger.log("Total Requests: " + total);
-        Logger.log("✅ Successful:   " + success);
-        Logger.log("❌ Failed:       " + failed);
+        Logger.log("Successful:   " + success);
+        Logger.log("Failed:       " + failed);
         Logger.log("Success Rate:   " + (total > 0 ? (success * 100 / total) + "%" : "N/A"));
     }
 }

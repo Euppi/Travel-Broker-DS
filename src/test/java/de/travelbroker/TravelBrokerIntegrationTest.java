@@ -24,7 +24,7 @@ public class TravelBrokerIntegrationTest {
 
     @BeforeAll
     public void setup() throws InterruptedException {
-        System.out.println("🔧 Starte HotelServices...");
+        System.out.println("Starting HotelServices...");
 
         for (String hotel : List.of("Hotel-A", "Hotel-B", "Hotel-C")) {
             Thread serviceThread = new Thread(() -> HotelService.main(new String[]{hotel}), hotel + "-Service");
@@ -33,12 +33,12 @@ public class TravelBrokerIntegrationTest {
             Thread.sleep(500); // kleine Pause zwischen Starts
         }
 
-        System.out.println("🔧 Starte TravelBroker...");
+        System.out.println("Starting TravelBroker...");
         Thread brokerThread = new Thread(() -> {
             try {
                 TravelBroker.main(new String[0]);
             } catch (Exception e) {
-                throw new RuntimeException("Broker konnte nicht gestartet werden", e);
+                throw new RuntimeException("Broker could not be started", e);
             }
         }, "TravelBroker-Thread");
         brokerThread.start();
@@ -51,12 +51,12 @@ public class TravelBrokerIntegrationTest {
         socket = context.createSocket(SocketType.REQ);
         socket.connect("tcp://localhost:5569");
 
-        System.out.println("✅ Setup abgeschlossen.");
+        System.out.println("ZeroMQ abgeschlossen.");
     }
 
     @AfterAll
     public void teardown() {
-        System.out.println("🧹 Stoppe Dienste...");
+        System.out.println("Stoppe Dienste...");
         if (socket != null) socket.close();
         if (context != null) context.close();
 
@@ -66,7 +66,7 @@ public class TravelBrokerIntegrationTest {
             }
         }
 
-        System.out.println("✅ Testumgebung beendet.");
+        System.out.println("Testing environment stopped");
     }
 
     private String sendBookingRequest(String customer, List<String> hotels) {
@@ -75,12 +75,12 @@ public class TravelBrokerIntegrationTest {
             threadSocket.connect("tcp://localhost:5569");
     
             String payload = customer + ":" + String.join(",", hotels);
-            System.out.println("➡️  [" + customer + "] Sende Buchung: " + payload);
+            System.out.println(" [" + customer + "] Sende Buchung: " + payload);
             threadSocket.send(payload.getBytes(StandardCharsets.UTF_8), 0);
     
             byte[] replyBytes = threadSocket.recv(0);
             String response = new String(replyBytes, StandardCharsets.UTF_8);
-            System.out.println("⬅️  [" + customer + "] Antwort: " + response);
+            System.out.println("  [" + customer + "] Antwort: " + response);
             return response;
         }
     }
@@ -90,28 +90,28 @@ public class TravelBrokerIntegrationTest {
     public void testValidBookingAccepted() {
         String response = sendBookingRequest("Alice", List.of("Hotel-A", "Hotel-B", "Hotel-C"));
         assertTrue(response.contains("erfolgreich") || response.contains("fehlgeschlagen"),
-                "Antwort sollte Erfolg oder Misserfolg anzeigen");
+                "Answer should show success or failure");
     }
 
     @Test
     public void testInvalidBookingRejected_DuplicateConsecutiveHotels() {
         String response = sendBookingRequest("Bob", List.of("Hotel-B", "Hotel-B", "Hotel-C"));
         assertTrue(response.contains("gleiches Hotel"),
-                "Gleiche Hotels direkt nacheinander müssen abgelehnt werden");
+                "Same Hotels directly have to be declined");
     }
 
     @Test
     public void testValidBookingWithRepeatsNotConsecutive() {
         String response = sendBookingRequest("Clara", List.of("Hotel-C", "Hotel-A", "Hotel-C"));
         assertTrue(response.contains("erfolgreich") || response.contains("fehlgeschlagen"),
-                "Antwort sollte Erfolg oder Misserfolg anzeigen");
+                "Answer should show success or failure");
     }
 
     @Test
     public void testInvalidBookingRejected_TwoSameHotels() {
         String response = sendBookingRequest("David", List.of("Hotel-A", "Hotel-A"));
         assertTrue(response.contains("gleiches Hotel"),
-                "Gleiche Hotels direkt nacheinander müssen abgelehnt werden");
+                "Same Hotels directly have to be declined");
     }
 
     @Test

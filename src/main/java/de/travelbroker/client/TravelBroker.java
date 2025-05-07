@@ -34,7 +34,7 @@ public class TravelBroker {
                 if (requestBytes == null) continue;
 
                 String request = new String(requestBytes, ZMQ.CHARSET);
-                Logger.log("📬 Anfrage empfangen: " + request);
+                Logger.log("Anfrage empfangen: " + request);
                 Statistics.incrementTotal();
 
                 // Anfrage aufsplitten in Kunde und Hotelliste

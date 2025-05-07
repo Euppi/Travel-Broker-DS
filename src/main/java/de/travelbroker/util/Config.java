@@ -25,9 +25,9 @@ public class Config {
             bookingDelayMillis = config.bookingDelayMillis;
             maxRetries = config.maxRetries;
             brokerResponseTimeoutMillis = config.brokerResponseTimeoutMillis; // NEU
-            System.out.println("✅ Konfiguration geladen aus: " + path);
+            System.out.println("Configuration loaded from: " + path);
         } catch (IOException e) {
-            System.out.println("⚠️ Konfiguration konnte nicht geladen werden – Standardwerte werden verwendet.");
+            System.out.println("Configuration could not be loaded: Setting default values.");
         }
     }
 

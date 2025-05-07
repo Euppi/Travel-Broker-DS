@@ -70,7 +70,7 @@ public class RequestSender {
                     Thread.sleep(1000);
                 }
 
-                log("Alle Buchungen abgeschlossen.");
+                log("All Bookings sucessful.");
             }
         }
     }

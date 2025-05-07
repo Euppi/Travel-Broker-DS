@@ -26,7 +26,7 @@ public class Logger {
                 fw.write(fullMessage + System.lineSeparator());
             }
         } catch (IOException e) {
-            System.out.println("⚠️ Logger failed: " + e.getMessage());
+            System.out.println("Logger failed: " + e.getMessage());
         }
     }
 }
