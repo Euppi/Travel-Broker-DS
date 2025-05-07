@@ -44,7 +44,7 @@ public class TravelBroker {
 
                 // Prüfe auf direkt aufeinanderfolgende doppelte Hotels
                 if (hasConsecutiveDuplicateHotels(hotels)) {
-                    String msg = "Ungültige Buchung von " + customer + ": gleiches Hotel kommt doppelt hintereinander vor.";
+                    String msg = "Invalid Booking of " + customer + ": same Hotel appears twice.";
                     Logger.log(msg);
                     socket.send(msg.getBytes(ZMQ.CHARSET), 0);
                     Statistics.incrementFailed();
@@ -70,20 +70,20 @@ public class TravelBroker {
                     // Wiederholungsversuche bei Fehlern/Timeouts
                     for (int attempt = 1; attempt <= Config.maxRetries; attempt++) {
                         Logger.log("[Retry " + attempt + "/" + Config.maxRetries + "] für " + hotel);
-                        Logger.log("Sende Buchungsanfrage an " + hotel);
+                        Logger.log("Sending Booking request to " + hotel);
 
                         try (ZMQ.Socket hotelSocket = context.createSocket(SocketType.REQ)) {
                             hotelSocket.connect("tcp://localhost:" + hotelPort(hotel));
                             hotelSocket.send(msg.toString().getBytes(ZMQ.CHARSET), 0);
 
-                            Logger.log("Warte auf Antwort von " + hotel + " (max. " + Config.brokerResponseTimeoutMillis + "ms)...");
+                            Logger.log("Waiting for answer from " + hotel + " (max. " + Config.brokerResponseTimeoutMillis + "ms)...");
                             byte[] reply = hotelSocket.recv(Config.brokerResponseTimeoutMillis);
 
                             // Keine Antwort erhalten (Timeout)
                             if (reply == null) {
                                 Logger.log("Timeout bei " + hotel + " nach " + Config.brokerResponseTimeoutMillis + "ms.");
                                 if (attempt == Config.maxRetries) {
-                                    Logger.log("Keine Antwort nach " + Config.maxRetries + " Versuchen – Buchung fehlgeschlagen.");
+                                    Logger.log("No Answer after " + Config.maxRetries + " Tries – Booking failed.");
                                 }
                                 continue;
                             }
@@ -91,18 +91,18 @@ public class TravelBroker {
                             // Antwort erhalten
                             String replyStr = new String(reply, ZMQ.CHARSET);
                             if (replyStr.equalsIgnoreCase("confirmed")) {
-                                Logger.log("Bestätigt von " + hotel);
+                                Logger.log("Confirmed from " + hotel);
                                 confirmed.add(hotel);
                                 hotelSuccess = true;
                                 break;
                             } else if (replyStr.equalsIgnoreCase("rejected")) {
-                                Logger.log("Buchung abgelehnt von " + hotel);
+                                Logger.log("Booking rejected from " + hotel);
                                 break;
                             } else if (replyStr.equalsIgnoreCase("dropped")) {
-                                Logger.log("Antwort von " + hotel + ": dropped – wird ignoriert, retry folgt.");
+                                Logger.log("Answer from " + hotel + ": dropped – ignoring, retry follows.");
                                 // keine break-Anweisung → Retry wird fortgesetzt
                             } else {
-                                Logger.log("Unerwartete Antwort von " + hotel + ": " + replyStr);
+                                Logger.log("Unexpected Answer from " + hotel + ": " + replyStr);
                             }
                         }
                     }
@@ -117,11 +117,11 @@ public class TravelBroker {
                 // Wenn ein Hotel fehlschlug → Rollback an alle vorher bestätigten Hotels
                 if (failed) {
                     sendRollback(context, confirmed, customer);
-                    socket.send(("Buchung fehlgeschlagen für " + customer).getBytes(ZMQ.CHARSET), 0);
+                    socket.send(("Booking failed for " + customer).getBytes(ZMQ.CHARSET), 0);
                     Statistics.incrementFailed();
                 } else {
                     // Erfolg für alle Hotels
-                    socket.send(("Buchung erfolgreich für " + customer).getBytes(ZMQ.CHARSET), 0);
+                    socket.send(("Booking successful for " + customer).getBytes(ZMQ.CHARSET), 0);
                     Statistics.incrementSuccess();
                 }
 
@@ -158,7 +158,7 @@ public class TravelBroker {
 
                 cancel.send(msg.toString().getBytes(ZMQ.CHARSET), 0);
                 cancel.recv(0); // Warten auf Bestätigung
-                Logger.log("Rollback gesendet an " + hotel);
+                Logger.log("Rollback sent to " + hotel);
             }
         }
     }

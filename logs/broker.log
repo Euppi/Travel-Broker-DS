@@ -1,1206 +1,232 @@
-[2025-05-05 10:02:15] 🧠 TravelBroker bereit und wartet auf Anfragen auf Port 5569...
-[2025-05-05 10:02:18] 📥 Anfrage empfangen: User2:Hotel-A,Hotel-B,Hotel-C
-[2025-05-05 10:02:18] ⏳ Versuche Buchung bei Hotel-A (Versuch 1)
-[2025-05-05 10:02:19] ✅ Bestätigt von Hotel-A
-[2025-05-05 10:02:19] ⏳ Versuche Buchung bei Hotel-B (Versuch 1)
-[2025-05-05 10:02:20] ✅ Bestätigt von Hotel-B
-[2025-05-05 10:02:20] ⏳ Versuche Buchung bei Hotel-C (Versuch 1)
-[2025-05-05 10:05:35] 🧠 TravelBroker bereit und wartet auf Anfragen auf Port 5569...
-[2025-05-05 10:05:38] 📥 Anfrage empfangen: User3:Hotel-A,Hotel-B,Hotel-C
-[2025-05-05 10:05:38] 🔁 [Retry 1/5] für Hotel-A
-[2025-05-05 10:05:38] ⏳ Sende Buchungsanfrage an Hotel-A
-[2025-05-05 10:05:38] 🕒 Warte auf Antwort von Hotel-A (max. 2s)...
-[2025-05-05 10:05:39] ✅ Bestätigt von Hotel-A
-[2025-05-05 10:05:39] 🔁 [Retry 1/5] für Hotel-B
-[2025-05-05 10:05:39] ⏳ Sende Buchungsanfrage an Hotel-B
-[2025-05-05 10:05:39] 🕒 Warte auf Antwort von Hotel-B (max. 2s)...
-[2025-05-05 10:07:27] 🧠 TravelBroker bereit und wartet auf Anfragen auf Port 5569...
-[2025-05-05 10:07:30] 📥 Anfrage empfangen: User2:Hotel-A,Hotel-B,Hotel-C
-[2025-05-05 10:07:30] 🔁 [Retry 1/5] für Hotel-A
-[2025-05-05 10:07:30] ⏳ Sende Buchungsanfrage an Hotel-A
-[2025-05-05 10:07:30] 🕒 Warte auf Antwort von Hotel-A (max. 1000ms)...
-[2025-05-05 10:07:30] ✅ Bestätigt von Hotel-A
-[2025-05-05 10:07:30] 🔁 [Retry 1/5] für Hotel-B
-[2025-05-05 10:07:30] ⏳ Sende Buchungsanfrage an Hotel-B
-[2025-05-05 10:07:30] 🕒 Warte auf Antwort von Hotel-B (max. 1000ms)...
-[2025-05-05 10:07:31] ✅ Bestätigt von Hotel-B
-[2025-05-05 10:07:31] 🔁 [Retry 1/5] für Hotel-C
-[2025-05-05 10:07:31] ⏳ Sende Buchungsanfrage an Hotel-C
-[2025-05-05 10:07:31] 🕒 Warte auf Antwort von Hotel-C (max. 1000ms)...
-[2025-05-05 10:08:45] 🧠 TravelBroker bereit und wartet auf Anfragen auf Port 5569...
-[2025-05-05 10:08:48] 📥 Anfrage empfangen: User1:Hotel-A,Hotel-B,Hotel-C
-[2025-05-05 10:08:48] 🔁 [Retry 1/5] für Hotel-A
-[2025-05-05 10:08:48] ⏳ Sende Buchungsanfrage an Hotel-A
-[2025-05-05 10:08:48] 🕒 Warte auf Antwort von Hotel-A (max. 1000ms)...
-[2025-05-05 10:08:48] ✅ Bestätigt von Hotel-A
-[2025-05-05 10:08:48] 🔁 [Retry 1/5] für Hotel-B
-[2025-05-05 10:08:48] ⏳ Sende Buchungsanfrage an Hotel-B
-[2025-05-05 10:08:48] 🕒 Warte auf Antwort von Hotel-B (max. 1000ms)...
-[2025-05-05 10:08:48] ✅ Bestätigt von Hotel-B
-[2025-05-05 10:08:48] 🔁 [Retry 1/5] für Hotel-C
-[2025-05-05 10:08:48] ⏳ Sende Buchungsanfrage an Hotel-C
-[2025-05-05 10:08:48] 🕒 Warte auf Antwort von Hotel-C (max. 1000ms)...
-[2025-05-05 10:10:59] 🧠 TravelBroker bereit und wartet auf Anfragen auf Port 5569...
-[2025-05-05 10:11:02] 📥 Anfrage empfangen: User1:Hotel-A,Hotel-B,Hotel-C
-[2025-05-05 10:11:02] 🔁 [Retry 1/5] für Hotel-A
-[2025-05-05 10:11:02] ⏳ Sende Buchungsanfrage an Hotel-A
-[2025-05-05 10:11:02] 🕒 Warte auf Antwort von Hotel-A (max. 1000ms)...
-[2025-05-05 10:11:03] ✅ Bestätigt von Hotel-A
-[2025-05-05 10:11:03] 🔁 [Retry 1/5] für Hotel-B
-[2025-05-05 10:11:03] ⏳ Sende Buchungsanfrage an Hotel-B
-[2025-05-05 10:11:03] 🕒 Warte auf Antwort von Hotel-B (max. 1000ms)...
-[2025-05-05 10:11:04] ✅ Bestätigt von Hotel-B
-[2025-05-05 10:11:04] 🔁 [Retry 1/5] für Hotel-C
-[2025-05-05 10:11:04] ⏳ Sende Buchungsanfrage an Hotel-C
-[2025-05-05 10:11:04] 🕒 Warte auf Antwort von Hotel-C (max. 1000ms)...
-[2025-05-05 10:11:04] ✅ Bestätigt von Hotel-C
-[2025-05-05 10:11:04] 📊 Booking Summary:
-[2025-05-05 10:11:04] Total Requests: 1
-[2025-05-05 10:11:04] ✅ Successful:   1
-[2025-05-05 10:11:04] ❌ Failed:       0
-[2025-05-05 10:11:04] Success Rate:   100%
-[2025-05-05 10:11:04] 📥 Anfrage empfangen: User8:Hotel-A,Hotel-B,Hotel-C
-[2025-05-05 10:11:04] 🔁 [Retry 1/5] für Hotel-A
-[2025-05-05 10:11:04] ⏳ Sende Buchungsanfrage an Hotel-A
-[2025-05-05 10:11:04] 🕒 Warte auf Antwort von Hotel-A (max. 1000ms)...
-[2025-05-05 10:13:04] 🧠 TravelBroker bereit und wartet auf Anfragen auf Port 5569...
-[2025-05-05 10:13:07] 📬 Anfrage empfangen: User5:Hotel-A,Hotel-B,Hotel-C
-[2025-05-05 10:13:07] 🔁 [Retry 1/5] für Hotel-A
-[2025-05-05 10:13:07] ⏳ Sende Buchungsanfrage an Hotel-A
-[2025-05-05 10:13:07] 🕒 Warte auf Antwort von Hotel-A (max. 1000ms)...
-[2025-05-05 10:16:13] 🧠 TravelBroker bereit und wartet auf Anfragen auf Port 5569...
-[2025-05-05 10:16:16] 📬 Anfrage empfangen: User2:Hotel-A,Hotel-B,Hotel-C
-[2025-05-05 10:16:16] 🔁 [Retry 1/3] für Hotel-A
-[2025-05-05 10:16:16] ⏳ Sende Buchungsanfrage an Hotel-A
-[2025-05-05 10:16:16] 🕒 Warte auf Antwort von Hotel-A (max. 1500ms)...
-[2025-05-05 10:16:17] ✅ Bestätigt von Hotel-A
-[2025-05-05 10:16:17] 🔁 [Retry 1/3] für Hotel-B
-[2025-05-05 10:16:17] ⏳ Sende Buchungsanfrage an Hotel-B
-[2025-05-05 10:16:17] 🕒 Warte auf Antwort von Hotel-B (max. 1500ms)...
-[2025-05-05 10:16:17] ✅ Bestätigt von Hotel-B
-[2025-05-05 10:16:17] 🔁 [Retry 1/3] für Hotel-C
-[2025-05-05 10:16:17] ⏳ Sende Buchungsanfrage an Hotel-C
-[2025-05-05 10:16:17] 🕒 Warte auf Antwort von Hotel-C (max. 1500ms)...
-[2025-05-05 10:16:17] ✅ Bestätigt von Hotel-C
-[2025-05-05 10:16:17] 📊 Booking Summary:
-[2025-05-05 10:16:17] Total Requests: 1
-[2025-05-05 10:16:17] ✅ Successful:   1
-[2025-05-05 10:16:17] ❌ Failed:       0
-[2025-05-05 10:16:17] Success Rate:   100%
-[2025-05-05 10:16:17] 📬 Anfrage empfangen: User7:Hotel-A,Hotel-B,Hotel-C
-[2025-05-05 10:16:17] 🔁 [Retry 1/3] für Hotel-A
-[2025-05-05 10:16:17] ⏳ Sende Buchungsanfrage an Hotel-A
-[2025-05-05 10:16:17] 🕒 Warte auf Antwort von Hotel-A (max. 1500ms)...
-[2025-05-05 10:16:18] ✅ Bestätigt von Hotel-A
-[2025-05-05 10:16:18] 🔁 [Retry 1/3] für Hotel-B
-[2025-05-05 10:16:18] ⏳ Sende Buchungsanfrage an Hotel-B
-[2025-05-05 10:16:18] 🕒 Warte auf Antwort von Hotel-B (max. 1500ms)...
-[2025-05-05 10:16:18] ✅ Bestätigt von Hotel-B
-[2025-05-05 10:16:18] 🔁 [Retry 1/3] für Hotel-C
-[2025-05-05 10:16:18] ⏳ Sende Buchungsanfrage an Hotel-C
-[2025-05-05 10:16:18] 🕒 Warte auf Antwort von Hotel-C (max. 1500ms)...
-[2025-05-05 10:16:18] ✅ Bestätigt von Hotel-C
-[2025-05-05 10:16:18] 📊 Booking Summary:
-[2025-05-05 10:16:18] Total Requests: 2
-[2025-05-05 10:16:18] ✅ Successful:   2
-[2025-05-05 10:16:18] ❌ Failed:       0
-[2025-05-05 10:16:18] Success Rate:   100%
-[2025-05-05 10:16:18] 📬 Anfrage empfangen: User3:Hotel-A,Hotel-B,Hotel-C
-[2025-05-05 10:16:18] 🔁 [Retry 1/3] für Hotel-A
-[2025-05-05 10:16:18] ⏳ Sende Buchungsanfrage an Hotel-A
-[2025-05-05 10:16:18] 🕒 Warte auf Antwort von Hotel-A (max. 1500ms)...
-[2025-05-05 10:16:18] ✅ Bestätigt von Hotel-A
-[2025-05-05 10:16:18] 🔁 [Retry 1/3] für Hotel-B
-[2025-05-05 10:16:18] ⏳ Sende Buchungsanfrage an Hotel-B
-[2025-05-05 10:16:18] 🕒 Warte auf Antwort von Hotel-B (max. 1500ms)...
-[2025-05-05 10:16:18] ✅ Bestätigt von Hotel-B
-[2025-05-05 10:16:18] 🔁 [Retry 1/3] für Hotel-C
-[2025-05-05 10:16:18] ⏳ Sende Buchungsanfrage an Hotel-C
-[2025-05-05 10:16:18] 🕒 Warte auf Antwort von Hotel-C (max. 1500ms)...
-[2025-05-05 10:20:42] 🧠 TravelBroker bereit und wartet auf Anfragen auf Port 5569...
-[2025-05-05 10:20:45] 📬 Anfrage empfangen: User2:Hotel-A,Hotel-B,Hotel-C
-[2025-05-05 10:20:45] 🔁 [Retry 1/3] für Hotel-A
-[2025-05-05 10:20:45] ⏳ Sende Buchungsanfrage an Hotel-A
-[2025-05-05 10:20:45] 🕒 Warte auf Antwort von Hotel-A (max. 1500ms)...
-[2025-05-05 10:20:45] ✅ Bestätigt von Hotel-A
-[2025-05-05 10:20:45] 🔁 [Retry 1/3] für Hotel-B
-[2025-05-05 10:20:45] ⏳ Sende Buchungsanfrage an Hotel-B
-[2025-05-05 10:20:45] 🕒 Warte auf Antwort von Hotel-B (max. 1500ms)...
-[2025-05-05 10:20:46] ✅ Bestätigt von Hotel-B
-[2025-05-05 10:20:46] 🔁 [Retry 1/3] für Hotel-C
-[2025-05-05 10:20:46] ⏳ Sende Buchungsanfrage an Hotel-C
-[2025-05-05 10:20:46] 🕒 Warte auf Antwort von Hotel-C (max. 1500ms)...
-[2025-05-05 10:20:47] ✅ Bestätigt von Hotel-C
-[2025-05-05 10:20:47] 📊 Booking Summary:
-[2025-05-05 10:20:47] Total Requests: 1
-[2025-05-05 10:20:47] ✅ Successful:   1
-[2025-05-05 10:20:47] ❌ Failed:       0
-[2025-05-05 10:20:47] Success Rate:   100%
-[2025-05-05 10:20:47] 📬 Anfrage empfangen: User10:Hotel-A,Hotel-B,Hotel-C
-[2025-05-05 10:20:47] 🔁 [Retry 1/3] für Hotel-A
-[2025-05-05 10:20:47] ⏳ Sende Buchungsanfrage an Hotel-A
-[2025-05-05 10:20:47] 🕒 Warte auf Antwort von Hotel-A (max. 1500ms)...
-[2025-05-05 10:20:47] ✅ Bestätigt von Hotel-A
-[2025-05-05 10:20:47] 🔁 [Retry 1/3] für Hotel-B
-[2025-05-05 10:20:47] ⏳ Sende Buchungsanfrage an Hotel-B
-[2025-05-05 10:20:47] 🕒 Warte auf Antwort von Hotel-B (max. 1500ms)...
-[2025-05-05 10:20:48] ⚠️ Antwort von Hotel-B: dropped – wird ignoriert, retry folgt.
-[2025-05-05 10:20:48] 🔁 [Retry 2/3] für Hotel-B
-[2025-05-05 10:20:48] ⏳ Sende Buchungsanfrage an Hotel-B
-[2025-05-05 10:20:48] 🕒 Warte auf Antwort von Hotel-B (max. 1500ms)...
-[2025-05-05 10:20:48] ⚠️ Antwort von Hotel-B: dropped – wird ignoriert, retry folgt.
-[2025-05-05 10:20:48] 🔁 [Retry 3/3] für Hotel-B
-[2025-05-05 10:20:48] ⏳ Sende Buchungsanfrage an Hotel-B
-[2025-05-05 10:20:48] 🕒 Warte auf Antwort von Hotel-B (max. 1500ms)...
-[2025-05-05 10:20:48] ✅ Bestätigt von Hotel-B
-[2025-05-05 10:20:48] 🔁 [Retry 1/3] für Hotel-C
-[2025-05-05 10:20:48] ⏳ Sende Buchungsanfrage an Hotel-C
-[2025-05-05 10:20:48] 🕒 Warte auf Antwort von Hotel-C (max. 1500ms)...
-[2025-05-05 10:20:48] ✅ Bestätigt von Hotel-C
-[2025-05-05 10:20:48] 📊 Booking Summary:
-[2025-05-05 10:20:48] Total Requests: 2
-[2025-05-05 10:20:48] ✅ Successful:   2
-[2025-05-05 10:20:48] ❌ Failed:       0
-[2025-05-05 10:20:48] Success Rate:   100%
-[2025-05-05 10:20:48] 📬 Anfrage empfangen: User7:Hotel-A,Hotel-B,Hotel-C
-[2025-05-05 10:20:48] 🔁 [Retry 1/3] für Hotel-A
-[2025-05-05 10:20:48] ⏳ Sende Buchungsanfrage an Hotel-A
-[2025-05-05 10:20:48] 🕒 Warte auf Antwort von Hotel-A (max. 1500ms)...
-[2025-05-05 10:20:49] ✅ Bestätigt von Hotel-A
-[2025-05-05 10:20:49] 🔁 [Retry 1/3] für Hotel-B
-[2025-05-05 10:20:49] ⏳ Sende Buchungsanfrage an Hotel-B
-[2025-05-05 10:20:49] 🕒 Warte auf Antwort von Hotel-B (max. 1500ms)...
-[2025-05-05 10:20:49] ✅ Bestätigt von Hotel-B
-[2025-05-05 10:20:49] 🔁 [Retry 1/3] für Hotel-C
-[2025-05-05 10:20:49] ⏳ Sende Buchungsanfrage an Hotel-C
-[2025-05-05 10:20:49] 🕒 Warte auf Antwort von Hotel-C (max. 1500ms)...
-[2025-05-05 10:20:49] ✅ Bestätigt von Hotel-C
-[2025-05-05 10:20:49] 📊 Booking Summary:
-[2025-05-05 10:20:49] Total Requests: 3
-[2025-05-05 10:20:49] ✅ Successful:   3
-[2025-05-05 10:20:49] ❌ Failed:       0
-[2025-05-05 10:20:49] Success Rate:   100%
-[2025-05-05 10:20:49] 📬 Anfrage empfangen: User1:Hotel-A,Hotel-B,Hotel-C
-[2025-05-05 10:20:49] 🔁 [Retry 1/3] für Hotel-A
-[2025-05-05 10:20:49] ⏳ Sende Buchungsanfrage an Hotel-A
-[2025-05-05 10:20:49] 🕒 Warte auf Antwort von Hotel-A (max. 1500ms)...
-[2025-05-05 10:20:50] ✅ Bestätigt von Hotel-A
-[2025-05-05 10:20:50] 🔁 [Retry 1/3] für Hotel-B
-[2025-05-05 10:20:50] ⏳ Sende Buchungsanfrage an Hotel-B
-[2025-05-05 10:20:50] 🕒 Warte auf Antwort von Hotel-B (max. 1500ms)...
-[2025-05-05 10:20:50] ✅ Bestätigt von Hotel-B
-[2025-05-05 10:20:50] 🔁 [Retry 1/3] für Hotel-C
-[2025-05-05 10:20:50] ⏳ Sende Buchungsanfrage an Hotel-C
-[2025-05-05 10:20:50] 🕒 Warte auf Antwort von Hotel-C (max. 1500ms)...
-[2025-05-05 10:20:50] ✅ Bestätigt von Hotel-C
-[2025-05-05 10:20:50] 📊 Booking Summary:
-[2025-05-05 10:20:50] Total Requests: 4
-[2025-05-05 10:20:50] ✅ Successful:   4
-[2025-05-05 10:20:50] ❌ Failed:       0
-[2025-05-05 10:20:50] Success Rate:   100%
-[2025-05-05 10:20:50] 📬 Anfrage empfangen: User9:Hotel-A,Hotel-B,Hotel-C
-[2025-05-05 10:20:50] 🔁 [Retry 1/3] für Hotel-A
-[2025-05-05 10:20:50] ⏳ Sende Buchungsanfrage an Hotel-A
-[2025-05-05 10:20:50] 🕒 Warte auf Antwort von Hotel-A (max. 1500ms)...
-[2025-05-05 10:21:21] ⚠️ Antwort von Hotel-A: dropped – wird ignoriert, retry folgt.
-[2025-05-05 10:21:21] 🔁 [Retry 2/3] für Hotel-A
-[2025-05-05 10:21:21] ⏳ Sende Buchungsanfrage an Hotel-A
-[2025-05-05 10:21:21] 🕒 Warte auf Antwort von Hotel-A (max. 1500ms)...
-[2025-05-05 10:21:21] ✅ Bestätigt von Hotel-A
-[2025-05-05 10:21:21] 🔁 [Retry 1/3] für Hotel-B
-[2025-05-05 10:21:21] ⏳ Sende Buchungsanfrage an Hotel-B
-[2025-05-05 10:21:21] 🕒 Warte auf Antwort von Hotel-B (max. 1500ms)...
-[2025-05-05 10:21:21] ✅ Bestätigt von Hotel-B
-[2025-05-05 10:21:21] 🔁 [Retry 1/3] für Hotel-C
-[2025-05-05 10:21:21] ⏳ Sende Buchungsanfrage an Hotel-C
-[2025-05-05 10:21:21] 🕒 Warte auf Antwort von Hotel-C (max. 1500ms)...
-[2025-05-05 10:21:22] ⚠️ Antwort von Hotel-C: dropped – wird ignoriert, retry folgt.
-[2025-05-05 10:21:22] 🔁 [Retry 2/3] für Hotel-C
-[2025-05-05 10:21:22] ⏳ Sende Buchungsanfrage an Hotel-C
-[2025-05-05 10:21:22] 🕒 Warte auf Antwort von Hotel-C (max. 1500ms)...
-[2025-05-05 10:21:22] ❌ Buchung abgelehnt von Hotel-C
-[2025-05-05 10:21:23] ↩️ Rollback gesendet an Hotel-A
-[2025-05-05 10:21:23] ↩️ Rollback gesendet an Hotel-B
-[2025-05-05 10:21:23] 📊 Booking Summary:
-[2025-05-05 10:21:23] Total Requests: 5
-[2025-05-05 10:21:23] ✅ Successful:   4
-[2025-05-05 10:21:23] ❌ Failed:       1
-[2025-05-05 10:21:23] Success Rate:   80%
-[2025-05-05 10:21:23] 📬 Anfrage empfangen: User5:Hotel-A,Hotel-B,Hotel-C
-[2025-05-05 10:21:23] 🔁 [Retry 1/3] für Hotel-A
-[2025-05-05 10:21:23] ⏳ Sende Buchungsanfrage an Hotel-A
-[2025-05-05 10:21:23] 🕒 Warte auf Antwort von Hotel-A (max. 1500ms)...
-[2025-05-05 10:21:23] ✅ Bestätigt von Hotel-A
-[2025-05-05 10:21:23] 🔁 [Retry 1/3] für Hotel-B
-[2025-05-05 10:21:23] ⏳ Sende Buchungsanfrage an Hotel-B
-[2025-05-05 10:21:23] 🕒 Warte auf Antwort von Hotel-B (max. 1500ms)...
-[2025-05-05 10:21:24] ✅ Bestätigt von Hotel-B
-[2025-05-05 10:21:24] 🔁 [Retry 1/3] für Hotel-C
-[2025-05-05 10:21:24] ⏳ Sende Buchungsanfrage an Hotel-C
-[2025-05-05 10:21:24] 🕒 Warte auf Antwort von Hotel-C (max. 1500ms)...
-[2025-05-05 10:21:24] ✅ Bestätigt von Hotel-C
-[2025-05-05 10:21:24] 📊 Booking Summary:
-[2025-05-05 10:21:24] Total Requests: 6
-[2025-05-05 10:21:24] ✅ Successful:   5
-[2025-05-05 10:21:24] ❌ Failed:       1
-[2025-05-05 10:21:24] Success Rate:   83%
-[2025-05-05 10:21:24] 📬 Anfrage empfangen: User6:Hotel-A,Hotel-B,Hotel-C
-[2025-05-05 10:21:24] 🔁 [Retry 1/3] für Hotel-A
-[2025-05-05 10:21:24] ⏳ Sende Buchungsanfrage an Hotel-A
-[2025-05-05 10:21:24] 🕒 Warte auf Antwort von Hotel-A (max. 1500ms)...
-[2025-05-05 10:21:25] ✅ Bestätigt von Hotel-A
-[2025-05-05 10:21:25] 🔁 [Retry 1/3] für Hotel-B
-[2025-05-05 10:21:25] ⏳ Sende Buchungsanfrage an Hotel-B
-[2025-05-05 10:21:25] 🕒 Warte auf Antwort von Hotel-B (max. 1500ms)...
-[2025-05-05 10:21:25] ✅ Bestätigt von Hotel-B
-[2025-05-05 10:21:25] 🔁 [Retry 1/3] für Hotel-C
-[2025-05-05 10:21:25] ⏳ Sende Buchungsanfrage an Hotel-C
-[2025-05-05 10:21:25] 🕒 Warte auf Antwort von Hotel-C (max. 1500ms)...
-[2025-05-05 10:21:25] ✅ Bestätigt von Hotel-C
-[2025-05-05 10:21:25] 📊 Booking Summary:
-[2025-05-05 10:21:25] Total Requests: 7
-[2025-05-05 10:21:25] ✅ Successful:   6
-[2025-05-05 10:21:25] ❌ Failed:       1
-[2025-05-05 10:21:25] Success Rate:   85%
-[2025-05-05 10:21:25] 📬 Anfrage empfangen: User8:Hotel-A,Hotel-B,Hotel-C
-[2025-05-05 10:21:25] 🔁 [Retry 1/3] für Hotel-A
-[2025-05-05 10:21:25] ⏳ Sende Buchungsanfrage an Hotel-A
-[2025-05-05 10:21:25] 🕒 Warte auf Antwort von Hotel-A (max. 1500ms)...
-[2025-05-05 10:21:25] ✅ Bestätigt von Hotel-A
-[2025-05-05 10:21:25] 🔁 [Retry 1/3] für Hotel-B
-[2025-05-05 10:21:25] ⏳ Sende Buchungsanfrage an Hotel-B
-[2025-05-05 10:21:25] 🕒 Warte auf Antwort von Hotel-B (max. 1500ms)...
-[2025-05-05 10:21:26] ✅ Bestätigt von Hotel-B
-[2025-05-05 10:21:26] 🔁 [Retry 1/3] für Hotel-C
-[2025-05-05 10:21:26] ⏳ Sende Buchungsanfrage an Hotel-C
-[2025-05-05 10:21:26] 🕒 Warte auf Antwort von Hotel-C (max. 1500ms)...
-[2025-05-05 10:21:26] ✅ Bestätigt von Hotel-C
-[2025-05-05 10:21:26] 📊 Booking Summary:
-[2025-05-05 10:21:26] Total Requests: 8
-[2025-05-05 10:21:26] ✅ Successful:   7
-[2025-05-05 10:21:26] ❌ Failed:       1
-[2025-05-05 10:21:26] Success Rate:   87%
-[2025-05-05 10:21:26] 📬 Anfrage empfangen: User3:Hotel-A,Hotel-B,Hotel-C
-[2025-05-05 10:21:26] 🔁 [Retry 1/3] für Hotel-A
-[2025-05-05 10:21:26] ⏳ Sende Buchungsanfrage an Hotel-A
-[2025-05-05 10:21:26] 🕒 Warte auf Antwort von Hotel-A (max. 1500ms)...
-[2025-05-05 10:21:27] ✅ Bestätigt von Hotel-A
-[2025-05-05 10:21:27] 🔁 [Retry 1/3] für Hotel-B
-[2025-05-05 10:21:27] ⏳ Sende Buchungsanfrage an Hotel-B
-[2025-05-05 10:21:27] 🕒 Warte auf Antwort von Hotel-B (max. 1500ms)...
-[2025-05-05 10:21:27] ✅ Bestätigt von Hotel-B
-[2025-05-05 10:21:27] 🔁 [Retry 1/3] für Hotel-C
-[2025-05-05 10:21:27] ⏳ Sende Buchungsanfrage an Hotel-C
-[2025-05-05 10:21:27] 🕒 Warte auf Antwort von Hotel-C (max. 1500ms)...
-[2025-05-05 10:21:28] ✅ Bestätigt von Hotel-C
-[2025-05-05 10:21:28] 📊 Booking Summary:
-[2025-05-05 10:21:28] Total Requests: 9
-[2025-05-05 10:21:28] ✅ Successful:   8
-[2025-05-05 10:21:28] ❌ Failed:       1
-[2025-05-05 10:21:28] Success Rate:   88%
-[2025-05-05 10:21:28] 📬 Anfrage empfangen: User4:Hotel-A,Hotel-B,Hotel-C
-[2025-05-05 10:21:28] 🔁 [Retry 1/3] für Hotel-A
-[2025-05-05 10:21:28] ⏳ Sende Buchungsanfrage an Hotel-A
-[2025-05-05 10:21:28] 🕒 Warte auf Antwort von Hotel-A (max. 1500ms)...
-[2025-05-05 10:21:29] ✅ Bestätigt von Hotel-A
-[2025-05-05 10:21:29] 🔁 [Retry 1/3] für Hotel-B
-[2025-05-05 10:21:29] ⏳ Sende Buchungsanfrage an Hotel-B
-[2025-05-05 10:21:29] 🕒 Warte auf Antwort von Hotel-B (max. 1500ms)...
-[2025-05-05 10:21:29] ✅ Bestätigt von Hotel-B
-[2025-05-05 10:21:29] 🔁 [Retry 1/3] für Hotel-C
-[2025-05-05 10:21:29] ⏳ Sende Buchungsanfrage an Hotel-C
-[2025-05-05 10:21:29] 🕒 Warte auf Antwort von Hotel-C (max. 1500ms)...
-[2025-05-05 10:21:29] ❌ Buchung abgelehnt von Hotel-C
-[2025-05-05 10:21:30] ↩️ Rollback gesendet an Hotel-A
-[2025-05-05 10:21:30] ↩️ Rollback gesendet an Hotel-B
-[2025-05-05 10:21:30] 📊 Booking Summary:
-[2025-05-05 10:21:30] Total Requests: 10
-[2025-05-05 10:21:30] ✅ Successful:   8
-[2025-05-05 10:21:30] ❌ Failed:       2
-[2025-05-05 10:21:30] Success Rate:   80%
-[2025-05-05 10:21:30] 📬 Anfrage empfangen: Clara:Hotel-C,Hotel-A,Hotel-C
-[2025-05-05 10:21:30] 🔁 [Retry 1/3] für Hotel-C
-[2025-05-05 10:21:30] ⏳ Sende Buchungsanfrage an Hotel-C
-[2025-05-05 10:21:30] 🕒 Warte auf Antwort von Hotel-C (max. 1500ms)...
-[2025-05-05 10:21:30] ✅ Bestätigt von Hotel-C
-[2025-05-05 10:21:30] 🔁 [Retry 1/3] für Hotel-A
-[2025-05-05 10:21:30] ⏳ Sende Buchungsanfrage an Hotel-A
-[2025-05-05 10:21:30] 🕒 Warte auf Antwort von Hotel-A (max. 1500ms)...
-[2025-05-05 10:21:30] ✅ Bestätigt von Hotel-A
-[2025-05-05 10:21:30] 🔁 [Retry 1/3] für Hotel-C
-[2025-05-05 10:21:30] ⏳ Sende Buchungsanfrage an Hotel-C
-[2025-05-05 10:21:30] 🕒 Warte auf Antwort von Hotel-C (max. 1500ms)...
-[2025-05-05 10:21:31] ✅ Bestätigt von Hotel-C
-[2025-05-05 10:21:31] 📊 Booking Summary:
-[2025-05-05 10:21:31] Total Requests: 11
-[2025-05-05 10:21:31] ✅ Successful:   9
-[2025-05-05 10:21:31] ❌ Failed:       2
-[2025-05-05 10:21:31] Success Rate:   81%
-[2025-05-05 10:21:31] 📬 Anfrage empfangen: David:Hotel-A,Hotel-A
-[2025-05-05 10:21:31] ❌ Ungültige Buchung von David: gleiches Hotel kommt doppelt hintereinander vor.
-[2025-05-05 10:21:31] 📬 Anfrage empfangen: Alice:Hotel-A,Hotel-B,Hotel-C
-[2025-05-05 10:21:31] 🔁 [Retry 1/3] für Hotel-A
-[2025-05-05 10:21:31] ⏳ Sende Buchungsanfrage an Hotel-A
-[2025-05-05 10:21:31] 🕒 Warte auf Antwort von Hotel-A (max. 1500ms)...
-[2025-05-05 10:21:31] ✅ Bestätigt von Hotel-A
-[2025-05-05 10:21:31] 🔁 [Retry 1/3] für Hotel-B
-[2025-05-05 10:21:31] ⏳ Sende Buchungsanfrage an Hotel-B
-[2025-05-05 10:21:31] 🕒 Warte auf Antwort von Hotel-B (max. 1500ms)...
-[2025-05-05 10:21:31] ⚠️ Antwort von Hotel-B: dropped – wird ignoriert, retry folgt.
-[2025-05-05 10:21:31] 🔁 [Retry 2/3] für Hotel-B
-[2025-05-05 10:21:31] ⏳ Sende Buchungsanfrage an Hotel-B
-[2025-05-05 10:21:31] 🕒 Warte auf Antwort von Hotel-B (max. 1500ms)...
-[2025-05-05 10:21:31] ✅ Bestätigt von Hotel-B
-[2025-05-05 10:21:31] 🔁 [Retry 1/3] für Hotel-C
-[2025-05-05 10:21:31] ⏳ Sende Buchungsanfrage an Hotel-C
-[2025-05-05 10:21:31] 🕒 Warte auf Antwort von Hotel-C (max. 1500ms)...
-[2025-05-05 10:21:31] ✅ Bestätigt von Hotel-C
-[2025-05-05 10:21:31] 📊 Booking Summary:
-[2025-05-05 10:21:31] Total Requests: 13
-[2025-05-05 10:21:31] ✅ Successful:   10
-[2025-05-05 10:21:31] ❌ Failed:       3
-[2025-05-05 10:21:31] Success Rate:   76%
-[2025-05-05 10:21:31] 📬 Anfrage empfangen: Bob:Hotel-B,Hotel-B,Hotel-C
-[2025-05-05 10:21:31] ❌ Ungültige Buchung von Bob: gleiches Hotel kommt doppelt hintereinander vor.
-[2025-05-05 10:25:27] 🧠 TravelBroker bereit und wartet auf Anfragen auf Port 5569...
-[2025-05-05 10:25:30] 📬 Anfrage empfangen: User1:Hotel-A,Hotel-B,Hotel-C
-[2025-05-05 10:25:30] 🔁 [Retry 1/3] für Hotel-A
-[2025-05-05 10:25:30] ⏳ Sende Buchungsanfrage an Hotel-A
-[2025-05-05 10:25:30] 🕒 Warte auf Antwort von Hotel-A (max. 1500ms)...
-[2025-05-05 10:25:30] ✅ Bestätigt von Hotel-A
-[2025-05-05 10:25:30] 🔁 [Retry 1/3] für Hotel-B
-[2025-05-05 10:25:30] ⏳ Sende Buchungsanfrage an Hotel-B
-[2025-05-05 10:25:30] 🕒 Warte auf Antwort von Hotel-B (max. 1500ms)...
-[2025-05-05 10:25:31] ✅ Bestätigt von Hotel-B
-[2025-05-05 10:25:31] 🔁 [Retry 1/3] für Hotel-C
-[2025-05-05 10:25:31] ⏳ Sende Buchungsanfrage an Hotel-C
-[2025-05-05 10:25:31] 🕒 Warte auf Antwort von Hotel-C (max. 1500ms)...
-[2025-05-05 10:25:31] ✅ Bestätigt von Hotel-C
-[2025-05-05 10:25:31] 📊 Booking Summary:
-[2025-05-05 10:25:31] Total Requests: 1
-[2025-05-05 10:25:31] ✅ Successful:   1
-[2025-05-05 10:25:31] ❌ Failed:       0
-[2025-05-05 10:25:31] Success Rate:   100%
-[2025-05-05 10:25:31] 📬 Anfrage empfangen: User10:Hotel-A,Hotel-B,Hotel-C
-[2025-05-05 10:25:31] 🔁 [Retry 1/3] für Hotel-A
-[2025-05-05 10:25:31] ⏳ Sende Buchungsanfrage an Hotel-A
-[2025-05-05 10:25:31] 🕒 Warte auf Antwort von Hotel-A (max. 1500ms)...
-[2025-05-05 10:25:32] ✅ Bestätigt von Hotel-A
-[2025-05-05 10:25:32] 🔁 [Retry 1/3] für Hotel-B
-[2025-05-05 10:25:32] ⏳ Sende Buchungsanfrage an Hotel-B
-[2025-05-05 10:25:32] 🕒 Warte auf Antwort von Hotel-B (max. 1500ms)...
-[2025-05-05 10:26:28] 🧠 TravelBroker bereit und wartet auf Anfragen auf Port 5569...
-[2025-05-05 10:28:46] 🧠 TravelBroker bereit und wartet auf Anfragen auf Port 5569...
-[2025-05-05 12:17:46] 🧠 TravelBroker bereit und wartet auf Anfragen auf Port 5569...
-[2025-05-05 12:17:49] 📬 Anfrage empfangen: User4:Hotel-A,Hotel-B,Hotel-C
-[2025-05-05 12:17:49] 🔁 [Retry 1/3] für Hotel-A
-[2025-05-05 12:17:49] ⏳ Sende Buchungsanfrage an Hotel-A
-[2025-05-05 12:17:49] 🕒 Warte auf Antwort von Hotel-A (max. 1500ms)...
-[2025-05-05 12:17:49] ✅ Bestätigt von Hotel-A
-[2025-05-05 12:17:49] 🔁 [Retry 1/3] für Hotel-B
-[2025-05-05 12:17:49] ⏳ Sende Buchungsanfrage an Hotel-B
-[2025-05-05 12:17:49] 🕒 Warte auf Antwort von Hotel-B (max. 1500ms)...
-[2025-05-05 12:17:50] ✅ Bestätigt von Hotel-B
-[2025-05-05 12:17:50] 🔁 [Retry 1/3] für Hotel-C
-[2025-05-05 12:17:50] ⏳ Sende Buchungsanfrage an Hotel-C
-[2025-05-05 12:17:50] 🕒 Warte auf Antwort von Hotel-C (max. 1500ms)...
-[2025-05-05 12:17:50] ✅ Bestätigt von Hotel-C
-[2025-05-05 12:17:50] 📊 Booking Summary:
-[2025-05-05 12:17:50] Total Requests: 1
-[2025-05-05 12:17:50] ✅ Successful:   1
-[2025-05-05 12:17:50] ❌ Failed:       0
-[2025-05-05 12:17:50] Success Rate:   100%
-[2025-05-05 12:17:50] 📬 Anfrage empfangen: User8:Hotel-A,Hotel-B,Hotel-C
-[2025-05-05 12:17:50] 🔁 [Retry 1/3] für Hotel-A
-[2025-05-05 12:17:50] ⏳ Sende Buchungsanfrage an Hotel-A
-[2025-05-05 12:17:50] 🕒 Warte auf Antwort von Hotel-A (max. 1500ms)...
-[2025-05-05 12:17:50] ✅ Bestätigt von Hotel-A
-[2025-05-05 12:17:50] 🔁 [Retry 1/3] für Hotel-B
-[2025-05-05 12:17:50] ⏳ Sende Buchungsanfrage an Hotel-B
-[2025-05-05 12:17:50] 🕒 Warte auf Antwort von Hotel-B (max. 1500ms)...
-[2025-05-05 12:17:51] ✅ Bestätigt von Hotel-B
-[2025-05-05 12:17:51] 🔁 [Retry 1/3] für Hotel-C
-[2025-05-05 12:17:51] ⏳ Sende Buchungsanfrage an Hotel-C
-[2025-05-05 12:17:51] 🕒 Warte auf Antwort von Hotel-C (max. 1500ms)...
-[2025-05-05 12:17:51] ✅ Bestätigt von Hotel-C
-[2025-05-05 12:17:51] 📊 Booking Summary:
-[2025-05-05 12:17:51] Total Requests: 2
-[2025-05-05 12:17:51] ✅ Successful:   2
-[2025-05-05 12:17:51] ❌ Failed:       0
-[2025-05-05 12:17:51] Success Rate:   100%
-[2025-05-05 12:17:51] 📬 Anfrage empfangen: User2:Hotel-A,Hotel-B,Hotel-C
-[2025-05-05 12:17:51] 🔁 [Retry 1/3] für Hotel-A
-[2025-05-05 12:17:51] ⏳ Sende Buchungsanfrage an Hotel-A
-[2025-05-05 12:17:51] 🕒 Warte auf Antwort von Hotel-A (max. 1500ms)...
-[2025-05-05 12:17:51] ✅ Bestätigt von Hotel-A
-[2025-05-05 12:17:51] 🔁 [Retry 1/3] für Hotel-B
-[2025-05-05 12:17:51] ⏳ Sende Buchungsanfrage an Hotel-B
-[2025-05-05 12:17:51] 🕒 Warte auf Antwort von Hotel-B (max. 1500ms)...
-[2025-05-05 12:17:52] ✅ Bestätigt von Hotel-B
-[2025-05-05 12:17:52] 🔁 [Retry 1/3] für Hotel-C
-[2025-05-05 12:17:52] ⏳ Sende Buchungsanfrage an Hotel-C
-[2025-05-05 12:17:52] 🕒 Warte auf Antwort von Hotel-C (max. 1500ms)...
-[2025-05-05 12:17:52] ✅ Bestätigt von Hotel-C
-[2025-05-05 12:17:52] 📊 Booking Summary:
-[2025-05-05 12:17:52] Total Requests: 3
-[2025-05-05 12:17:52] ✅ Successful:   3
-[2025-05-05 12:17:52] ❌ Failed:       0
-[2025-05-05 12:17:52] Success Rate:   100%
-[2025-05-05 12:17:52] 📬 Anfrage empfangen: User3:Hotel-A,Hotel-B,Hotel-C
-[2025-05-05 12:17:52] 🔁 [Retry 1/3] für Hotel-A
-[2025-05-05 12:17:52] ⏳ Sende Buchungsanfrage an Hotel-A
-[2025-05-05 12:17:52] 🕒 Warte auf Antwort von Hotel-A (max. 1500ms)...
-[2025-05-05 12:17:53] ✅ Bestätigt von Hotel-A
-[2025-05-05 12:17:53] 🔁 [Retry 1/3] für Hotel-B
-[2025-05-05 12:17:53] ⏳ Sende Buchungsanfrage an Hotel-B
-[2025-05-05 12:17:53] 🕒 Warte auf Antwort von Hotel-B (max. 1500ms)...
-[2025-05-05 12:17:53] ✅ Bestätigt von Hotel-B
-[2025-05-05 12:17:53] 🔁 [Retry 1/3] für Hotel-C
-[2025-05-05 12:17:53] ⏳ Sende Buchungsanfrage an Hotel-C
-[2025-05-05 12:17:53] 🕒 Warte auf Antwort von Hotel-C (max. 1500ms)...
-[2025-05-05 12:17:53] ✅ Bestätigt von Hotel-C
-[2025-05-05 12:17:53] 📊 Booking Summary:
-[2025-05-05 12:17:53] Total Requests: 4
-[2025-05-05 12:17:53] ✅ Successful:   4
-[2025-05-05 12:17:53] ❌ Failed:       0
-[2025-05-05 12:17:53] Success Rate:   100%
-[2025-05-05 12:17:53] 📬 Anfrage empfangen: User1:Hotel-A,Hotel-B,Hotel-C
-[2025-05-05 12:17:53] 🔁 [Retry 1/3] für Hotel-A
-[2025-05-05 12:17:53] ⏳ Sende Buchungsanfrage an Hotel-A
-[2025-05-05 12:17:53] 🕒 Warte auf Antwort von Hotel-A (max. 1500ms)...
-[2025-05-05 12:17:53] ✅ Bestätigt von Hotel-A
-[2025-05-05 12:17:53] 🔁 [Retry 1/3] für Hotel-B
-[2025-05-05 12:17:53] ⏳ Sende Buchungsanfrage an Hotel-B
-[2025-05-05 12:17:53] 🕒 Warte auf Antwort von Hotel-B (max. 1500ms)...
-[2025-05-05 12:17:54] ✅ Bestätigt von Hotel-B
-[2025-05-05 12:17:54] 🔁 [Retry 1/3] für Hotel-C
-[2025-05-05 12:17:54] ⏳ Sende Buchungsanfrage an Hotel-C
-[2025-05-05 12:17:54] 🕒 Warte auf Antwort von Hotel-C (max. 1500ms)...
-[2025-05-05 12:17:54] ✅ Bestätigt von Hotel-C
-[2025-05-05 12:17:54] 📊 Booking Summary:
-[2025-05-05 12:17:54] Total Requests: 5
-[2025-05-05 12:17:54] ✅ Successful:   5
-[2025-05-05 12:17:54] ❌ Failed:       0
-[2025-05-05 12:17:54] Success Rate:   100%
-[2025-05-05 12:17:54] 📬 Anfrage empfangen: User5:Hotel-A,Hotel-B,Hotel-C
-[2025-05-05 12:17:54] 🔁 [Retry 1/3] für Hotel-A
-[2025-05-05 12:17:54] ⏳ Sende Buchungsanfrage an Hotel-A
-[2025-05-05 12:17:54] 🕒 Warte auf Antwort von Hotel-A (max. 1500ms)...
-[2025-05-05 12:17:54] ⚠️ Antwort von Hotel-A: dropped – wird ignoriert, retry folgt.
-[2025-05-05 12:17:54] 🔁 [Retry 2/3] für Hotel-A
-[2025-05-05 12:17:54] ⏳ Sende Buchungsanfrage an Hotel-A
-[2025-05-05 12:17:54] 🕒 Warte auf Antwort von Hotel-A (max. 1500ms)...
-[2025-05-05 12:17:54] ✅ Bestätigt von Hotel-A
-[2025-05-05 12:17:54] 🔁 [Retry 1/3] für Hotel-B
-[2025-05-05 12:17:54] ⏳ Sende Buchungsanfrage an Hotel-B
-[2025-05-05 12:17:54] 🕒 Warte auf Antwort von Hotel-B (max. 1500ms)...
-[2025-05-05 12:17:54] ✅ Bestätigt von Hotel-B
-[2025-05-05 12:17:54] 🔁 [Retry 1/3] für Hotel-C
-[2025-05-05 12:17:54] ⏳ Sende Buchungsanfrage an Hotel-C
-[2025-05-05 12:17:54] 🕒 Warte auf Antwort von Hotel-C (max. 1500ms)...
-[2025-05-05 12:17:55] ✅ Bestätigt von Hotel-C
-[2025-05-05 12:17:55] 📊 Booking Summary:
-[2025-05-05 12:17:55] Total Requests: 6
-[2025-05-05 12:17:55] ✅ Successful:   6
-[2025-05-05 12:17:55] ❌ Failed:       0
-[2025-05-05 12:17:55] Success Rate:   100%
-[2025-05-05 12:17:55] 📬 Anfrage empfangen: User10:Hotel-A,Hotel-B,Hotel-C
-[2025-05-05 12:17:55] 🔁 [Retry 1/3] für Hotel-A
-[2025-05-05 12:17:55] ⏳ Sende Buchungsanfrage an Hotel-A
-[2025-05-05 12:17:55] 🕒 Warte auf Antwort von Hotel-A (max. 1500ms)...
-[2025-05-05 12:17:56] ✅ Bestätigt von Hotel-A
-[2025-05-05 12:17:56] 🔁 [Retry 1/3] für Hotel-B
-[2025-05-05 12:17:56] ⏳ Sende Buchungsanfrage an Hotel-B
-[2025-05-05 12:17:56] 🕒 Warte auf Antwort von Hotel-B (max. 1500ms)...
-[2025-05-05 12:17:56] ⚠️ Antwort von Hotel-B: dropped – wird ignoriert, retry folgt.
-[2025-05-05 12:17:56] 🔁 [Retry 2/3] für Hotel-B
-[2025-05-05 12:17:56] ⏳ Sende Buchungsanfrage an Hotel-B
-[2025-05-05 12:17:56] 🕒 Warte auf Antwort von Hotel-B (max. 1500ms)...
-[2025-05-05 12:17:56] ✅ Bestätigt von Hotel-B
-[2025-05-05 12:17:56] 🔁 [Retry 1/3] für Hotel-C
-[2025-05-05 12:17:56] ⏳ Sende Buchungsanfrage an Hotel-C
-[2025-05-05 12:17:56] 🕒 Warte auf Antwort von Hotel-C (max. 1500ms)...
-[2025-05-05 12:17:56] ❌ Buchung abgelehnt von Hotel-C
-[2025-05-05 12:17:57] ↩️ Rollback gesendet an Hotel-A
-[2025-05-05 12:17:57] ↩️ Rollback gesendet an Hotel-B
-[2025-05-05 12:17:57] 📊 Booking Summary:
-[2025-05-05 12:17:57] Total Requests: 7
-[2025-05-05 12:17:57] ✅ Successful:   6
-[2025-05-05 12:17:57] ❌ Failed:       1
-[2025-05-05 12:17:57] Success Rate:   85%
-[2025-05-05 12:17:57] 📬 Anfrage empfangen: User9:Hotel-A,Hotel-B,Hotel-C
-[2025-05-05 12:17:57] 🔁 [Retry 1/3] für Hotel-A
-[2025-05-05 12:17:57] ⏳ Sende Buchungsanfrage an Hotel-A
-[2025-05-05 12:17:57] 🕒 Warte auf Antwort von Hotel-A (max. 1500ms)...
-[2025-05-05 12:17:58] ✅ Bestätigt von Hotel-A
-[2025-05-05 12:17:58] 🔁 [Retry 1/3] für Hotel-B
-[2025-05-05 12:17:58] ⏳ Sende Buchungsanfrage an Hotel-B
-[2025-05-05 12:17:58] 🕒 Warte auf Antwort von Hotel-B (max. 1500ms)...
-[2025-05-05 12:17:58] ⚠️ Antwort von Hotel-B: dropped – wird ignoriert, retry folgt.
-[2025-05-05 12:17:58] 🔁 [Retry 2/3] für Hotel-B
-[2025-05-05 12:17:58] ⏳ Sende Buchungsanfrage an Hotel-B
-[2025-05-05 12:17:58] 🕒 Warte auf Antwort von Hotel-B (max. 1500ms)...
-[2025-05-05 12:17:58] ✅ Bestätigt von Hotel-B
-[2025-05-05 12:17:58] 🔁 [Retry 1/3] für Hotel-C
-[2025-05-05 12:17:58] ⏳ Sende Buchungsanfrage an Hotel-C
-[2025-05-05 12:17:58] 🕒 Warte auf Antwort von Hotel-C (max. 1500ms)...
-[2025-05-05 12:17:59] ✅ Bestätigt von Hotel-C
-[2025-05-05 12:17:59] 📊 Booking Summary:
-[2025-05-05 12:17:59] Total Requests: 8
-[2025-05-05 12:17:59] ✅ Successful:   7
-[2025-05-05 12:17:59] ❌ Failed:       1
-[2025-05-05 12:17:59] Success Rate:   87%
-[2025-05-05 12:17:59] 📬 Anfrage empfangen: User7:Hotel-A,Hotel-B,Hotel-C
-[2025-05-05 12:17:59] 🔁 [Retry 1/3] für Hotel-A
-[2025-05-05 12:17:59] ⏳ Sende Buchungsanfrage an Hotel-A
-[2025-05-05 12:17:59] 🕒 Warte auf Antwort von Hotel-A (max. 1500ms)...
-[2025-05-05 12:17:59] ✅ Bestätigt von Hotel-A
-[2025-05-05 12:17:59] 🔁 [Retry 1/3] für Hotel-B
-[2025-05-05 12:17:59] ⏳ Sende Buchungsanfrage an Hotel-B
-[2025-05-05 12:17:59] 🕒 Warte auf Antwort von Hotel-B (max. 1500ms)...
-[2025-05-05 12:17:59] ✅ Bestätigt von Hotel-B
-[2025-05-05 12:17:59] 🔁 [Retry 1/3] für Hotel-C
-[2025-05-05 12:17:59] ⏳ Sende Buchungsanfrage an Hotel-C
-[2025-05-05 12:17:59] 🕒 Warte auf Antwort von Hotel-C (max. 1500ms)...
-[2025-05-05 12:17:59] ✅ Bestätigt von Hotel-C
-[2025-05-05 12:17:59] 📊 Booking Summary:
-[2025-05-05 12:17:59] Total Requests: 9
-[2025-05-05 12:17:59] ✅ Successful:   8
-[2025-05-05 12:17:59] ❌ Failed:       1
-[2025-05-05 12:17:59] Success Rate:   88%
-[2025-05-05 12:17:59] 📬 Anfrage empfangen: User6:Hotel-A,Hotel-B,Hotel-C
-[2025-05-05 12:17:59] 🔁 [Retry 1/3] für Hotel-A
-[2025-05-05 12:17:59] ⏳ Sende Buchungsanfrage an Hotel-A
-[2025-05-05 12:17:59] 🕒 Warte auf Antwort von Hotel-A (max. 1500ms)...
-[2025-05-05 12:18:00] ✅ Bestätigt von Hotel-A
-[2025-05-05 12:18:00] 🔁 [Retry 1/3] für Hotel-B
-[2025-05-05 12:18:00] ⏳ Sende Buchungsanfrage an Hotel-B
-[2025-05-05 12:18:00] 🕒 Warte auf Antwort von Hotel-B (max. 1500ms)...
-[2025-05-05 12:18:00] ✅ Bestätigt von Hotel-B
-[2025-05-05 12:18:00] 🔁 [Retry 1/3] für Hotel-C
-[2025-05-05 12:18:00] ⏳ Sende Buchungsanfrage an Hotel-C
-[2025-05-05 12:18:00] 🕒 Warte auf Antwort von Hotel-C (max. 1500ms)...
-[2025-05-05 12:18:01] ✅ Bestätigt von Hotel-C
-[2025-05-05 12:18:01] 📊 Booking Summary:
-[2025-05-05 12:18:01] Total Requests: 10
-[2025-05-05 12:18:01] ✅ Successful:   9
-[2025-05-05 12:18:01] ❌ Failed:       1
-[2025-05-05 12:18:01] Success Rate:   90%
-[2025-05-05 12:18:01] 📬 Anfrage empfangen: Clara:Hotel-C,Hotel-A,Hotel-C
-[2025-05-05 12:18:01] 🔁 [Retry 1/3] für Hotel-C
-[2025-05-05 12:18:01] ⏳ Sende Buchungsanfrage an Hotel-C
-[2025-05-05 12:18:01] 🕒 Warte auf Antwort von Hotel-C (max. 1500ms)...
-[2025-05-05 12:18:01] ✅ Bestätigt von Hotel-C
-[2025-05-05 12:18:01] 🔁 [Retry 1/3] für Hotel-A
-[2025-05-05 12:18:01] ⏳ Sende Buchungsanfrage an Hotel-A
-[2025-05-05 12:18:01] 🕒 Warte auf Antwort von Hotel-A (max. 1500ms)...
-[2025-05-05 12:18:02] ✅ Bestätigt von Hotel-A
-[2025-05-05 12:18:02] 🔁 [Retry 1/3] für Hotel-C
-[2025-05-05 12:18:02] ⏳ Sende Buchungsanfrage an Hotel-C
-[2025-05-05 12:18:02] 🕒 Warte auf Antwort von Hotel-C (max. 1500ms)...
-[2025-05-05 12:18:02] ✅ Bestätigt von Hotel-C
-[2025-05-05 12:18:02] 📊 Booking Summary:
-[2025-05-05 12:18:02] Total Requests: 11
-[2025-05-05 12:18:02] ✅ Successful:   10
-[2025-05-05 12:18:02] ❌ Failed:       1
-[2025-05-05 12:18:02] Success Rate:   90%
-[2025-05-05 12:18:02] 📬 Anfrage empfangen: David:Hotel-A,Hotel-A
-[2025-05-05 12:18:02] ❌ Ungültige Buchung von David: gleiches Hotel kommt doppelt hintereinander vor.
-[2025-05-05 12:18:02] 📬 Anfrage empfangen: Alice:Hotel-A,Hotel-B,Hotel-C
-[2025-05-05 12:18:02] 🔁 [Retry 1/3] für Hotel-A
-[2025-05-05 12:18:02] ⏳ Sende Buchungsanfrage an Hotel-A
-[2025-05-05 12:18:02] 🕒 Warte auf Antwort von Hotel-A (max. 1500ms)...
-[2025-05-05 12:18:02] ✅ Bestätigt von Hotel-A
-[2025-05-05 12:18:02] 🔁 [Retry 1/3] für Hotel-B
-[2025-05-05 12:18:02] ⏳ Sende Buchungsanfrage an Hotel-B
-[2025-05-05 12:18:02] 🕒 Warte auf Antwort von Hotel-B (max. 1500ms)...
-[2025-05-05 12:18:02] ✅ Bestätigt von Hotel-B
-[2025-05-05 12:18:02] 🔁 [Retry 1/3] für Hotel-C
-[2025-05-05 12:18:02] ⏳ Sende Buchungsanfrage an Hotel-C
-[2025-05-05 12:18:02] 🕒 Warte auf Antwort von Hotel-C (max. 1500ms)...
-[2025-05-05 12:18:02] ✅ Bestätigt von Hotel-C
-[2025-05-05 12:18:02] 📊 Booking Summary:
-[2025-05-05 12:18:02] Total Requests: 13
-[2025-05-05 12:18:02] ✅ Successful:   11
-[2025-05-05 12:18:02] ❌ Failed:       2
-[2025-05-05 12:18:02] Success Rate:   84%
-[2025-05-05 12:18:02] 📬 Anfrage empfangen: Bob:Hotel-B,Hotel-B,Hotel-C
-[2025-05-05 12:18:02] ❌ Ungültige Buchung von Bob: gleiches Hotel kommt doppelt hintereinander vor.
-[2025-05-05 12:20:05] 🧠 TravelBroker bereit und wartet auf Anfragen auf Port 5569...
-[2025-05-05 12:20:08] 📬 Anfrage empfangen: User4:Hotel-A,Hotel-B,Hotel-C
-[2025-05-05 12:20:08] 🔁 [Retry 1/3] für Hotel-A
-[2025-05-05 12:20:08] ⏳ Sende Buchungsanfrage an Hotel-A
-[2025-05-05 12:20:08] 🕒 Warte auf Antwort von Hotel-A (max. 1500ms)...
-[2025-05-05 12:20:09] ✅ Bestätigt von Hotel-A
-[2025-05-05 12:20:09] 🔁 [Retry 1/3] für Hotel-B
-[2025-05-05 12:20:09] ⏳ Sende Buchungsanfrage an Hotel-B
-[2025-05-05 12:20:09] 🕒 Warte auf Antwort von Hotel-B (max. 1500ms)...
-[2025-05-05 12:20:09] ✅ Bestätigt von Hotel-B
-[2025-05-05 12:20:09] 🔁 [Retry 1/3] für Hotel-C
-[2025-05-05 12:20:09] ⏳ Sende Buchungsanfrage an Hotel-C
-[2025-05-05 12:20:09] 🕒 Warte auf Antwort von Hotel-C (max. 1500ms)...
-[2025-05-05 12:20:09] ✅ Bestätigt von Hotel-C
-[2025-05-05 12:20:09] 📊 Booking Summary:
-[2025-05-05 12:20:09] Total Requests: 1
-[2025-05-05 12:20:09] ✅ Successful:   1
-[2025-05-05 12:20:09] ❌ Failed:       0
-[2025-05-05 12:20:09] Success Rate:   100%
-[2025-05-05 12:20:09] 📬 Anfrage empfangen: User10:Hotel-A,Hotel-B,Hotel-C
-[2025-05-05 12:20:09] 🔁 [Retry 1/3] für Hotel-A
-[2025-05-05 12:20:09] ⏳ Sende Buchungsanfrage an Hotel-A
-[2025-05-05 12:20:09] 🕒 Warte auf Antwort von Hotel-A (max. 1500ms)...
-[2025-05-05 12:20:09] ✅ Bestätigt von Hotel-A
-[2025-05-05 12:20:09] 🔁 [Retry 1/3] für Hotel-B
-[2025-05-05 12:20:09] ⏳ Sende Buchungsanfrage an Hotel-B
-[2025-05-05 12:20:09] 🕒 Warte auf Antwort von Hotel-B (max. 1500ms)...
-[2025-05-05 12:20:10] ✅ Bestätigt von Hotel-B
-[2025-05-05 12:20:10] 🔁 [Retry 1/3] für Hotel-C
-[2025-05-05 12:20:10] ⏳ Sende Buchungsanfrage an Hotel-C
-[2025-05-05 12:20:10] 🕒 Warte auf Antwort von Hotel-C (max. 1500ms)...
-[2025-05-05 12:20:10] ✅ Bestätigt von Hotel-C
-[2025-05-05 12:20:10] 📊 Booking Summary:
-[2025-05-05 12:20:10] Total Requests: 2
-[2025-05-05 12:20:10] ✅ Successful:   2
-[2025-05-05 12:20:10] ❌ Failed:       0
-[2025-05-05 12:20:10] Success Rate:   100%
-[2025-05-05 12:20:10] 📬 Anfrage empfangen: User2:Hotel-A,Hotel-B,Hotel-C
-[2025-05-05 12:20:10] 🔁 [Retry 1/3] für Hotel-A
-[2025-05-05 12:20:10] ⏳ Sende Buchungsanfrage an Hotel-A
-[2025-05-05 12:20:10] 🕒 Warte auf Antwort von Hotel-A (max. 1500ms)...
-[2025-05-05 12:20:10] ✅ Bestätigt von Hotel-A
-[2025-05-05 12:20:10] 🔁 [Retry 1/3] für Hotel-B
-[2025-05-05 12:20:10] ⏳ Sende Buchungsanfrage an Hotel-B
-[2025-05-05 12:20:10] 🕒 Warte auf Antwort von Hotel-B (max. 1500ms)...
-[2025-05-05 12:20:11] ✅ Bestätigt von Hotel-B
-[2025-05-05 12:20:11] 🔁 [Retry 1/3] für Hotel-C
-[2025-05-05 12:20:11] ⏳ Sende Buchungsanfrage an Hotel-C
-[2025-05-05 12:20:11] 🕒 Warte auf Antwort von Hotel-C (max. 1500ms)...
-[2025-05-05 12:20:11] ✅ Bestätigt von Hotel-C
-[2025-05-05 12:20:11] 📊 Booking Summary:
-[2025-05-05 12:20:11] Total Requests: 3
-[2025-05-05 12:20:11] ✅ Successful:   3
-[2025-05-05 12:20:11] ❌ Failed:       0
-[2025-05-05 12:20:11] Success Rate:   100%
-[2025-05-05 12:20:11] 📬 Anfrage empfangen: User6:Hotel-A,Hotel-B,Hotel-C
-[2025-05-05 12:20:11] 🔁 [Retry 1/3] für Hotel-A
-[2025-05-05 12:20:11] ⏳ Sende Buchungsanfrage an Hotel-A
-[2025-05-05 12:20:11] 🕒 Warte auf Antwort von Hotel-A (max. 1500ms)...
-[2025-05-05 12:20:12] ✅ Bestätigt von Hotel-A
-[2025-05-05 12:20:12] 🔁 [Retry 1/3] für Hotel-B
-[2025-05-05 12:20:12] ⏳ Sende Buchungsanfrage an Hotel-B
-[2025-05-05 12:20:12] 🕒 Warte auf Antwort von Hotel-B (max. 1500ms)...
-[2025-05-05 12:20:12] ✅ Bestätigt von Hotel-B
-[2025-05-05 12:20:12] 🔁 [Retry 1/3] für Hotel-C
-[2025-05-05 12:20:12] ⏳ Sende Buchungsanfrage an Hotel-C
-[2025-05-05 12:20:12] 🕒 Warte auf Antwort von Hotel-C (max. 1500ms)...
-[2025-05-05 12:20:13] ✅ Bestätigt von Hotel-C
-[2025-05-05 12:20:13] 📊 Booking Summary:
-[2025-05-05 12:20:13] Total Requests: 4
-[2025-05-05 12:20:13] ✅ Successful:   4
-[2025-05-05 12:20:13] ❌ Failed:       0
-[2025-05-05 12:20:13] Success Rate:   100%
-[2025-05-05 12:20:13] 📬 Anfrage empfangen: User9:Hotel-A,Hotel-B,Hotel-C
-[2025-05-05 12:20:13] 🔁 [Retry 1/3] für Hotel-A
-[2025-05-05 12:20:13] ⏳ Sende Buchungsanfrage an Hotel-A
-[2025-05-05 12:20:13] 🕒 Warte auf Antwort von Hotel-A (max. 1500ms)...
-[2025-05-05 12:20:13] ✅ Bestätigt von Hotel-A
-[2025-05-05 12:20:13] 🔁 [Retry 1/3] für Hotel-B
-[2025-05-05 12:20:13] ⏳ Sende Buchungsanfrage an Hotel-B
-[2025-05-05 12:20:13] 🕒 Warte auf Antwort von Hotel-B (max. 1500ms)...
-[2025-05-05 12:20:13] ✅ Bestätigt von Hotel-B
-[2025-05-05 12:20:13] 🔁 [Retry 1/3] für Hotel-C
-[2025-05-05 12:20:13] ⏳ Sende Buchungsanfrage an Hotel-C
-[2025-05-05 12:20:13] 🕒 Warte auf Antwort von Hotel-C (max. 1500ms)...
-[2025-05-05 12:20:13] ✅ Bestätigt von Hotel-C
-[2025-05-05 12:20:13] 📊 Booking Summary:
-[2025-05-05 12:20:13] Total Requests: 5
-[2025-05-05 12:20:13] ✅ Successful:   5
-[2025-05-05 12:20:13] ❌ Failed:       0
-[2025-05-05 12:20:13] Success Rate:   100%
-[2025-05-05 12:20:13] 📬 Anfrage empfangen: User8:Hotel-A,Hotel-B,Hotel-C
-[2025-05-05 12:20:13] 🔁 [Retry 1/3] für Hotel-A
-[2025-05-05 12:20:13] ⏳ Sende Buchungsanfrage an Hotel-A
-[2025-05-05 12:20:13] 🕒 Warte auf Antwort von Hotel-A (max. 1500ms)...
-[2025-05-05 12:20:13] ✅ Bestätigt von Hotel-A
-[2025-05-05 12:20:13] 🔁 [Retry 1/3] für Hotel-B
-[2025-05-05 12:20:13] ⏳ Sende Buchungsanfrage an Hotel-B
-[2025-05-05 12:20:13] 🕒 Warte auf Antwort von Hotel-B (max. 1500ms)...
-[2025-05-05 12:20:14] ✅ Bestätigt von Hotel-B
-[2025-05-05 12:20:14] 🔁 [Retry 1/3] für Hotel-C
-[2025-05-05 12:20:14] ⏳ Sende Buchungsanfrage an Hotel-C
-[2025-05-05 12:20:14] 🕒 Warte auf Antwort von Hotel-C (max. 1500ms)...
-[2025-05-05 12:20:15] ✅ Bestätigt von Hotel-C
-[2025-05-05 12:20:15] 📊 Booking Summary:
-[2025-05-05 12:20:15] Total Requests: 6
-[2025-05-05 12:20:15] ✅ Successful:   6
-[2025-05-05 12:20:15] ❌ Failed:       0
-[2025-05-05 12:20:15] Success Rate:   100%
-[2025-05-05 12:20:15] 📬 Anfrage empfangen: User3:Hotel-A,Hotel-B,Hotel-C
-[2025-05-05 12:20:15] 🔁 [Retry 1/3] für Hotel-A
-[2025-05-05 12:20:15] ⏳ Sende Buchungsanfrage an Hotel-A
-[2025-05-05 12:20:15] 🕒 Warte auf Antwort von Hotel-A (max. 1500ms)...
-[2025-05-05 12:20:15] ✅ Bestätigt von Hotel-A
-[2025-05-05 12:20:15] 🔁 [Retry 1/3] für Hotel-B
-[2025-05-05 12:20:15] ⏳ Sende Buchungsanfrage an Hotel-B
-[2025-05-05 12:20:15] 🕒 Warte auf Antwort von Hotel-B (max. 1500ms)...
-[2025-05-05 12:20:15] ✅ Bestätigt von Hotel-B
-[2025-05-05 12:20:15] 🔁 [Retry 1/3] für Hotel-C
-[2025-05-05 12:20:15] ⏳ Sende Buchungsanfrage an Hotel-C
-[2025-05-05 12:20:15] 🕒 Warte auf Antwort von Hotel-C (max. 1500ms)...
-[2025-05-05 12:20:16] ✅ Bestätigt von Hotel-C
-[2025-05-05 12:20:16] 📊 Booking Summary:
-[2025-05-05 12:20:16] Total Requests: 7
-[2025-05-05 12:20:16] ✅ Successful:   7
-[2025-05-05 12:20:16] ❌ Failed:       0
-[2025-05-05 12:20:16] Success Rate:   100%
-[2025-05-05 12:20:16] 📬 Anfrage empfangen: User1:Hotel-A,Hotel-B,Hotel-C
-[2025-05-05 12:20:16] 🔁 [Retry 1/3] für Hotel-A
-[2025-05-05 12:20:16] ⏳ Sende Buchungsanfrage an Hotel-A
-[2025-05-05 12:20:16] 🕒 Warte auf Antwort von Hotel-A (max. 1500ms)...
-[2025-05-05 12:20:17] ✅ Bestätigt von Hotel-A
-[2025-05-05 12:20:17] 🔁 [Retry 1/3] für Hotel-B
-[2025-05-05 12:20:17] ⏳ Sende Buchungsanfrage an Hotel-B
-[2025-05-05 12:20:17] 🕒 Warte auf Antwort von Hotel-B (max. 1500ms)...
-[2025-05-05 12:20:18] ✅ Bestätigt von Hotel-B
-[2025-05-05 12:20:18] 🔁 [Retry 1/3] für Hotel-C
-[2025-05-05 12:20:18] ⏳ Sende Buchungsanfrage an Hotel-C
-[2025-05-05 12:20:18] 🕒 Warte auf Antwort von Hotel-C (max. 1500ms)...
-[2025-05-05 12:20:18] ⚠️ Antwort von Hotel-C: dropped – wird ignoriert, retry folgt.
-[2025-05-05 12:20:18] 🔁 [Retry 2/3] für Hotel-C
-[2025-05-05 12:20:18] ⏳ Sende Buchungsanfrage an Hotel-C
-[2025-05-05 12:20:18] 🕒 Warte auf Antwort von Hotel-C (max. 1500ms)...
-[2025-05-05 12:20:18] ❌ Buchung abgelehnt von Hotel-C
-[2025-05-05 12:20:19] ↩️ Rollback gesendet an Hotel-A
-[2025-05-05 12:20:19] ↩️ Rollback gesendet an Hotel-B
-[2025-05-05 12:20:19] 📊 Booking Summary:
-[2025-05-05 12:20:19] Total Requests: 8
-[2025-05-05 12:20:19] ✅ Successful:   7
-[2025-05-05 12:20:19] ❌ Failed:       1
-[2025-05-05 12:20:19] Success Rate:   87%
-[2025-05-05 12:20:19] 📬 Anfrage empfangen: User7:Hotel-A,Hotel-B,Hotel-C
-[2025-05-05 12:20:19] 🔁 [Retry 1/3] für Hotel-A
-[2025-05-05 12:20:19] ⏳ Sende Buchungsanfrage an Hotel-A
-[2025-05-05 12:20:19] 🕒 Warte auf Antwort von Hotel-A (max. 1500ms)...
-[2025-05-05 12:20:20] ✅ Bestätigt von Hotel-A
-[2025-05-05 12:20:20] 🔁 [Retry 1/3] für Hotel-B
-[2025-05-05 12:20:20] ⏳ Sende Buchungsanfrage an Hotel-B
-[2025-05-05 12:20:20] 🕒 Warte auf Antwort von Hotel-B (max. 1500ms)...
-[2025-05-05 12:20:20] ✅ Bestätigt von Hotel-B
-[2025-05-05 12:20:20] 🔁 [Retry 1/3] für Hotel-C
-[2025-05-05 12:20:20] ⏳ Sende Buchungsanfrage an Hotel-C
-[2025-05-05 12:20:20] 🕒 Warte auf Antwort von Hotel-C (max. 1500ms)...
-[2025-05-05 12:20:21] ✅ Bestätigt von Hotel-C
-[2025-05-05 12:20:21] 📊 Booking Summary:
-[2025-05-05 12:20:21] Total Requests: 9
-[2025-05-05 12:20:21] ✅ Successful:   8
-[2025-05-05 12:20:21] ❌ Failed:       1
-[2025-05-05 12:20:21] Success Rate:   88%
-[2025-05-05 12:20:21] 📬 Anfrage empfangen: User5:Hotel-A,Hotel-B,Hotel-C
-[2025-05-05 12:20:21] 🔁 [Retry 1/3] für Hotel-A
-[2025-05-05 12:20:21] ⏳ Sende Buchungsanfrage an Hotel-A
-[2025-05-05 12:20:21] 🕒 Warte auf Antwort von Hotel-A (max. 1500ms)...
-[2025-05-05 12:20:21] ✅ Bestätigt von Hotel-A
-[2025-05-05 12:20:21] 🔁 [Retry 1/3] für Hotel-B
-[2025-05-05 12:20:21] ⏳ Sende Buchungsanfrage an Hotel-B
-[2025-05-05 12:20:21] 🕒 Warte auf Antwort von Hotel-B (max. 1500ms)...
-[2025-05-05 12:20:21] ✅ Bestätigt von Hotel-B
-[2025-05-05 12:20:21] 🔁 [Retry 1/3] für Hotel-C
-[2025-05-05 12:20:21] ⏳ Sende Buchungsanfrage an Hotel-C
-[2025-05-05 12:20:21] 🕒 Warte auf Antwort von Hotel-C (max. 1500ms)...
-[2025-05-05 12:20:22] ✅ Bestätigt von Hotel-C
-[2025-05-05 12:20:22] 📊 Booking Summary:
-[2025-05-05 12:20:22] Total Requests: 10
-[2025-05-05 12:20:22] ✅ Successful:   9
-[2025-05-05 12:20:22] ❌ Failed:       1
-[2025-05-05 12:20:22] Success Rate:   90%
-[2025-05-05 12:20:22] 📬 Anfrage empfangen: Clara:Hotel-C,Hotel-A,Hotel-C
-[2025-05-05 12:20:22] 🔁 [Retry 1/3] für Hotel-C
-[2025-05-05 12:20:22] ⏳ Sende Buchungsanfrage an Hotel-C
-[2025-05-05 12:20:22] 🕒 Warte auf Antwort von Hotel-C (max. 1500ms)...
-[2025-05-05 12:20:22] ✅ Bestätigt von Hotel-C
-[2025-05-05 12:20:22] 🔁 [Retry 1/3] für Hotel-A
-[2025-05-05 12:20:22] ⏳ Sende Buchungsanfrage an Hotel-A
-[2025-05-05 12:20:22] 🕒 Warte auf Antwort von Hotel-A (max. 1500ms)...
-[2025-05-05 12:20:22] ✅ Bestätigt von Hotel-A
-[2025-05-05 12:20:22] 🔁 [Retry 1/3] für Hotel-C
-[2025-05-05 12:20:22] ⏳ Sende Buchungsanfrage an Hotel-C
-[2025-05-05 12:20:22] 🕒 Warte auf Antwort von Hotel-C (max. 1500ms)...
-[2025-05-05 12:20:23] ✅ Bestätigt von Hotel-C
-[2025-05-05 12:20:23] 📊 Booking Summary:
-[2025-05-05 12:20:23] Total Requests: 11
-[2025-05-05 12:20:23] ✅ Successful:   10
-[2025-05-05 12:20:23] ❌ Failed:       1
-[2025-05-05 12:20:23] Success Rate:   90%
-[2025-05-05 12:20:23] 📬 Anfrage empfangen: David:Hotel-A,Hotel-A
-[2025-05-05 12:20:23] ❌ Ungültige Buchung von David: gleiches Hotel kommt doppelt hintereinander vor.
-[2025-05-05 12:20:23] 📬 Anfrage empfangen: Alice:Hotel-A,Hotel-B,Hotel-C
-[2025-05-05 12:20:23] 🔁 [Retry 1/3] für Hotel-A
-[2025-05-05 12:20:23] ⏳ Sende Buchungsanfrage an Hotel-A
-[2025-05-05 12:20:23] 🕒 Warte auf Antwort von Hotel-A (max. 1500ms)...
-[2025-05-05 12:20:23] ✅ Bestätigt von Hotel-A
-[2025-05-05 12:20:23] 🔁 [Retry 1/3] für Hotel-B
-[2025-05-05 12:20:23] ⏳ Sende Buchungsanfrage an Hotel-B
-[2025-05-05 12:20:23] 🕒 Warte auf Antwort von Hotel-B (max. 1500ms)...
-[2025-05-05 12:20:23] ✅ Bestätigt von Hotel-B
-[2025-05-05 12:20:23] 🔁 [Retry 1/3] für Hotel-C
-[2025-05-05 12:20:23] ⏳ Sende Buchungsanfrage an Hotel-C
-[2025-05-05 12:20:23] 🕒 Warte auf Antwort von Hotel-C (max. 1500ms)...
-[2025-05-05 12:20:23] ❌ Buchung abgelehnt von Hotel-C
-[2025-05-05 12:20:23] ↩️ Rollback gesendet an Hotel-A
-[2025-05-05 12:20:24] ↩️ Rollback gesendet an Hotel-B
-[2025-05-05 12:20:24] 📊 Booking Summary:
-[2025-05-05 12:20:24] Total Requests: 13
-[2025-05-05 12:20:24] ✅ Successful:   10
-[2025-05-05 12:20:24] ❌ Failed:       3
-[2025-05-05 12:20:24] Success Rate:   76%
-[2025-05-05 12:20:24] 📬 Anfrage empfangen: Bob:Hotel-B,Hotel-B,Hotel-C
-[2025-05-05 12:20:24] ❌ Ungültige Buchung von Bob: gleiches Hotel kommt doppelt hintereinander vor.
-[2025-05-05 12:20:41] 🧠 TravelBroker bereit und wartet auf Anfragen auf Port 5569...
-[2025-05-05 12:23:10] 🧠 TravelBroker bereit und wartet auf Anfragen auf Port 5569...
-[2025-05-05 12:24:51] 🧠 TravelBroker bereit und wartet auf Anfragen auf Port 5569...
-[2025-05-05 12:26:17] 🧠 TravelBroker bereit und wartet auf Anfragen auf Port 5569...
-[2025-05-05 12:26:39] 📬 Anfrage empfangen: Alice:Hotel-A,Hotel-C
-[2025-05-05 12:26:39] 🔁 [Retry 1/3] für Hotel-A
-[2025-05-05 12:26:39] ⏳ Sende Buchungsanfrage an Hotel-A
-[2025-05-05 12:26:39] 🕒 Warte auf Antwort von Hotel-A (max. 1500ms)...
-[2025-05-05 12:26:40] ✅ Bestätigt von Hotel-A
-[2025-05-05 12:26:40] 🔁 [Retry 1/3] für Hotel-C
-[2025-05-05 12:26:40] ⏳ Sende Buchungsanfrage an Hotel-C
-[2025-05-05 12:26:40] 🕒 Warte auf Antwort von Hotel-C (max. 1500ms)...
-[2025-05-05 12:26:40] ✅ Bestätigt von Hotel-C
-[2025-05-05 12:26:40] 📊 Booking Summary:
-[2025-05-05 12:26:40] Total Requests: 1
-[2025-05-05 12:26:40] ✅ Successful:   1
-[2025-05-05 12:26:40] ❌ Failed:       0
-[2025-05-05 12:26:40] Success Rate:   100%
-[2025-05-05 12:26:41] 📬 Anfrage empfangen: Bob:Hotel-A,Hotel-B,Hotel-C
-[2025-05-05 12:26:41] 🔁 [Retry 1/3] für Hotel-A
-[2025-05-05 12:26:41] ⏳ Sende Buchungsanfrage an Hotel-A
-[2025-05-05 12:26:41] 🕒 Warte auf Antwort von Hotel-A (max. 1500ms)...
-[2025-05-05 12:26:41] ✅ Bestätigt von Hotel-A
-[2025-05-05 12:26:41] 🔁 [Retry 1/3] für Hotel-B
-[2025-05-05 12:26:41] ⏳ Sende Buchungsanfrage an Hotel-B
-[2025-05-05 12:26:41] 🕒 Warte auf Antwort von Hotel-B (max. 1500ms)...
-[2025-05-05 12:26:42] ✅ Bestätigt von Hotel-B
-[2025-05-05 12:26:42] 🔁 [Retry 1/3] für Hotel-C
-[2025-05-05 12:26:42] ⏳ Sende Buchungsanfrage an Hotel-C
-[2025-05-05 12:26:42] 🕒 Warte auf Antwort von Hotel-C (max. 1500ms)...
-[2025-05-05 12:26:42] ✅ Bestätigt von Hotel-C
-[2025-05-05 12:26:42] 📊 Booking Summary:
-[2025-05-05 12:26:42] Total Requests: 2
-[2025-05-05 12:26:42] ✅ Successful:   2
-[2025-05-05 12:26:42] ❌ Failed:       0
-[2025-05-05 12:26:42] Success Rate:   100%
-[2025-05-05 12:26:43] 📬 Anfrage empfangen: Clara:Hotel-A,Hotel-C
-[2025-05-05 12:26:43] 🔁 [Retry 1/3] für Hotel-A
-[2025-05-05 12:26:43] ⏳ Sende Buchungsanfrage an Hotel-A
-[2025-05-05 12:26:43] 🕒 Warte auf Antwort von Hotel-A (max. 1500ms)...
-[2025-05-05 12:26:44] ✅ Bestätigt von Hotel-A
-[2025-05-05 12:26:44] 🔁 [Retry 1/3] für Hotel-C
-[2025-05-05 12:26:44] ⏳ Sende Buchungsanfrage an Hotel-C
-[2025-05-05 12:26:44] 🕒 Warte auf Antwort von Hotel-C (max. 1500ms)...
-[2025-05-05 12:26:45] ⚠️ Antwort von Hotel-C: dropped – wird ignoriert, retry folgt.
-[2025-05-05 12:26:45] 🔁 [Retry 2/3] für Hotel-C
-[2025-05-05 12:26:45] ⏳ Sende Buchungsanfrage an Hotel-C
-[2025-05-05 12:26:45] 🕒 Warte auf Antwort von Hotel-C (max. 1500ms)...
-[2025-05-05 12:26:45] ✅ Bestätigt von Hotel-C
-[2025-05-05 12:26:45] 📊 Booking Summary:
-[2025-05-05 12:26:45] Total Requests: 3
-[2025-05-05 12:26:45] ✅ Successful:   3
-[2025-05-05 12:26:45] ❌ Failed:       0
-[2025-05-05 12:26:45] Success Rate:   100%
-[2025-05-05 12:26:46] 📬 Anfrage empfangen: David:Hotel-C,Hotel-A,Hotel-C
-[2025-05-05 12:26:46] 🔁 [Retry 1/3] für Hotel-C
-[2025-05-05 12:26:46] ⏳ Sende Buchungsanfrage an Hotel-C
-[2025-05-05 12:26:46] 🕒 Warte auf Antwort von Hotel-C (max. 1500ms)...
-[2025-05-05 12:26:46] ✅ Bestätigt von Hotel-C
-[2025-05-05 12:26:46] 🔁 [Retry 1/3] für Hotel-A
-[2025-05-05 12:26:46] ⏳ Sende Buchungsanfrage an Hotel-A
-[2025-05-05 12:26:46] 🕒 Warte auf Antwort von Hotel-A (max. 1500ms)...
-[2025-05-05 12:26:46] ✅ Bestätigt von Hotel-A
-[2025-05-05 12:26:46] 🔁 [Retry 1/3] für Hotel-C
-[2025-05-05 12:26:46] ⏳ Sende Buchungsanfrage an Hotel-C
-[2025-05-05 12:26:46] 🕒 Warte auf Antwort von Hotel-C (max. 1500ms)...
-[2025-05-05 12:26:46] ✅ Bestätigt von Hotel-C
-[2025-05-05 12:26:46] 📊 Booking Summary:
-[2025-05-05 12:26:46] Total Requests: 4
-[2025-05-05 12:26:46] ✅ Successful:   4
-[2025-05-05 12:26:46] ❌ Failed:       0
-[2025-05-05 12:26:46] Success Rate:   100%
-[2025-05-05 12:26:47] 📬 Anfrage empfangen: Ella:Hotel-C,Hotel-B
-[2025-05-05 12:26:47] 🔁 [Retry 1/3] für Hotel-C
-[2025-05-05 12:26:47] ⏳ Sende Buchungsanfrage an Hotel-C
-[2025-05-05 12:26:47] 🕒 Warte auf Antwort von Hotel-C (max. 1500ms)...
-[2025-05-05 12:26:47] ✅ Bestätigt von Hotel-C
-[2025-05-05 12:26:47] 🔁 [Retry 1/3] für Hotel-B
-[2025-05-05 12:26:47] ⏳ Sende Buchungsanfrage an Hotel-B
-[2025-05-05 12:26:47] 🕒 Warte auf Antwort von Hotel-B (max. 1500ms)...
-[2025-05-05 12:26:48] ✅ Bestätigt von Hotel-B
-[2025-05-05 12:26:48] 📊 Booking Summary:
-[2025-05-05 12:26:48] Total Requests: 5
-[2025-05-05 12:26:48] ✅ Successful:   5
-[2025-05-05 12:26:48] ❌ Failed:       0
-[2025-05-05 12:26:48] Success Rate:   100%
-[2025-05-05 12:26:49] 📬 Anfrage empfangen: Finn:Hotel-B,Hotel-C
-[2025-05-05 12:26:49] 🔁 [Retry 1/3] für Hotel-B
-[2025-05-05 12:26:49] ⏳ Sende Buchungsanfrage an Hotel-B
-[2025-05-05 12:26:49] 🕒 Warte auf Antwort von Hotel-B (max. 1500ms)...
-[2025-05-05 12:26:49] ✅ Bestätigt von Hotel-B
-[2025-05-05 12:26:49] 🔁 [Retry 1/3] für Hotel-C
-[2025-05-05 12:26:49] ⏳ Sende Buchungsanfrage an Hotel-C
-[2025-05-05 12:26:49] 🕒 Warte auf Antwort von Hotel-C (max. 1500ms)...
-[2025-05-05 12:26:49] ✅ Bestätigt von Hotel-C
-[2025-05-05 12:26:49] 📊 Booking Summary:
-[2025-05-05 12:26:49] Total Requests: 6
-[2025-05-05 12:26:49] ✅ Successful:   6
-[2025-05-05 12:26:49] ❌ Failed:       0
-[2025-05-05 12:26:49] Success Rate:   100%
-[2025-05-05 12:26:50] 📬 Anfrage empfangen: Greta:Hotel-A,Hotel-C
-[2025-05-05 12:26:50] 🔁 [Retry 1/3] für Hotel-A
-[2025-05-05 12:26:50] ⏳ Sende Buchungsanfrage an Hotel-A
-[2025-05-05 12:26:50] 🕒 Warte auf Antwort von Hotel-A (max. 1500ms)...
-[2025-05-05 12:26:50] ✅ Bestätigt von Hotel-A
-[2025-05-05 12:26:50] 🔁 [Retry 1/3] für Hotel-C
-[2025-05-05 12:26:50] ⏳ Sende Buchungsanfrage an Hotel-C
-[2025-05-05 12:26:50] 🕒 Warte auf Antwort von Hotel-C (max. 1500ms)...
-[2025-05-05 12:26:50] ✅ Bestätigt von Hotel-C
-[2025-05-05 12:26:50] 📊 Booking Summary:
-[2025-05-05 12:26:50] Total Requests: 7
-[2025-05-05 12:26:50] ✅ Successful:   7
-[2025-05-05 12:26:50] ❌ Failed:       0
-[2025-05-05 12:26:50] Success Rate:   100%
-[2025-05-05 12:26:51] 📬 Anfrage empfangen: Hannes:Hotel-C,Hotel-B,Hotel-A
-[2025-05-05 12:26:51] 🔁 [Retry 1/3] für Hotel-C
-[2025-05-05 12:26:51] ⏳ Sende Buchungsanfrage an Hotel-C
-[2025-05-05 12:26:51] 🕒 Warte auf Antwort von Hotel-C (max. 1500ms)...
-[2025-05-05 12:26:52] ⚠️ Antwort von Hotel-C: dropped – wird ignoriert, retry folgt.
-[2025-05-05 12:26:52] 🔁 [Retry 2/3] für Hotel-C
-[2025-05-05 12:26:52] ⏳ Sende Buchungsanfrage an Hotel-C
-[2025-05-05 12:26:52] 🕒 Warte auf Antwort von Hotel-C (max. 1500ms)...
-[2025-05-05 12:26:53] ✅ Bestätigt von Hotel-C
-[2025-05-05 12:26:53] 🔁 [Retry 1/3] für Hotel-B
-[2025-05-05 12:26:53] ⏳ Sende Buchungsanfrage an Hotel-B
-[2025-05-05 12:26:53] 🕒 Warte auf Antwort von Hotel-B (max. 1500ms)...
-[2025-05-05 12:26:54] ✅ Bestätigt von Hotel-B
-[2025-05-05 12:26:54] 🔁 [Retry 1/3] für Hotel-A
-[2025-05-05 12:26:54] ⏳ Sende Buchungsanfrage an Hotel-A
-[2025-05-05 12:26:54] 🕒 Warte auf Antwort von Hotel-A (max. 1500ms)...
-[2025-05-05 12:26:54] ✅ Bestätigt von Hotel-A
-[2025-05-05 12:26:54] 📊 Booking Summary:
-[2025-05-05 12:26:54] Total Requests: 8
-[2025-05-05 12:26:54] ✅ Successful:   8
-[2025-05-05 12:26:54] ❌ Failed:       0
-[2025-05-05 12:26:54] Success Rate:   100%
-[2025-05-05 12:26:55] 📬 Anfrage empfangen: Ida:Hotel-A,Hotel-C,Hotel-B
-[2025-05-05 12:26:55] 🔁 [Retry 1/3] für Hotel-A
-[2025-05-05 12:26:55] ⏳ Sende Buchungsanfrage an Hotel-A
-[2025-05-05 12:26:55] 🕒 Warte auf Antwort von Hotel-A (max. 1500ms)...
-[2025-05-05 12:26:55] ✅ Bestätigt von Hotel-A
-[2025-05-05 12:26:55] 🔁 [Retry 1/3] für Hotel-C
-[2025-05-05 12:26:55] ⏳ Sende Buchungsanfrage an Hotel-C
-[2025-05-05 12:26:55] 🕒 Warte auf Antwort von Hotel-C (max. 1500ms)...
-[2025-05-05 12:26:56] ✅ Bestätigt von Hotel-C
-[2025-05-05 12:26:56] 🔁 [Retry 1/3] für Hotel-B
-[2025-05-05 12:26:56] ⏳ Sende Buchungsanfrage an Hotel-B
-[2025-05-05 12:26:56] 🕒 Warte auf Antwort von Hotel-B (max. 1500ms)...
-[2025-05-05 12:26:57] ✅ Bestätigt von Hotel-B
-[2025-05-05 12:26:57] 📊 Booking Summary:
-[2025-05-05 12:26:57] Total Requests: 9
-[2025-05-05 12:26:57] ✅ Successful:   9
-[2025-05-05 12:26:57] ❌ Failed:       0
-[2025-05-05 12:26:57] Success Rate:   100%
-[2025-05-05 12:26:58] 📬 Anfrage empfangen: Jonas:Hotel-C,Hotel-A,Hotel-B
-[2025-05-05 12:26:58] 🔁 [Retry 1/3] für Hotel-C
-[2025-05-05 12:26:58] ⏳ Sende Buchungsanfrage an Hotel-C
-[2025-05-05 12:26:58] 🕒 Warte auf Antwort von Hotel-C (max. 1500ms)...
-[2025-05-05 12:26:58] ✅ Bestätigt von Hotel-C
-[2025-05-05 12:26:58] 🔁 [Retry 1/3] für Hotel-A
-[2025-05-05 12:26:58] ⏳ Sende Buchungsanfrage an Hotel-A
-[2025-05-05 12:26:58] 🕒 Warte auf Antwort von Hotel-A (max. 1500ms)...
-[2025-05-05 12:26:58] ⚠️ Antwort von Hotel-A: dropped – wird ignoriert, retry folgt.
-[2025-05-05 12:26:58] 🔁 [Retry 2/3] für Hotel-A
-[2025-05-05 12:26:58] ⏳ Sende Buchungsanfrage an Hotel-A
-[2025-05-05 12:26:58] 🕒 Warte auf Antwort von Hotel-A (max. 1500ms)...
-[2025-05-05 12:26:59] ✅ Bestätigt von Hotel-A
-[2025-05-05 12:26:59] 🔁 [Retry 1/3] für Hotel-B
-[2025-05-05 12:26:59] ⏳ Sende Buchungsanfrage an Hotel-B
-[2025-05-05 12:26:59] 🕒 Warte auf Antwort von Hotel-B (max. 1500ms)...
-[2025-05-05 12:26:59] ✅ Bestätigt von Hotel-B
-[2025-05-05 12:26:59] 📊 Booking Summary:
-[2025-05-05 12:26:59] Total Requests: 10
-[2025-05-05 12:26:59] ✅ Successful:   10
-[2025-05-05 12:26:59] ❌ Failed:       0
-[2025-05-05 12:26:59] Success Rate:   100%
-[2025-05-05 16:13:58] 🧠 TravelBroker bereit und wartet auf Anfragen auf Port 5569...
-[2025-05-05 16:14:15] 📬 Anfrage empfangen: Alice:Hotel-A,Hotel-C
-[2025-05-05 16:14:15] 🔁 [Retry 1/3] für Hotel-A
-[2025-05-05 16:14:15] ⏳ Sende Buchungsanfrage an Hotel-A
-[2025-05-05 16:14:15] 🕒 Warte auf Antwort von Hotel-A (max. 1500ms)...
-[2025-05-05 16:14:16] ✅ Bestätigt von Hotel-A
-[2025-05-05 16:14:16] 🔁 [Retry 1/3] für Hotel-C
-[2025-05-05 16:14:16] ⏳ Sende Buchungsanfrage an Hotel-C
-[2025-05-05 16:14:16] 🕒 Warte auf Antwort von Hotel-C (max. 1500ms)...
-[2025-05-05 16:14:17] ✅ Bestätigt von Hotel-C
-[2025-05-05 16:14:17] 📊 Booking Summary:
-[2025-05-05 16:14:17] Total Requests: 1
-[2025-05-05 16:14:17] ✅ Successful:   1
-[2025-05-05 16:14:17] ❌ Failed:       0
-[2025-05-05 16:14:17] Success Rate:   100%
-[2025-05-05 16:14:18] 📬 Anfrage empfangen: Bob:Hotel-B,Hotel-A
-[2025-05-05 16:14:18] 🔁 [Retry 1/3] für Hotel-B
-[2025-05-05 16:14:18] ⏳ Sende Buchungsanfrage an Hotel-B
-[2025-05-05 16:14:18] 🕒 Warte auf Antwort von Hotel-B (max. 1500ms)...
-[2025-05-05 16:14:18] ✅ Bestätigt von Hotel-B
-[2025-05-05 16:14:18] 🔁 [Retry 1/3] für Hotel-A
-[2025-05-05 16:14:18] ⏳ Sende Buchungsanfrage an Hotel-A
-[2025-05-05 16:14:18] 🕒 Warte auf Antwort von Hotel-A (max. 1500ms)...
-[2025-05-05 16:14:18] ✅ Bestätigt von Hotel-A
-[2025-05-05 16:14:18] 📊 Booking Summary:
-[2025-05-05 16:14:18] Total Requests: 2
-[2025-05-05 16:14:18] ✅ Successful:   2
-[2025-05-05 16:14:18] ❌ Failed:       0
-[2025-05-05 16:14:18] Success Rate:   100%
-[2025-05-05 16:14:19] 📬 Anfrage empfangen: Clara:Hotel-A,Hotel-C
-[2025-05-05 16:14:19] 🔁 [Retry 1/3] für Hotel-A
-[2025-05-05 16:14:19] ⏳ Sende Buchungsanfrage an Hotel-A
-[2025-05-05 16:14:19] 🕒 Warte auf Antwort von Hotel-A (max. 1500ms)...
-[2025-05-05 16:14:19] ✅ Bestätigt von Hotel-A
-[2025-05-05 16:14:19] 🔁 [Retry 1/3] für Hotel-C
-[2025-05-05 16:14:19] ⏳ Sende Buchungsanfrage an Hotel-C
-[2025-05-05 16:14:19] 🕒 Warte auf Antwort von Hotel-C (max. 1500ms)...
-[2025-05-05 16:14:20] ✅ Bestätigt von Hotel-C
-[2025-05-05 16:14:20] 📊 Booking Summary:
-[2025-05-05 16:14:20] Total Requests: 3
-[2025-05-05 16:14:20] ✅ Successful:   3
-[2025-05-05 16:14:20] ❌ Failed:       0
-[2025-05-05 16:14:20] Success Rate:   100%
-[2025-05-05 16:14:21] 📬 Anfrage empfangen: David:Hotel-C,Hotel-A
-[2025-05-05 16:14:21] 🔁 [Retry 1/3] für Hotel-C
-[2025-05-05 16:14:21] ⏳ Sende Buchungsanfrage an Hotel-C
-[2025-05-05 16:14:21] 🕒 Warte auf Antwort von Hotel-C (max. 1500ms)...
-[2025-05-05 16:14:21] ✅ Bestätigt von Hotel-C
-[2025-05-05 16:14:21] 🔁 [Retry 1/3] für Hotel-A
-[2025-05-05 16:14:21] ⏳ Sende Buchungsanfrage an Hotel-A
-[2025-05-05 16:14:21] 🕒 Warte auf Antwort von Hotel-A (max. 1500ms)...
-[2025-05-05 16:14:22] ✅ Bestätigt von Hotel-A
-[2025-05-05 16:14:22] 📊 Booking Summary:
-[2025-05-05 16:14:22] Total Requests: 4
-[2025-05-05 16:14:22] ✅ Successful:   4
-[2025-05-05 16:14:22] ❌ Failed:       0
-[2025-05-05 16:14:22] Success Rate:   100%
-[2025-05-05 16:14:23] 📬 Anfrage empfangen: Ella:Hotel-A,Hotel-B,Hotel-C
-[2025-05-05 16:14:23] 🔁 [Retry 1/3] für Hotel-A
-[2025-05-05 16:14:23] ⏳ Sende Buchungsanfrage an Hotel-A
-[2025-05-05 16:14:23] 🕒 Warte auf Antwort von Hotel-A (max. 1500ms)...
-[2025-05-05 16:14:23] ✅ Bestätigt von Hotel-A
-[2025-05-05 16:14:23] 🔁 [Retry 1/3] für Hotel-B
-[2025-05-05 16:14:23] ⏳ Sende Buchungsanfrage an Hotel-B
-[2025-05-05 16:14:23] 🕒 Warte auf Antwort von Hotel-B (max. 1500ms)...
-[2025-05-05 16:14:23] ✅ Bestätigt von Hotel-B
-[2025-05-05 16:14:23] 🔁 [Retry 1/3] für Hotel-C
-[2025-05-05 16:14:23] ⏳ Sende Buchungsanfrage an Hotel-C
-[2025-05-05 16:14:23] 🕒 Warte auf Antwort von Hotel-C (max. 1500ms)...
-[2025-05-05 16:14:24] ✅ Bestätigt von Hotel-C
-[2025-05-05 16:14:24] 📊 Booking Summary:
-[2025-05-05 16:14:24] Total Requests: 5
-[2025-05-05 16:14:24] ✅ Successful:   5
-[2025-05-05 16:14:24] ❌ Failed:       0
-[2025-05-05 16:14:24] Success Rate:   100%
-[2025-05-05 16:14:25] 📬 Anfrage empfangen: Finn:Hotel-A,Hotel-C,Hotel-B
-[2025-05-05 16:14:25] 🔁 [Retry 1/3] für Hotel-A
-[2025-05-05 16:14:25] ⏳ Sende Buchungsanfrage an Hotel-A
-[2025-05-05 16:14:25] 🕒 Warte auf Antwort von Hotel-A (max. 1500ms)...
-[2025-05-05 16:14:25] ✅ Bestätigt von Hotel-A
-[2025-05-05 16:14:25] 🔁 [Retry 1/3] für Hotel-C
-[2025-05-05 16:14:25] ⏳ Sende Buchungsanfrage an Hotel-C
-[2025-05-05 16:14:25] 🕒 Warte auf Antwort von Hotel-C (max. 1500ms)...
-[2025-05-05 16:14:25] ⚠️ Antwort von Hotel-C: dropped – wird ignoriert, retry folgt.
-[2025-05-05 16:14:25] 🔁 [Retry 2/3] für Hotel-C
-[2025-05-05 16:14:25] ⏳ Sende Buchungsanfrage an Hotel-C
-[2025-05-05 16:14:25] 🕒 Warte auf Antwort von Hotel-C (max. 1500ms)...
-[2025-05-05 16:14:26] ✅ Bestätigt von Hotel-C
-[2025-05-05 16:14:26] 🔁 [Retry 1/3] für Hotel-B
-[2025-05-05 16:14:26] ⏳ Sende Buchungsanfrage an Hotel-B
-[2025-05-05 16:14:26] 🕒 Warte auf Antwort von Hotel-B (max. 1500ms)...
-[2025-05-05 16:14:26] ✅ Bestätigt von Hotel-B
-[2025-05-05 16:14:26] 📊 Booking Summary:
-[2025-05-05 16:14:26] Total Requests: 6
-[2025-05-05 16:14:26] ✅ Successful:   6
-[2025-05-05 16:14:26] ❌ Failed:       0
-[2025-05-05 16:14:26] Success Rate:   100%
-[2025-05-05 16:14:27] 📬 Anfrage empfangen: Greta:Hotel-B,Hotel-A,Hotel-C,Hotel-B
-[2025-05-05 16:14:27] 🔁 [Retry 1/3] für Hotel-B
-[2025-05-05 16:14:27] ⏳ Sende Buchungsanfrage an Hotel-B
-[2025-05-05 16:14:27] 🕒 Warte auf Antwort von Hotel-B (max. 1500ms)...
-[2025-05-05 16:14:27] ✅ Bestätigt von Hotel-B
-[2025-05-05 16:14:27] 🔁 [Retry 1/3] für Hotel-A
-[2025-05-05 16:14:27] ⏳ Sende Buchungsanfrage an Hotel-A
-[2025-05-05 16:14:27] 🕒 Warte auf Antwort von Hotel-A (max. 1500ms)...
-[2025-05-05 16:14:28] ✅ Bestätigt von Hotel-A
-[2025-05-05 16:14:28] 🔁 [Retry 1/3] für Hotel-C
-[2025-05-05 16:14:28] ⏳ Sende Buchungsanfrage an Hotel-C
-[2025-05-05 16:14:28] 🕒 Warte auf Antwort von Hotel-C (max. 1500ms)...
-[2025-05-05 16:14:29] ✅ Bestätigt von Hotel-C
-[2025-05-05 16:14:29] 🔁 [Retry 1/3] für Hotel-B
-[2025-05-05 16:14:29] ⏳ Sende Buchungsanfrage an Hotel-B
-[2025-05-05 16:14:29] 🕒 Warte auf Antwort von Hotel-B (max. 1500ms)...
-[2025-05-05 16:14:29] ✅ Bestätigt von Hotel-B
-[2025-05-05 16:14:29] 📊 Booking Summary:
-[2025-05-05 16:14:29] Total Requests: 7
-[2025-05-05 16:14:29] ✅ Successful:   7
-[2025-05-05 16:14:29] ❌ Failed:       0
-[2025-05-05 16:14:29] Success Rate:   100%
-[2025-05-05 16:14:30] 📬 Anfrage empfangen: Hannes:Hotel-A,Hotel-B
-[2025-05-05 16:14:30] 🔁 [Retry 1/3] für Hotel-A
-[2025-05-05 16:14:30] ⏳ Sende Buchungsanfrage an Hotel-A
-[2025-05-05 16:14:30] 🕒 Warte auf Antwort von Hotel-A (max. 1500ms)...
-[2025-05-05 16:14:30] ✅ Bestätigt von Hotel-A
-[2025-05-05 16:14:30] 🔁 [Retry 1/3] für Hotel-B
-[2025-05-05 16:14:30] ⏳ Sende Buchungsanfrage an Hotel-B
-[2025-05-05 16:14:30] 🕒 Warte auf Antwort von Hotel-B (max. 1500ms)...
-[2025-05-05 16:14:31] ✅ Bestätigt von Hotel-B
-[2025-05-05 16:14:31] 📊 Booking Summary:
-[2025-05-05 16:14:31] Total Requests: 8
-[2025-05-05 16:14:31] ✅ Successful:   8
-[2025-05-05 16:14:31] ❌ Failed:       0
-[2025-05-05 16:14:31] Success Rate:   100%
-[2025-05-05 16:14:32] 📬 Anfrage empfangen: Ida:Hotel-A,Hotel-B,Hotel-C
-[2025-05-05 16:14:32] 🔁 [Retry 1/3] für Hotel-A
-[2025-05-05 16:14:32] ⏳ Sende Buchungsanfrage an Hotel-A
-[2025-05-05 16:14:32] 🕒 Warte auf Antwort von Hotel-A (max. 1500ms)...
-[2025-05-05 16:14:33] ✅ Bestätigt von Hotel-A
-[2025-05-05 16:14:33] 🔁 [Retry 1/3] für Hotel-B
-[2025-05-05 16:14:33] ⏳ Sende Buchungsanfrage an Hotel-B
-[2025-05-05 16:14:33] 🕒 Warte auf Antwort von Hotel-B (max. 1500ms)...
-[2025-05-05 16:14:33] ✅ Bestätigt von Hotel-B
-[2025-05-05 16:14:33] 🔁 [Retry 1/3] für Hotel-C
-[2025-05-05 16:14:33] ⏳ Sende Buchungsanfrage an Hotel-C
-[2025-05-05 16:14:33] 🕒 Warte auf Antwort von Hotel-C (max. 1500ms)...
-[2025-05-05 16:14:33] ✅ Bestätigt von Hotel-C
-[2025-05-05 16:14:33] 📊 Booking Summary:
-[2025-05-05 16:14:33] Total Requests: 9
-[2025-05-05 16:14:33] ✅ Successful:   9
-[2025-05-05 16:14:33] ❌ Failed:       0
-[2025-05-05 16:14:33] Success Rate:   100%
-[2025-05-05 16:14:34] 📬 Anfrage empfangen: Jonas:Hotel-B,Hotel-A,Hotel-C
-[2025-05-05 16:14:34] 🔁 [Retry 1/3] für Hotel-B
-[2025-05-05 16:14:34] ⏳ Sende Buchungsanfrage an Hotel-B
-[2025-05-05 16:14:34] 🕒 Warte auf Antwort von Hotel-B (max. 1500ms)...
-[2025-05-05 16:14:34] ✅ Bestätigt von Hotel-B
-[2025-05-05 16:14:34] 🔁 [Retry 1/3] für Hotel-A
-[2025-05-05 16:14:34] ⏳ Sende Buchungsanfrage an Hotel-A
-[2025-05-05 16:14:34] 🕒 Warte auf Antwort von Hotel-A (max. 1500ms)...
-[2025-05-05 16:14:35] ⚠️ Antwort von Hotel-A: dropped – wird ignoriert, retry folgt.
-[2025-05-05 16:14:35] 🔁 [Retry 2/3] für Hotel-A
-[2025-05-05 16:14:35] ⏳ Sende Buchungsanfrage an Hotel-A
-[2025-05-05 16:14:35] 🕒 Warte auf Antwort von Hotel-A (max. 1500ms)...
-[2025-05-05 16:14:35] ✅ Bestätigt von Hotel-A
-[2025-05-05 16:14:35] 🔁 [Retry 1/3] für Hotel-C
-[2025-05-05 16:14:35] ⏳ Sende Buchungsanfrage an Hotel-C
-[2025-05-05 16:14:35] 🕒 Warte auf Antwort von Hotel-C (max. 1500ms)...
-[2025-05-05 16:14:35] ✅ Bestätigt von Hotel-C
-[2025-05-05 16:14:35] 📊 Booking Summary:
-[2025-05-05 16:14:35] Total Requests: 10
-[2025-05-05 16:14:35] ✅ Successful:   10
-[2025-05-05 16:14:35] ❌ Failed:       0
-[2025-05-05 16:14:35] Success Rate:   100%
+[2025-05-07 15:59:16] 📬 Anfrage empfangen: User3:Hotel-A,Hotel-B,Hotel-C
+[2025-05-07 15:59:16] 🔁 [Retry 1/3] für Hotel-A
+[2025-05-07 15:59:16] ⏳ Sende Buchungsanfrage an Hotel-A
+[2025-05-07 15:59:16] 🕒 Warte auf Antwort von Hotel-A (max. 1500ms)...
+[2025-05-07 15:59:16] ✅ Bestätigt von Hotel-A
+[2025-05-07 15:59:16] 🔁 [Retry 1/3] für Hotel-B
+[2025-05-07 15:59:16] ⏳ Sende Buchungsanfrage an Hotel-B
+[2025-05-07 15:59:16] 🕒 Warte auf Antwort von Hotel-B (max. 1500ms)...
+[2025-05-07 15:59:17] ✅ Bestätigt von Hotel-B
+[2025-05-07 15:59:17] 🔁 [Retry 1/3] für Hotel-C
+[2025-05-07 15:59:17] ⏳ Sende Buchungsanfrage an Hotel-C
+[2025-05-07 15:59:17] 🕒 Warte auf Antwort von Hotel-C (max. 1500ms)...
+[2025-05-07 15:59:17] ✅ Bestätigt von Hotel-C
+[2025-05-07 15:59:17] 📊 Booking Summary:
+[2025-05-07 15:59:17] Total Requests: 25
+[2025-05-07 15:59:17] ✅ Successful:   23
+[2025-05-07 15:59:17] ❌ Failed:       2
+[2025-05-07 15:59:17] Success Rate:   92%
+[2025-05-07 15:59:17] 📬 Anfrage empfangen: User10:Hotel-A,Hotel-B,Hotel-C
+[2025-05-07 15:59:17] 🔁 [Retry 1/3] für Hotel-A
+[2025-05-07 15:59:17] ⏳ Sende Buchungsanfrage an Hotel-A
+[2025-05-07 15:59:17] 🕒 Warte auf Antwort von Hotel-A (max. 1500ms)...
+[2025-05-07 15:59:18] ✅ Bestätigt von Hotel-A
+[2025-05-07 15:59:18] 🔁 [Retry 1/3] für Hotel-B
+[2025-05-07 15:59:18] ⏳ Sende Buchungsanfrage an Hotel-B
+[2025-05-07 15:59:18] 🕒 Warte auf Antwort von Hotel-B (max. 1500ms)...
+[2025-05-07 15:59:18] ✅ Bestätigt von Hotel-B
+[2025-05-07 15:59:18] 🔁 [Retry 1/3] für Hotel-C
+[2025-05-07 15:59:18] ⏳ Sende Buchungsanfrage an Hotel-C
+[2025-05-07 15:59:18] 🕒 Warte auf Antwort von Hotel-C (max. 1500ms)...
+[2025-05-07 15:59:18] ✅ Bestätigt von Hotel-C
+[2025-05-07 15:59:18] 📊 Booking Summary:
+[2025-05-07 15:59:18] Total Requests: 26
+[2025-05-07 15:59:18] ✅ Successful:   24
+[2025-05-07 15:59:18] ❌ Failed:       2
+[2025-05-07 15:59:18] Success Rate:   92%
+[2025-05-07 15:59:18] 📬 Anfrage empfangen: User1:Hotel-A,Hotel-B,Hotel-C
+[2025-05-07 15:59:18] 🔁 [Retry 1/3] für Hotel-A
+[2025-05-07 15:59:19] ⏳ Sende Buchungsanfrage an Hotel-A
+[2025-05-07 15:59:19] 🕒 Warte auf Antwort von Hotel-A (max. 1500ms)...
+[2025-05-07 15:59:19] ✅ Bestätigt von Hotel-A
+[2025-05-07 15:59:19] 🔁 [Retry 1/3] für Hotel-B
+[2025-05-07 15:59:19] ⏳ Sende Buchungsanfrage an Hotel-B
+[2025-05-07 15:59:19] 🕒 Warte auf Antwort von Hotel-B (max. 1500ms)...
+[2025-05-07 15:59:20] ✅ Bestätigt von Hotel-B
+[2025-05-07 15:59:20] 🔁 [Retry 1/3] für Hotel-C
+[2025-05-07 15:59:20] ⏳ Sende Buchungsanfrage an Hotel-C
+[2025-05-07 15:59:20] 🕒 Warte auf Antwort von Hotel-C (max. 1500ms)...
+[2025-05-07 15:59:20] ✅ Bestätigt von Hotel-C
+[2025-05-07 15:59:20] 📊 Booking Summary:
+[2025-05-07 15:59:20] Total Requests: 27
+[2025-05-07 15:59:20] ✅ Successful:   25
+[2025-05-07 15:59:20] ❌ Failed:       2
+[2025-05-07 15:59:20] Success Rate:   92%
+[2025-05-07 15:59:20] 📬 Anfrage empfangen: User2:Hotel-A,Hotel-B,Hotel-C
+[2025-05-07 15:59:20] 🔁 [Retry 1/3] für Hotel-A
+[2025-05-07 15:59:20] ⏳ Sende Buchungsanfrage an Hotel-A
+[2025-05-07 15:59:20] 🕒 Warte auf Antwort von Hotel-A (max. 1500ms)...
+[2025-05-07 15:59:20] ✅ Bestätigt von Hotel-A
+[2025-05-07 15:59:20] 🔁 [Retry 1/3] für Hotel-B
+[2025-05-07 15:59:20] ⏳ Sende Buchungsanfrage an Hotel-B
+[2025-05-07 15:59:20] 🕒 Warte auf Antwort von Hotel-B (max. 1500ms)...
+[2025-05-07 15:59:21] ✅ Bestätigt von Hotel-B
+[2025-05-07 15:59:21] 🔁 [Retry 1/3] für Hotel-C
+[2025-05-07 15:59:21] ⏳ Sende Buchungsanfrage an Hotel-C
+[2025-05-07 15:59:21] 🕒 Warte auf Antwort von Hotel-C (max. 1500ms)...
+[2025-05-07 15:59:21] ⚠️ Antwort von Hotel-C: dropped – wird ignoriert, retry folgt.
+[2025-05-07 15:59:21] 🔁 [Retry 2/3] für Hotel-C
+[2025-05-07 15:59:21] ⏳ Sende Buchungsanfrage an Hotel-C
+[2025-05-07 15:59:21] 🕒 Warte auf Antwort von Hotel-C (max. 1500ms)...
+[2025-05-07 15:59:21] ✅ Bestätigt von Hotel-C
+[2025-05-07 15:59:21] 📊 Booking Summary:
+[2025-05-07 15:59:21] Total Requests: 28
+[2025-05-07 15:59:21] ✅ Successful:   26
+[2025-05-07 15:59:21] ❌ Failed:       2
+[2025-05-07 15:59:21] Success Rate:   92%
+[2025-05-07 15:59:21] 📬 Anfrage empfangen: User4:Hotel-A,Hotel-B,Hotel-C
+[2025-05-07 15:59:21] 🔁 [Retry 1/3] für Hotel-A
+[2025-05-07 15:59:21] ⏳ Sende Buchungsanfrage an Hotel-A
+[2025-05-07 15:59:21] 🕒 Warte auf Antwort von Hotel-A (max. 1500ms)...
+[2025-05-07 15:59:22] ✅ Bestätigt von Hotel-A
+[2025-05-07 15:59:22] 🔁 [Retry 1/3] für Hotel-B
+[2025-05-07 15:59:22] ⏳ Sende Buchungsanfrage an Hotel-B
+[2025-05-07 15:59:22] 🕒 Warte auf Antwort von Hotel-B (max. 1500ms)...
+[2025-05-07 15:59:22] ⚠️ Antwort von Hotel-B: dropped – wird ignoriert, retry folgt.
+[2025-05-07 15:59:22] 🔁 [Retry 2/3] für Hotel-B
+[2025-05-07 15:59:22] ⏳ Sende Buchungsanfrage an Hotel-B
+[2025-05-07 15:59:22] 🕒 Warte auf Antwort von Hotel-B (max. 1500ms)...
+[2025-05-07 15:59:23] ✅ Bestätigt von Hotel-B
+[2025-05-07 15:59:23] 🔁 [Retry 1/3] für Hotel-C
+[2025-05-07 15:59:23] ⏳ Sende Buchungsanfrage an Hotel-C
+[2025-05-07 15:59:23] 🕒 Warte auf Antwort von Hotel-C (max. 1500ms)...
+[2025-05-07 15:59:23] ✅ Bestätigt von Hotel-C
+[2025-05-07 15:59:23] 📊 Booking Summary:
+[2025-05-07 15:59:23] Total Requests: 29
+[2025-05-07 15:59:23] ✅ Successful:   27
+[2025-05-07 15:59:23] ❌ Failed:       2
+[2025-05-07 15:59:23] Success Rate:   93%
+[2025-05-07 15:59:23] 📬 Anfrage empfangen: User6:Hotel-A,Hotel-B,Hotel-C
+[2025-05-07 15:59:23] 🔁 [Retry 1/3] für Hotel-A
+[2025-05-07 15:59:23] ⏳ Sende Buchungsanfrage an Hotel-A
+[2025-05-07 15:59:23] 🕒 Warte auf Antwort von Hotel-A (max. 1500ms)...
+[2025-05-07 15:59:23] ✅ Bestätigt von Hotel-A
+[2025-05-07 15:59:24] 🔁 [Retry 1/3] für Hotel-B
+[2025-05-07 15:59:24] ⏳ Sende Buchungsanfrage an Hotel-B
+[2025-05-07 15:59:24] 🕒 Warte auf Antwort von Hotel-B (max. 1500ms)...
+[2025-05-07 15:59:24] ⚠️ Antwort von Hotel-B: dropped – wird ignoriert, retry folgt.
+[2025-05-07 15:59:24] 🔁 [Retry 2/3] für Hotel-B
+[2025-05-07 15:59:24] ⏳ Sende Buchungsanfrage an Hotel-B
+[2025-05-07 15:59:24] 🕒 Warte auf Antwort von Hotel-B (max. 1500ms)...
+[2025-05-07 15:59:25] ✅ Bestätigt von Hotel-B
+[2025-05-07 15:59:25] 🔁 [Retry 1/3] für Hotel-C
+[2025-05-07 15:59:25] ⏳ Sende Buchungsanfrage an Hotel-C
+[2025-05-07 15:59:25] 🕒 Warte auf Antwort von Hotel-C (max. 1500ms)...
+[2025-05-07 15:59:25] ✅ Bestätigt von Hotel-C
+[2025-05-07 15:59:25] 📊 Booking Summary:
+[2025-05-07 15:59:25] Total Requests: 30
+[2025-05-07 15:59:25] ✅ Successful:   28
+[2025-05-07 15:59:25] ❌ Failed:       2
+[2025-05-07 15:59:25] Success Rate:   93%
+[2025-05-07 15:59:25] 📬 Anfrage empfangen: User7:Hotel-A,Hotel-B,Hotel-C
+[2025-05-07 15:59:25] 🔁 [Retry 1/3] für Hotel-A
+[2025-05-07 15:59:25] ⏳ Sende Buchungsanfrage an Hotel-A
+[2025-05-07 15:59:25] 🕒 Warte auf Antwort von Hotel-A (max. 1500ms)...
+[2025-05-07 15:59:25] ✅ Bestätigt von Hotel-A
+[2025-05-07 15:59:25] 🔁 [Retry 1/3] für Hotel-B
+[2025-05-07 15:59:25] ⏳ Sende Buchungsanfrage an Hotel-B
+[2025-05-07 15:59:25] 🕒 Warte auf Antwort von Hotel-B (max. 1500ms)...
+[2025-05-07 15:59:26] ✅ Bestätigt von Hotel-B
+[2025-05-07 15:59:26] 🔁 [Retry 1/3] für Hotel-C
+[2025-05-07 15:59:26] ⏳ Sende Buchungsanfrage an Hotel-C
+[2025-05-07 15:59:26] 🕒 Warte auf Antwort von Hotel-C (max. 1500ms)...
+[2025-05-07 15:59:26] ✅ Bestätigt von Hotel-C
+[2025-05-07 15:59:26] 📊 Booking Summary:
+[2025-05-07 15:59:26] Total Requests: 31
+[2025-05-07 15:59:26] ✅ Successful:   29
+[2025-05-07 15:59:26] ❌ Failed:       2
+[2025-05-07 15:59:26] Success Rate:   93%
+[2025-05-07 15:59:26] 📬 Anfrage empfangen: User5:Hotel-A,Hotel-B,Hotel-C
+[2025-05-07 15:59:26] 🔁 [Retry 1/3] für Hotel-A
+[2025-05-07 15:59:26] ⏳ Sende Buchungsanfrage an Hotel-A
+[2025-05-07 15:59:26] 🕒 Warte auf Antwort von Hotel-A (max. 1500ms)...
+[2025-05-07 15:59:27] ✅ Bestätigt von Hotel-A
+[2025-05-07 15:59:27] 🔁 [Retry 1/3] für Hotel-B
+[2025-05-07 15:59:27] ⏳ Sende Buchungsanfrage an Hotel-B
+[2025-05-07 15:59:27] 🕒 Warte auf Antwort von Hotel-B (max. 1500ms)...
+[2025-05-07 15:59:27] ✅ Bestätigt von Hotel-B
+[2025-05-07 15:59:27] 🔁 [Retry 1/3] für Hotel-C
+[2025-05-07 15:59:27] ⏳ Sende Buchungsanfrage an Hotel-C
+[2025-05-07 15:59:27] 🕒 Warte auf Antwort von Hotel-C (max. 1500ms)...
+[2025-05-07 15:59:27] ✅ Bestätigt von Hotel-C
+[2025-05-07 15:59:27] 📊 Booking Summary:
+[2025-05-07 15:59:27] Total Requests: 32
+[2025-05-07 15:59:27] ✅ Successful:   30
+[2025-05-07 15:59:27] ❌ Failed:       2
+[2025-05-07 15:59:27] Success Rate:   93%
+[2025-05-07 15:59:27] 📬 Anfrage empfangen: User8:Hotel-A,Hotel-B,Hotel-C
+[2025-05-07 15:59:27] 🔁 [Retry 1/3] für Hotel-A
+[2025-05-07 15:59:27] ⏳ Sende Buchungsanfrage an Hotel-A
+[2025-05-07 15:59:27] 🕒 Warte auf Antwort von Hotel-A (max. 1500ms)...
+[2025-05-07 15:59:28] ✅ Bestätigt von Hotel-A
+[2025-05-07 15:59:28] 🔁 [Retry 1/3] für Hotel-B
+[2025-05-07 15:59:28] ⏳ Sende Buchungsanfrage an Hotel-B
+[2025-05-07 15:59:28] 🕒 Warte auf Antwort von Hotel-B (max. 1500ms)...
+[2025-05-07 15:59:28] ✅ Bestätigt von Hotel-B
+[2025-05-07 15:59:28] 🔁 [Retry 1/3] für Hotel-C
+[2025-05-07 15:59:28] ⏳ Sende Buchungsanfrage an Hotel-C
+[2025-05-07 15:59:28] 🕒 Warte auf Antwort von Hotel-C (max. 1500ms)...
+[2025-05-07 15:59:28] ✅ Bestätigt von Hotel-C
+[2025-05-07 15:59:28] 📊 Booking Summary:
+[2025-05-07 15:59:28] Total Requests: 33
+[2025-05-07 15:59:28] ✅ Successful:   31
+[2025-05-07 15:59:28] ❌ Failed:       2
+[2025-05-07 15:59:28] Success Rate:   93%
+[2025-05-07 15:59:28] 📬 Anfrage empfangen: User9:Hotel-A,Hotel-B,Hotel-C
+[2025-05-07 15:59:28] 🔁 [Retry 1/3] für Hotel-A
+[2025-05-07 15:59:28] ⏳ Sende Buchungsanfrage an Hotel-A
+[2025-05-07 15:59:28] 🕒 Warte auf Antwort von Hotel-A (max. 1500ms)...
+[2025-05-07 15:59:29] ✅ Bestätigt von Hotel-A
+[2025-05-07 15:59:29] 🔁 [Retry 1/3] für Hotel-B
+[2025-05-07 15:59:29] ⏳ Sende Buchungsanfrage an Hotel-B
+[2025-05-07 15:59:29] 🕒 Warte auf Antwort von Hotel-B (max. 1500ms)...
+[2025-05-07 15:59:29] ✅ Bestätigt von Hotel-B
+[2025-05-07 15:59:29] 🔁 [Retry 1/3] für Hotel-C
+[2025-05-07 15:59:29] ⏳ Sende Buchungsanfrage an Hotel-C
+[2025-05-07 15:59:29] 🕒 Warte auf Antwort von Hotel-C (max. 1500ms)...
+[2025-05-07 15:59:30] ✅ Bestätigt von Hotel-C
+[2025-05-07 15:59:30] 📊 Booking Summary:
+[2025-05-07 15:59:30] Total Requests: 34
+[2025-05-07 15:59:30] ✅ Successful:   32
+[2025-05-07 15:59:30] ❌ Failed:       2
+[2025-05-07 15:59:30] Success Rate:   94%
+[2025-05-07 15:59:30] 📬 Anfrage empfangen: Clara:Hotel-C,Hotel-A,Hotel-C
+[2025-05-07 15:59:30] 🔁 [Retry 1/3] für Hotel-C
+[2025-05-07 15:59:30] ⏳ Sende Buchungsanfrage an Hotel-C
+[2025-05-07 15:59:30] 🕒 Warte auf Antwort von Hotel-C (max. 1500ms)...
+[2025-05-07 15:59:30] ✅ Bestätigt von Hotel-C
+[2025-05-07 15:59:30] 🔁 [Retry 1/3] für Hotel-A
+[2025-05-07 15:59:30] ⏳ Sende Buchungsanfrage an Hotel-A
+[2025-05-07 15:59:30] 🕒 Warte auf Antwort von Hotel-A (max. 1500ms)...
+[2025-05-07 15:59:31] ✅ Bestätigt von Hotel-A
+[2025-05-07 15:59:31] 🔁 [Retry 1/3] für Hotel-C
+[2025-05-07 15:59:31] ⏳ Sende Buchungsanfrage an Hotel-C
+[2025-05-07 15:59:31] 🕒 Warte auf Antwort von Hotel-C (max. 1500ms)...
+[2025-05-07 15:59:31] ✅ Bestätigt von Hotel-C
+[2025-05-07 15:59:31] 📊 Booking Summary:
+[2025-05-07 15:59:31] Total Requests: 35
+[2025-05-07 15:59:31] ✅ Successful:   33
+[2025-05-07 15:59:31] ❌ Failed:       2
+[2025-05-07 15:59:31] Success Rate:   94%
+[2025-05-07 15:59:31] 📬 Anfrage empfangen: David:Hotel-A,Hotel-A
+[2025-05-07 15:59:31] ❌ Ungültige Buchung von David: gleiches Hotel kommt doppelt hintereinander vor.
+[2025-05-07 15:59:31] 📬 Anfrage empfangen: Alice:Hotel-A,Hotel-B,Hotel-C
+[2025-05-07 15:59:31] 🔁 [Retry 1/3] für Hotel-A
+[2025-05-07 15:59:31] ⏳ Sende Buchungsanfrage an Hotel-A
+[2025-05-07 15:59:31] 🕒 Warte auf Antwort von Hotel-A (max. 1500ms)...
+[2025-05-07 15:59:31] ✅ Bestätigt von Hotel-A
+[2025-05-07 15:59:31] 🔁 [Retry 1/3] für Hotel-B
+[2025-05-07 15:59:31] ⏳ Sende Buchungsanfrage an Hotel-B
+[2025-05-07 15:59:31] 🕒 Warte auf Antwort von Hotel-B (max. 1500ms)...
+[2025-05-07 15:59:31] ✅ Bestätigt von Hotel-B
+[2025-05-07 15:59:31] 🔁 [Retry 1/3] für Hotel-C
+[2025-05-07 15:59:31] ⏳ Sende Buchungsanfrage an Hotel-C
+[2025-05-07 15:59:31] 🕒 Warte auf Antwort von Hotel-C (max. 1500ms)...
+[2025-05-07 15:59:31] ✅ Bestätigt von Hotel-C
+[2025-05-07 15:59:31] 📊 Booking Summary:
+[2025-05-07 15:59:31] Total Requests: 37
+[2025-05-07 15:59:31] ✅ Successful:   34
+[2025-05-07 15:59:31] ❌ Failed:       3
+[2025-05-07 15:59:31] Success Rate:   91%
+[2025-05-07 15:59:31] 📬 Anfrage empfangen: Bob:Hotel-B,Hotel-B,Hotel-C
+[2025-05-07 15:59:31] ❌ Ungültige Buchung von Bob: gleiches Hotel kommt doppelt hintereinander vor.

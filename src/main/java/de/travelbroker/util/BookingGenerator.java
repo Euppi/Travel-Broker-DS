@@ -11,7 +11,7 @@ public class BookingGenerator {
 
     public static Map<String, Object> generateBooking(int customerId) {
         Map<String, Object> booking = new HashMap<>();
-        booking.put("customerName", "Testkunde-" + customerId);
+        booking.put("customerName", "Testcustomer-" + customerId);
 
         int hotelCount = rand.nextInt(3) + 2; // 2 bis 4 Hotels
         List<String> hotels = new ArrayList<>();

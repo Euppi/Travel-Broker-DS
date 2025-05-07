@@ -51,12 +51,12 @@ public class TravelBrokerIntegrationTest {
         socket = context.createSocket(SocketType.REQ);
         socket.connect("tcp://localhost:5569");
 
-        System.out.println("ZeroMQ abgeschlossen.");
+        System.out.println("ZeroMQ sucesfuly.");
     }
 
     @AfterAll
     public void teardown() {
-        System.out.println("Stoppe Dienste...");
+        System.out.println("stopping service");
         if (socket != null) socket.close();
         if (context != null) context.close();
 
@@ -75,12 +75,12 @@ public class TravelBrokerIntegrationTest {
             threadSocket.connect("tcp://localhost:5569");
     
             String payload = customer + ":" + String.join(",", hotels);
-            System.out.println(" [" + customer + "] Sende Buchung: " + payload);
+            System.out.println(" [" + customer + "] sending book: " + payload);
             threadSocket.send(payload.getBytes(StandardCharsets.UTF_8), 0);
     
             byte[] replyBytes = threadSocket.recv(0);
             String response = new String(replyBytes, StandardCharsets.UTF_8);
-            System.out.println("  [" + customer + "] Antwort: " + response);
+            System.out.println("  [" + customer + "] answwer: " + response);
             return response;
         }
     }
@@ -90,7 +90,7 @@ public class TravelBrokerIntegrationTest {
     public void testValidBookingAccepted() {
         String response = sendBookingRequest("Alice", List.of("Hotel-A", "Hotel-B", "Hotel-C"));
         assertTrue(response.contains("erfolgreich") || response.contains("fehlgeschlagen"),
-                "Answer should show success or failure");
+                "Answwer should show success or failure");
     }
 
     @Test

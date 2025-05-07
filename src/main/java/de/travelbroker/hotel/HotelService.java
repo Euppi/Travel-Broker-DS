@@ -35,7 +35,7 @@ public class HotelService {
             case "Hotel-A" -> 5556;
             case "Hotel-B" -> 5557;
             case "Hotel-C" -> 5558;
-            default -> throw new IllegalArgumentException("Unbekannter Hotelname: " + hotelName);
+            default -> throw new IllegalArgumentException("Unknown Hotel name: " + hotelName);
         };
 
         // Konfiguration laden (z. B. Fehlerwahrscheinlichkeiten, Verzögerung)
@@ -67,7 +67,7 @@ public class HotelService {
 
                 // Fehlersimulation: z. B. keine Antwort, Antwort mit „dropped“, etc.
                 double chance = rand.nextDouble();
-                System.out.println("[" + hotelName + "] Zufallswert (Fehlersimulation): " + chance);
+                System.out.println("[" + hotelName + "] Random value (Failure Simulation): " + chance);
 
                 if (chance < Config.hotelErrorRate) {
                     // Kein Response: Broker wird Timeout behandeln
@@ -80,7 +80,7 @@ public class HotelService {
                     continue;
                 }
 
-                System.out.println("[" + hotelName + "] Prüfe Verfügbarkeit der Zeitblöcke...");
+                System.out.println("[" + hotelName + "] Checking availability of the time blocks...");
 
                 // JSON parsen
                 String bookingId = extractBookingId(request);
@@ -126,9 +126,9 @@ public class HotelService {
             for (int block : booking.timeBlocks) {
                 availability[block]++;
             }
-            System.out.println("Rollback erfolgreich für " + bookingId);
+            System.out.println("Rollback successful for " + bookingId);
         } else {
-            System.out.println("Keine aktive Buchung für " + bookingId + " gefunden.");
+            System.out.println("No active booking for " + bookingId + " found.");
         }
     }
 
