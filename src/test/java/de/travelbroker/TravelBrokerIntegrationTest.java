@@ -30,7 +30,7 @@ public class TravelBrokerIntegrationTest {
             Thread serviceThread = new Thread(() -> HotelService.main(new String[]{hotel}), hotel + "-Service");
             serviceThread.start();
             serviceThreads.add(serviceThread);
-            Thread.sleep(500); // kleine Pause zwischen Starts
+            Thread.sleep(500); // small pause between starts
         }
 
         System.out.println("Starting TravelBroker...");
@@ -44,19 +44,19 @@ public class TravelBrokerIntegrationTest {
         brokerThread.start();
         serviceThreads.add(brokerThread);
 
-        // Warte bis alles bereit ist
+        // Wait until everything is ready
         Thread.sleep(3000);
 
         context = new ZContext();
         socket = context.createSocket(SocketType.REQ);
         socket.connect("tcp://localhost:5569");
 
-        System.out.println("ZeroMQ sucesfuly.");
+        System.out.println("ZeroMQ successfully connected.");
     }
 
     @AfterAll
     public void teardown() {
-        System.out.println("stopping service");
+        System.out.println("Stopping services...");
         if (socket != null) socket.close();
         if (context != null) context.close();
 
@@ -66,52 +66,51 @@ public class TravelBrokerIntegrationTest {
             }
         }
 
-        System.out.println("Testing environment stopped");
+        System.out.println("Testing environment stopped.");
     }
 
     private String sendBookingRequest(String customer, List<String> hotels) {
         try (ZContext threadContext = new ZContext()) {
             ZMQ.Socket threadSocket = threadContext.createSocket(SocketType.REQ);
             threadSocket.connect("tcp://localhost:5569");
-    
+
             String payload = customer + ":" + String.join(",", hotels);
-            System.out.println(" [" + customer + "] sending book: " + payload);
+            System.out.println("[" + customer + "] sending booking: " + payload);
             threadSocket.send(payload.getBytes(StandardCharsets.UTF_8), 0);
-    
+
             byte[] replyBytes = threadSocket.recv(0);
             String response = new String(replyBytes, StandardCharsets.UTF_8);
-            System.out.println("  [" + customer + "] answwer: " + response);
+            System.out.println("[" + customer + "] reply: " + response);
             return response;
         }
     }
-    
 
     @Test
     public void testValidBookingAccepted() {
         String response = sendBookingRequest("Alice", List.of("Hotel-A", "Hotel-B", "Hotel-C"));
-        assertTrue(response.contains("erfolgreich") || response.contains("fehlgeschlagen"),
-                "Answwer should show success or failure");
+        assertTrue(response.contains("successful") || response.contains("failed"),
+                "Answer should show success or failure");
     }
 
     @Test
     public void testInvalidBookingRejected_DuplicateConsecutiveHotels() {
         String response = sendBookingRequest("Bob", List.of("Hotel-B", "Hotel-B", "Hotel-C"));
-        assertTrue(response.contains("gleiches Hotel"),
-                "Same Hotels directly have to be declined");
+        assertTrue(response.contains("same Hotel appears twice"),
+                "Same hotels directly have to be declined");
     }
 
     @Test
     public void testValidBookingWithRepeatsNotConsecutive() {
         String response = sendBookingRequest("Clara", List.of("Hotel-C", "Hotel-A", "Hotel-C"));
-        assertTrue(response.contains("erfolgreich") || response.contains("fehlgeschlagen"),
+        assertTrue(response.contains("successful") || response.contains("failed"),
                 "Answer should show success or failure");
     }
 
     @Test
     public void testInvalidBookingRejected_TwoSameHotels() {
         String response = sendBookingRequest("David", List.of("Hotel-A", "Hotel-A"));
-        assertTrue(response.contains("gleiches Hotel"),
-                "Same Hotels directly have to be declined");
+        assertTrue(response.contains("same Hotel appears twice"),
+                "Same hotels directly have to be declined");
     }
 
     @Test
@@ -124,7 +123,7 @@ public class TravelBrokerIntegrationTest {
                 String customer = "User" + index;
                 List<String> hotels = List.of("Hotel-A", "Hotel-B", "Hotel-C");
                 String response = sendBookingRequest(customer, hotels);
-                assertNotNull(response);
+                assertNotNull(response, "Response should not be null");
             });
             threads.add(t);
             t.start();
